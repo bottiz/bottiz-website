@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BottiZ｜智慧校園機械人方案</title>
+
+<!-- ===== SEO ===== -->
+<meta name="description" content="BottiZ 為香港學校提供智慧校園機械人方案：清潔、物資運送、接待導賞及互動教學機械人，連同部署規劃、本地培訓與售後支援。可預約免費校園示範。"/>
+<meta name="keywords" content="校園機械人,學校清潔機械人,送遞機械人,接待機械人,智慧校園,香港,BottiZ,SwiftBot,Phantas,Scrubber 50,MiniBot"/>
+<meta name="robots" content="index,follow"/>
+<!-- 上線後將 https://example.com 全部改成你的正式網域（GoDaddy 那個） -->
+<!-- canonical: 上線版本喺 zip 入面 -->
+<link rel="icon" type="image/png" href="images/logo_bottiz.png"/>
+<link rel="apple-touch-icon" href="images/logo_bottiz.png"/>
+
+<!-- ===== Open Graph（WhatsApp / Facebook 分享預覽）===== -->
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="zh_HK"/>
+<meta property="og:site_name" content="BottiZ"/>
+<meta property="og:title" content="BottiZ｜智慧校園機械人方案"/>
+<meta property="og:description" content="為香港學校而設的校園機械人方案：清潔、運送、接待導賞及互動教學，連部署規劃與本地支援。"/>
+<meta property="og:url" content="https://example.com/"/>
+<meta property="og:image" content="https://example.com/images/hero-minibot-students.webp"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="BottiZ｜智慧校園機械人方案"/>
+<meta name="twitter:description" content="為香港學校而設的校園機械人方案：清潔、運送、接待導賞及互動教學。"/>
+<meta name="twitter:image" content="https://example.com/images/hero-minibot-students.webp"/>
+
+<!-- ===== 結構化資料（Google 搜尋結果顯示品牌資訊）===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "BottiZ",
+  "url": "https://example.com/",
+  "logo": "https://example.com/images/logo-bottiz.png",
+  "description": "香港智慧校園機械人方案供應商",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "West Wing 2/F, 822 Lai Chi Kok Road, Cheung Sha Wan",
+    "addressLocality": "Kowloon",
+    "addressCountry": "HK"
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61591216350595",
+    "https://www.instagram.com/bottiz.ai/",
+    "https://www.youtube.com/@BottiZ_AI"
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="assets/site.css"/>
+</head>
+<body>
+<header class="site-header">
+<nav class="nav">
+<a class="brand" href="index.html">
+<div class="brand-mark"><img alt="BottiZ icon" class="brand-icon" src="images/logo_bottiz.png" width="315" height="213" loading="eager" fetchpriority="high" decoding="async"/></div>
+<div>
+          BottiZ
+          <small>Tobot Solution 合作夥伴</small>
+</div>
+</a>
+<button class="nav-toggle" aria-label="Menu" onclick="toggleMobileNav()">☰</button>
+<div class="nav-links">
+<a class="nav-link" href="index.html">首頁</a><a class="nav-link" href="solutions.html">按行業探索</a><a class="nav-link" href="products.html">產品中心</a><a class="nav-link active" href="smart-campus.html">智慧校園</a><a class="nav-link" href="campus-funding.html">校園資助計劃</a><a class="nav-link" href="insights.html">媒體動態</a><a class="nav-link" href="about.html">關於我們</a><a class="nav-link" href="contact.html">聯絡我們</a><div class="language-switcher">
+<span aria-hidden="true" class="language-icon">🌐</span>
+<select aria-label="選擇語言" class="language-select" id="languageSelect">
+<option value="zh-Hant">繁中</option>
+<option value="zh-Hans">简中</option>
+<option value="en">English</option>
+</select>
+</div>
+<button class="btn btn-primary" onclick="openContact()">預約免費示範</button>
+</div>
+</nav>
+</header>
+<main>
+<section class="hero hero-campus-v2">
+<div class="hero-copy-panel">
+<span class="eyebrow"><span class="dot"></span>專為香港中小學而設</span>
+<h1 class="hero-title">
+<span class="heading-line">把重複工作交給機械人，</span>
+<span class="heading-line">把更多時間留給教學與學生。</span>
+</h1>
+<p class="hero-copy">由校園清潔、教材及物資運送，到訪客接待、智能圖書及互動學習，BottiZ 從學校日常流程出發，按場地、時段及人手需要配置合適方案。</p>
+<div class="hero-actions">
+<button class="btn btn-primary" onclick="openContact()">預約免費校園示範</button>
+<a class="btn btn-secondary" href="#campus-solutions">查看校園應用場景</a>
+</div>
+<div class="hero-note">
+<span>真實校園場景</span>
+<span>按需要逐步部署</span>
+<span>本地培訓及售後支援</span>
+</div>
+</div>
+<div aria-label="MiniBot 與學生於校園互動" class="hero-photo-card">
+<div class="hero-photo-orbit"></div>
+<img alt="MiniBot 與學生於校園互動" class="hero-campus-photo" src="images/hero_minibot_students.webp" width="820" height="820" loading="eager" fetchpriority="high" decoding="async"/>
+<div class="hero-photo-label">
+<span>教材及物資運送</span>
+<strong>文件・圖書・教具定點運送</strong>
+</div>
+<div class="hero-float hero-float-one"><b>校園清潔</b><small>配合課堂時段，支援走廊及公共空間清潔</small></div>
+<div class="hero-float hero-float-two"><b>接待與導賞</b><small>支援開放日、訪客查詢及校園介紹</small></div>
+</div>
+</section>
+<section class="stats-bar">
+<div class="stats-bar-inner">
+<div class="stat-item"><strong>20+</strong><span>已服務學校</span></div>
+<div class="stat-item"><strong>6</strong><span>步部署流程</span></div>
+<div class="stat-item"><strong>100%</strong><span>本地團隊支援</span></div>
+</div>
+</section>
+<section class="section campus-needs" id="campus-needs">
+<div class="section-head">
+<div>
+<div class="section-kicker">School-first Design</div>
+<h2 class="section-title-split">
+<span class="heading-line">先看學校每天面對的工作，</span>
+<span class="heading-line">再決定需要哪一款機械人</span>
+</h2>
+</div>
+<p class="section-desc">BottiZ 先從校園常見任務與人手壓力出發，協助學校釐清最需要改善的環節，再規劃合適的機械人配置與使用方式。</p>
+</div>
+<div class="needs-grid">
+<article class="need-card">
+<div class="need-number">01</div>
+<div class="need-icon">潔</div>
+<h3>清潔安排難以配合課堂與活動</h3>
+<p>走廊、大堂、禮堂及公共空間需要反覆清潔，但人手及可用時段有限。</p>
+<div class="need-answer"><span>BottiZ 如何協助</span>按區域、路線及校園時段安排清潔任務，支援不同大小及室內外空間。</div>
+</article>
+<article class="need-card">
+<div class="need-number">02</div>
+<div class="need-icon">運</div>
+<h3>教材、文件與物資反覆來回</h3>
+<p>校務處、教員室、課室及活動場地之間，經常需要運送文件、教具及物資。</p>
+<div class="need-answer"><span>BottiZ 如何協助</span>按指定路線及站點執行定時或按需運送，減少非教學性來回與重複搬運。</div>
+</article>
+<article class="need-card">
+<div class="need-number">03</div>
+<div class="need-icon">迎</div>
+<h3>開放日與訪客接待工作繁重</h3>
+<p>校園介紹、方向查詢及活動資訊往往需要教職員重複回應。</p>
+<div class="need-answer"><span>BottiZ 如何協助</span>以多語言、觸控及校本內容支援接待、導賞、圖書介紹及校園問答。</div>
+</article>
+<article class="need-card">
+<div class="need-number">04</div>
+<div class="need-icon">落</div>
+<h3>購置科技後仍擔心難以落地</h3>
+<p>場地、路線、網絡及使用流程不同，單靠產品規格難以判斷是否適合。</p>
+<div class="need-answer"><span>BottiZ 如何協助</span>由到校勘察、實機示範、建圖配置，到培訓及售後支援，協助學校逐步部署。</div>
+</article>
+</div>
+</section><section class="section campus-day" id="campus-day">
+<div class="section-head">
+<div>
+<div class="section-kicker">A Day on Campus</div>
+<h2 class="section-title-split"><span class="heading-line">機械人如何融入</span><span class="heading-line">校園一天的日常運作</span></h2>
+</div>
+<p class="section-desc">以下以校園一天的不同時段示範應用情境，讓校方更容易理解機械人在日常流程中的實際角色與分工。</p>
+</div>
+<div class="day-timeline">
+<article class="day-step">
+<time>07:00</time>
+<div class="day-dot"></div>
+<h3>學生回校前</h3>
+<p>清潔機械人完成走廊、大堂及公共空間的例行清潔。</p>
+</article>
+<article class="day-step">
+<time>10:30</time>
+<div class="day-dot"></div>
+<h3>課堂及行政工作期間</h3>
+<p>教材配送機械人協助運送文件、圖書、教具及日常物資。</p>
+</article>
+<article class="day-step">
+<time>15:30</time>
+<div class="day-dot"></div>
+<h3>圖書館及課外活動</h3>
+<p>互動機械人支援圖書介紹、學生導賞、語言表達及校本內容。</p>
+</article>
+<article class="day-step">
+<time>開放日</time>
+<div class="day-dot"></div>
+<h3>開放日及家長日</h3>
+<p>提供訪客接待、校園介紹、活動資訊及場地指引。</p>
+</article>
+</div>
+</section>
+<section class="section campus-solutions" id="campus-solutions">
+<div class="section-head">
+<div>
+<div class="section-kicker">Campus Scenarios</div>
+<h2 class="section-title-split">
+<span class="heading-line">先按校園任務選方案，</span>
+<span class="heading-line">再了解合適機型</span>
+</h2>
+</div>
+<p class="section-desc">可先按校園常見任務了解應用方向，再查看對應機型、部署方式及示範安排，評估是否適合校內實際流程。</p>
+</div>
+<div class="solution-scene-grid">
+<article class="solution-scene-card">
+<img alt="清潔機械人於學校禮堂執行清潔工作" src="images/scene_cleaning_hall.webp" width="1069" height="713" loading="lazy" decoding="async"/>
+<div class="scene-card-body">
+<span class="scene-tag">01 · 智慧清潔</span>
+<h3>走廊、大堂、禮堂及戶外範圍</h3>
+<p>按空間大小、地面材質、人流及清潔時段，配置適合的室內或室內外清潔機械人。</p>
+<button class="scene-link" onclick="showProductCategory('cleaning')">查看合適機械人 <b>→</b></button>
+</div>
+</article>
+<article class="solution-scene-card">
+<img alt="教材配送機械人於校園運送物資" class="scene-image-delivery" src="images/scene_delivery_supplies.webp" width="1200" height="800" loading="lazy" decoding="async"/>
+<div class="scene-card-body">
+<span class="scene-tag">02 · 教材及物資運送</span>
+<h3>校務處、教員室、課室及活動場地</h3>
+<p>分擔文件、圖書、教材、教具及活動物資的固定路線運送，減少重複搬運。</p>
+<button class="scene-link" onclick="showProductCategory('delivery')">查看合適機械人 <b>→</b></button>
+</div>
+</article>
+<article class="solution-scene-card">
+<img alt="學生與接待機械人於校園互動" src="images/scene_reception_students.webp" width="1000" height="833" loading="lazy" decoding="async"/>
+<div class="scene-card-body">
+<span class="scene-tag">03 · 訪客接待與校園導賞</span>
+<h3>校門、接待處、開放日及家長日</h3>
+<p>載入校本資訊及導賞內容，支援多語言查詢、校園介紹、方向指引及活動資訊。</p>
+<button class="scene-link" onclick="showProductCategory('reception')">查看合適機械人 <b>→</b></button>
+</div>
+</article>
+<article class="solution-scene-card">
+<img alt="互動機械人於校園展示、導賞及互動學習場景" class="scene-image-learning" src="images/scene_interactive_learning.webp" width="953" height="634" loading="lazy" decoding="async"/>
+<div class="scene-card-body">
+<span class="scene-tag">04 · 智能圖書與互動學習</span>
+<h3>圖書館、閱讀角、課堂及學生導賞</h3>
+<p>配合圖書內容、語音互動、校園導賞及機械人課程，讓科技成為可參與的學習體驗。</p>
+<button class="scene-link" onclick="showProductCategory('teaching')">查看合適機械人 <b>→</b></button>
+</div>
+</article>
+</div>
+</section><section class="section deployment" id="deployment">
+<div class="deployment-shell">
+<div class="deployment-intro">
+<div class="section-kicker">Local Deployment &amp; Support</div>
+<h2 class="section-title-split"><span class="heading-line">不止交付機械人，</span><span class="heading-line">更協助學校真正用得上</span></h2>
+<p>由到校勘察、方案配置、實機示範，到培訓及售後支援，協助學校按實際需要逐步部署，讓機械人真正融入校園運作。</p>
+<div class="support-badges">
+<span>機械人及 AI 團隊</span>
+<span>靈活客製化</span>
+<span>本地服務支援</span>
+</div>
+</div>
+<ol class="deployment-steps">
+<li><b>01</b><strong>了解需要</strong><span>確認希望改善的工作、區域及校園時段。</span></li>
+<li><b>02</b><strong>到校勘察</strong><span>評估路線、通道、地面、網絡及人流。</span></li>
+<li><b>03</b><strong>方案配置</strong><span>建議合適機型、任務流程及校本內容。</span></li>
+<li><b>04</b><strong>實機示範</strong><span>讓校方在真實場地了解操作及效果。</span></li>
+<li><b>05</b><strong>部署及培訓</strong><span>完成建圖、設定及使用人員培訓。</span></li>
+<li><b>06</b><strong>售後支援</strong><span>提供日常使用、保養及後續調整支援。</span></li>
+</ol>
+</div>
+</section><section class="section" id="products">
+<div class="section-head">
+<div>
+<div class="section-kicker">Robot Reference</div>
+<h2>校園機械人資料一覽</h2>
+</div>
+<p class="section-desc">以下整理各款機械人的建議場景、功能重點及主要規格，方便校方按應用方向進一步比較。</p>
+</div>
+<div class="filters" id="filters"><button class="filter active" data-filter="all">全部</button><button class="filter" data-filter="cleaning">智慧清潔</button><button class="filter" data-filter="delivery">配送／運送</button><button class="filter" data-filter="reception">接待／圖書館</button><button class="filter" data-filter="teaching">教學互動</button></div>
+<div class="product-grid" id="productGrid">
+<article class="card" data-category="cleaning">
+<div class="product-media">
+<span class="official-badge">Beetle</span>
+<img alt="Beetle 室內外工業級清潔機械人" class="product-image" src="images/tobot_beetle.png" style="object-fit:contain;object-position:center center;width:78%;height:78%;" width="539" height="538" loading="lazy" decoding="async"/>
+</div>
+<div class="card-body">
+<div class="product-code">Indoor &amp; Outdoor Industrial Cleaning Robot</div>
+<h3>Beetle</h3>
+<p class="product-subtitle">室內外工業級清潔機械人</p>
+<p class="product-copy">可於光線不足或人流較多的環境中定位及避障，適合校門、戶外通道、操場外圍、停車區及校園後勤範圍。</p>
+<div class="tags">
+<span class="tag">室內外清掃</span>
+<span class="tag">智能定點清潔</span>
+<span class="tag">門禁／升降機聯動</span>
+</div>
+<div class="spec-strip">
+<div class="spec"><small>建議場景</small><strong>戶外／後勤區域</strong></div>
+<div class="spec"><small>最大效率</small><strong>3,240 m²／h</strong></div>
+</div>
+<div class="card-actions">
+<a class="btn btn-secondary" href="product-beetle.html">查看詳情</a>
+<button class="btn btn-primary" onclick="openContact('Beetle')">查詢方案</button>
+</div>
+</div>
+</article>
+<article class="card" data-category="cleaning">
+<div class="product-media">
+<span class="official-badge">Phantas</span>
+<img alt="Phantas 中小型設施清潔機械人" class="product-image" src="images/tobot_phantas.png" style="object-fit:contain;object-position:center center;width:78%;height:78%;" width="539" height="538" loading="lazy" decoding="async"/>
+</div>
+<div class="card-body">
+<div class="product-code">Multi-purpose Floor Cleaning Robot</div>
+<h3>Phantas</h3>
+<p class="product-subtitle">中小型設施多合一地板清潔機械人</p>
+<p class="product-copy">機身小巧靈活，支援多合一地板清潔、零距離邊緣清潔及自動定點清洗，適合校內中小型室內空間。</p>
+<div class="tags">
+<span class="tag">多合一清潔</span>
+<span class="tag">零距離邊緣清潔</span>
+<span class="tag">地板種類識別</span>
+</div>
+<div class="spec-strip">
+<div class="spec"><small>建議場景</small><strong>走廊／圖書館</strong></div>
+<div class="spec"><small>清潔效率</small><strong>400–700 m²／h</strong></div>
+</div>
+<div class="card-actions">
+<a class="btn btn-secondary" href="product-phantas.html">查看詳情</a>
+<button class="btn btn-primary" onclick="openContact('Phantas')">查詢方案</button>
+</div>
+</div>
+</article>
+<article class="card" data-category="cleaning">
+<div class="product-media">
+<span class="official-badge">Scrubber 50</span>
+<img alt="Scrubber 50 全自動清潔機械人" class="product-image" src="images/tobot_scrubber50.png" style="object-fit:contain;object-position:center center;width:82%;height:82%;" width="351" height="454" loading="lazy" decoding="async"/>
+</div>
+<div class="card-body">
+<div class="product-code">Fully Autonomous Cleaning Robot</div>
+<h3>Scrubber 50</h3>
+<p class="product-subtitle">大中型校園空間全自動清潔機械人</p>
+<p class="product-copy">以全自動清潔及機械人隊伍管理減少人手操作，適合學校大堂、體育館、禮堂外及寬闊走廊。</p>
+<div class="tags">
+<span class="tag">四合一清潔</span>
+<span class="tag">分區清潔</span>
+<span class="tag">自動工作站</span>
+</div>
+<div class="spec-strip">
+<div class="spec"><small>建議場景</small><strong>大堂／體育館</strong></div>
+<div class="spec"><small>最大效率</small><strong>1,600 m²／h</strong></div>
+</div>
+<div class="card-actions">
+<a class="btn btn-secondary" href="product-scrubber50.html">查看詳情</a>
+<button class="btn btn-primary" onclick="openContact('Scrubber 50')">查詢方案</button>
+</div>
+</div>
+</article>
+<article class="card" data-category="delivery">
+<div class="product-media">
+<span class="official-badge">SwiftBot</span>
+<img alt="SwiftBot 通用送遞機械人" class="product-image" src="images/tobot_swiftbot.png" width="337" height="358" loading="lazy" decoding="async"/>
+</div>
+<div class="card-body">
+<div class="product-code">Versatile Delivery Robot</div>
+<h3>SwiftBot</h3>
+<p class="product-subtitle">通用送遞機械人</p>
+<p class="product-copy">可在校務處、教員室、課室、圖書館及活動場地之間運送教材、文件、物資及餐飲，減少重複搬運與來回。</p>
+<div class="tags"><span class="tag">教材／文件配送</span><span class="tag">最大載重 35 kg</span><span class="tag">多層托盤設計</span></div>
+<div class="spec-strip">
+<div class="spec"><small>建議場景</small><strong>校務處／圖書館</strong></div>
+<div class="spec"><small>續航時間</small><strong>10–24 小時</strong></div>
+</div>
+<div class="card-actions">
+<a class="btn btn-secondary" href="product-swiftbot.html">查看詳情</a>
+<button class="btn btn-primary" onclick="openContact('SwiftBot')">查詢方案</button>
+</div>
+</div>
+</article><article class="card" data-category="reception teaching">
+<div class="product-media">
+<span class="official-badge">MiniBot</span>
+<img alt="MiniBot 招待小專員" class="product-image" src="images/tobot_minibot.jpg" width="254" height="519" loading="lazy" decoding="async"/>
+</div>
+<div class="card-body">
+<div class="product-code">Reception &amp; Education Robot</div>
+<h3>MiniBot</h3>
+<p class="product-subtitle">招待小專員</p>
+<p class="product-copy">適合校門接待、訪客登記、校園介紹、圖書館導覽及互動教學，以多語言、觸控及語音功能提升校園服務。</p>
+<div class="tags"><span class="tag">支援 27 種語言</span><span class="tag">14 吋觸控屏幕</span><span class="tag">自動回充</span></div>
+<div class="spec-strip">
+<div class="spec"><small>建議場景</small><strong>校門／圖書館</strong></div>
+<div class="spec"><small>最窄通行</small><strong>約 55 cm</strong></div>
+</div>
+<div class="card-actions">
+<a class="btn btn-secondary" href="product-minibot.html">查看詳情</a>
+<button class="btn btn-primary" onclick="openContact('MiniBot')">查詢方案</button>
+</div>
+</div>
+</article></div>
+</section><section class="section" id="benefits">
+<div class="section-head">
+<div>
+<div class="section-kicker">Value for Schools</div>
+<h2 class="section-title-split">
+<span class="heading-line">為工友、教職員<span class="mobile-break"><br/></span>及學生</span>
+<span class="heading-line">帶來實際價值</span>
+</h2>
+</div>
+<p class="section-desc">機械人不是取代校園團隊，而是承接重複、耗力及可標準化的工序，讓人力回到更需要判斷、溝通與照顧的工作。</p></div>
+<div class="value-grid"><div class="value-card">
+<div class="value-icon">01</div>
+<h4>減輕重複及耗力工作</h4>
+<p>分擔長距離搬運、固定路線清潔及反覆來回，協助降低工友的體力負擔。</p>
+</div><div class="value-card">
+<div class="value-icon">02</div>
+<h4>改善健康與工作安全</h4>
+<p>減少推拉重物、長時間彎腰及在戶外或濕滑區域持續工作的需要。</p>
+</div><div class="value-card">
+<div class="value-icon">03</div>
+<h4>穩定校園服務質素</h4>
+<p>按預設路線、時段及區域執行任務，有助減少遺漏並保持服務一致。</p>
+</div><div class="value-card">
+<div class="value-icon">04</div>
+<h4>提升行政與後勤效率</h4>
+<p>加快教材、文件及物資在校內流轉，讓教職員減少非教學性來回。</p>
+</div><div class="value-card">
+<div class="value-icon">05</div>
+<h4>增加學生互動與學習</h4>
+<p>結合校園導賞、圖書內容、語言互動及機械人課程，提升參與感與科技素養。</p>
+</div><div class="value-card">
+<div class="value-icon">06</div>
+<h4>建立智慧校園形象</h4>
+<p>將人工智能、自主導航及服務機械人落地於真實校園，展示創新及科技教育成果。</p>
+</div></div>
+</section>
+
+<section class="cta">
+<div>
+<h2>先由一個校園場景開始，安排免費示範</h2>
+<p>告訴我們希望改善的區域、日常工作及校園時段，團隊會先了解場地，再建議合適機型、部署方式及示範方向。</p>
+</div>
+<button class="btn btn-secondary" onclick="openContact()">預約免費校園示範</button>
+</section>
+<section class="contact-section" id="contact">
+<div class="contact-panel">
+<div class="contact-brand">
+<div class="brand-mark"><img alt="BottiZ icon" class="brand-icon" src="images/logo_bottiz.png" width="315" height="213" loading="eager" fetchpriority="high" decoding="async"/></div>
+<div>
+<strong>BottiZ</strong>
+<small>Tobot Solution 合作夥伴</small>
+</div>
+</div>
+<p class="contact-description">為教育、商業、醫療及基礎設施提供清潔、配送、接待、教學及巡邏等全場景機械人整合方案。</p>
+<div aria-label="社交媒體" class="social-row">
+<a aria-label="Facebook 官方頁面" class="social-btn" href="https://www.facebook.com/profile.php?id=61591216350595#" rel="noopener" target="_blank" title="Facebook">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M13.5 22v-8h2.8l.5-3h-3.3V9.1c0-.9.3-1.6 1.7-1.6H17V4.8c-.4-.1-1.3-.2-2.4-.2-2.4 0-4.1 1.5-4.1 4.2V11H8v3h2.5v8h3z"></path></svg>
+</a>
+<a aria-label="Instagram 官方頁面" class="social-btn" href="https://www.instagram.com/bottiz.ai/" rel="noopener" target="_blank" title="Instagram">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.3A4.7 4.7 0 1 1 7.3 12 4.7 4.7 0 0 1 12 7.3zm0 2A2.7 2.7 0 1 0 14.7 12 2.7 2.7 0 0 0 12 9.3zm5.2-3.5a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1z"></path></svg>
+</a>
+<a aria-label="YouTube 官方頻道" class="social-btn" href="https://www.youtube.com/@BottiZ_AI" rel="noopener" target="_blank" title="YouTube">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M23 12s0-3.4-.4-5c-.2-1.2-1-2-2.1-2.3C18.6 4.2 12 4.2 12 4.2s-6.6 0-8.5.5C2.4 5 1.6 5.8 1.4 7 .9 8.6.9 12 .9 12s0 3.4.5 5c.2 1.2 1 2 2.1 2.3 1.9.5 8.5.5 8.5.5s6.6 0 8.5-.5c1.1-.3 1.9-1.1 2.1-2.3.4-1.6.4-5 .4-5zm-13.3 3.4V8.6l6 3.4-6 3.4z"></path></svg>
+</a>
+<a aria-label="WhatsApp" class="social-btn" href="https://wa.me/85295335639" rel="noopener" target="_blank" title="WhatsApp">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L0 24l6.5-1.7a11.8 11.8 0 0 0 5.6 1.4h.1C18.7 23.7 24 18.4 24 11.9a11.8 11.8 0 0 0-3.5-8.4zM12.2 21.7h-.1a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.5 4.7zm5.4-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.7.1-1.9-.9-3.2-1.7-4.5-3.8-.3-.6.3-.5.9-1.7.1-.2.1-.4 0-.6l-.9-2.2c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"></path></svg>
+</a>
+</div>
+</div>
+<div class="contact-panel">
+<h2 class="contact-title">聯絡我們</h2>
+<div class="contact-list">
+<div class="contact-item">
+<strong>電話</strong>
+<a href="tel:+85295335639">+852 9533 5639</a>
+</div>
+<div class="contact-item">
+<strong>Email</strong>
+<a href="mailto:support@bottiz.com">support@bottiz.com</a>
+</div>
+<div class="contact-item">
+<strong>地址</strong>
+<address class="contact-address">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=West+Wing+2%2FF%2C+822+Lai+Chi+Kok+Road%2C+Cheung+Sha+Wan%2C+Kowloon" rel="noopener" target="_blank">
+                West Wing 2/F, 822 Lai Chi Kok Road, Cheung Sha Wan, Kowloon<br/>
+                九龍長沙灣荔枝角道822號2樓西翼
+              </a>
+</address>
+</div>
+<div class="contact-item">
+<strong>體驗中心</strong>
+<div>
+              荔枝角體驗中心
+              <span class="visit-chip">預約參觀</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>© BottiZ · Tobot Solution 合作夥伴 · 智慧校園機械人方案</footer>
+<div class="modal" id="contactModal" onclick="backdropClose(event,'contactModal')">
+<div class="modal-panel">
+<div class="modal-head">
+<h3>索取校園方案</h3>
+<button aria-label="關閉" class="close" onclick="closeModal('contactModal')">×</button>
+</div>
+<div class="modal-content">
+<form class="form-grid" id="inquiryForm" onsubmit="handleEmailSubmit(event)">
+<label>姓名<input id="nameInput" name="姓名" placeholder="姓名及職位" required="" type="text"/></label>
+<label>學校 / 機構名稱<input id="companyInput" name="學校/機構名稱" placeholder="例如：XX小學" type="text"/></label>
+<label>電子郵件<input id="emailInput" name="電子郵件" placeholder="name@school.edu.hk" required="" type="email"/></label>
+<label>電話號碼<input id="phoneInput" name="電話號碼" placeholder="例如：9123 4567" type="tel"/></label>
+<label>查詢類型<select id="inquiryTypeSelect" name="查詢類型">
+<option value="校園方案評估">校園方案評估</option>
+<option value="產品諮詢">產品諮詢</option>
+<option value="技術支援">技術支援</option>
+<option value="其他">其他</option>
+</select></label>
+<label>感興趣的校園場景<input id="interestInput" name="感興趣的產品" placeholder="例如：走廊清潔、教材運送、訪客接待、智能圖書或互動學習" type="text"/></label>
+<label>詳細說明<textarea id="messageInput" name="詳細說明" placeholder="例如：走廊清潔、教材配送、訪客接待、圖書館導覽或互動教學" required="" rows="4"></textarea></label>
+<div class="form-actions">
+<button class="btn btn-primary" id="submitInquiryButton" type="submit">電郵提交</button>
+<button class="btn btn-whatsapp" id="whatsappInquiryButton" onclick="handleWhatsAppSubmit()" type="button">WhatsApp 查詢</button>
+</div>
+<div id="prototypeMessage" style="display:none;padding:12px 14px;border-radius:12px;background:#ecfdf5;color:#047857;font-weight:750;line-height:1.65">已開啟電郵應用，請確認內容後按「傳送」。</div>
+</form>
+</div>
+</div>
+</div>
+<script src="assets/site.js"></script>
+</body>
+</html>

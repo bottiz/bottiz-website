@@ -1,0 +1,43 @@
+BottiZ 網站公開預覽連結清單
+================================
+首頁（入口，其他頁面都可由此導覽到達）：
+https://claude.ai/code/artifact/a1605a90-538b-4ee8-b8b9-e1b35de866a8
+
+── 主要頁面 ──
+按行業探索　　https://claude.ai/code/artifact/5c2783b1-b525-49ac-afd2-a7d839d737b1
+產品中心　　　https://claude.ai/code/artifact/53b6d568-d7af-4fe4-b5d7-e514aadc628e
+智慧校園方案　https://claude.ai/code/artifact/f7c1ad73-9a42-4ba3-b1c3-5cae9021ce9f
+校園資助計劃　https://claude.ai/code/artifact/8c3a4238-1a80-4ab4-860a-fd5003273cef
+媒體及行業動態 https://claude.ai/code/artifact/09b913d4-61de-4dbb-8911-d1b7543d9dbb
+關於我們　　　https://claude.ai/code/artifact/3bb75516-386d-4d5b-a6f2-3589865e00a6
+聯絡我們　　　https://claude.ai/code/artifact/f8ea52d1-93b6-4a34-ba94-6faac0512047
+
+── 產品詳情頁（18 個）──
+Securbot     https://claude.ai/code/artifact/a5cbdf30-a5a7-4358-abb9-d3f8e9ea5e59
+M20Pro       https://claude.ai/code/artifact/19ee4927-4601-466a-9b50-bf881c4cc657
+Beetle       https://claude.ai/code/artifact/b4b24603-d419-4f94-8acd-2d9406978fc6
+Scrubber 75  https://claude.ai/code/artifact/512613cc-51f7-4185-993a-98c05a1fd9dc
+G5           https://claude.ai/code/artifact/588aab76-dd5f-4c2e-94fa-e4b57d114dc6
+G3           https://claude.ai/code/artifact/de633748-b6d4-47c3-8f05-4e50a2a1d117
+G2           https://claude.ai/code/artifact/1e8a635d-2a74-46c3-a0a9-0ab986023b31
+W3           https://claude.ai/code/artifact/0a945c59-92c3-4fe5-b880-77dccbd80e4e
+KettyBot     https://claude.ai/code/artifact/373a3648-487f-4544-9e1b-2578ab9cd964
+D-300        https://claude.ai/code/artifact/1a7adf31-a61c-4866-9770-5ff0adf94e39
+D-150        https://claude.ai/code/artifact/f3c5ed64-f23e-4530-ba92-52bce3f92375
+S-100        https://claude.ai/code/artifact/8e777614-c26b-4af1-ab76-8cf226e904a6
+FlashBot     https://claude.ai/code/artifact/f26f6822-974b-4843-b36e-4b070e687906
+SwiftBot     https://claude.ai/code/artifact/da34ed26-170b-42fc-b270-5161956b354f
+InfoBot      https://claude.ai/code/artifact/a79efebb-99bc-4f91-a02a-6e9aa2d59275
+MiniBot      https://claude.ai/code/artifact/27cbbfd2-cbb0-4990-81c0-c0567b58a976
+Phantas      https://claude.ai/code/artifact/b804c11d-fe94-4f0d-a65f-7fb08edbcd38
+Scrubber 50  https://claude.ai/code/artifact/feb78b16-fb55-4c34-b771-f5d69ec2b572
+
+================================
+重要：預設係私人連結，要按以下步驟先可以俾其他人睇：
+1. 用你自己嘅 Claude 帳號打開任一條連結
+2. 揭開頁面右上角「Share」／分享選單
+3. 開啟公開分享（Public / Anyone with the link）
+4. 26 頁全部都要重複呢個動作，因為每一頁都係獨立嘅 Artifact
+
+如果只想俾人睇某幾頁（例如淨係首頁＋產品中心），可以只分享嗰幾頁，
+但注意導覽選單／連結去到未分享嘅頁面時，對方會見到「需要權限」畫面。
