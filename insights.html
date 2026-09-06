@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>媒體及行業動態｜BottiZ 成功案例與新聞報導</title>
+
+<meta name="description" content="BottiZ 客戶成功案例、媒體報導及行業動態，涵蓋酒店、教育、餐飲等行業的機械人應用實例。"/>
+<meta name="robots" content="index,follow"/>
+<link rel="icon" type="image/png" href="images/logo_bottiz.png"/>
+<link rel="apple-touch-icon" href="images/logo_bottiz.png"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="zh_HK"/>
+<meta property="og:site_name" content="BottiZ"/>
+<meta property="og:title" content="媒體及行業動態｜BottiZ"/>
+<meta property="og:description" content="BottiZ 客戶成功案例、媒體報導及行業動態。"/>
+<meta property="og:url" content="https://example.com/insights.html"/>
+
+<link rel="stylesheet" href="assets/site.css"/>
+</head>
+<body>
+<header class="site-header">
+<nav class="nav">
+<a class="brand" href="index.html">
+<div class="brand-mark"><img alt="BottiZ icon" class="brand-icon" src="images/logo_bottiz.png" width="315" height="213" loading="eager" fetchpriority="high" decoding="async"/></div>
+<div>
+          BottiZ
+          <small>Tobot Solution 合作夥伴</small>
+</div>
+</a>
+<button class="nav-toggle" aria-label="Menu" onclick="toggleMobileNav()">☰</button>
+<div class="nav-links">
+<a class="nav-link" href="index.html">首頁</a><a class="nav-link" href="solutions.html">按行業探索</a><a class="nav-link" href="products.html">產品中心</a><a class="nav-link" href="smart-campus.html">智慧校園</a><a class="nav-link" href="campus-funding.html">校園資助計劃</a><a class="nav-link active" href="insights.html">媒體動態</a><a class="nav-link" href="about.html">關於我們</a><a class="nav-link" href="contact.html">聯絡我們</a><div class="language-switcher">
+<span aria-hidden="true" class="language-icon">🌐</span>
+<select aria-label="選擇語言" class="language-select" id="languageSelect">
+<option value="zh-Hant">繁中</option>
+<option value="zh-Hans">简中</option>
+<option value="en">English</option>
+</select>
+</div>
+<button class="btn btn-primary" onclick="openContact()">取得方案建議</button>
+</div>
+</nav>
+</header>
+<main>
+
+<section class="section" style="padding-top:56px">
+<div class="section-head">
+<div>
+<div class="section-kicker">Case Studies</div>
+<h2>成功案例</h2>
+</div>
+<p class="section-desc">客戶背景 → 導入前痛點 → BottiZ 方案 → 量化成果</p>
+</div>
+<div class="case-study-grid">
+
+<article class="case-study-card">
+<img alt="沙田凱悅酒店" src="images/insight_hyatt_hotel.webp"/>
+<span class="scene-tag">商業空間 · 酒店</span>
+<h3>沙田凱悅酒店</h3>
+<div class="case-step"><b>01</b><div><strong>客戶背景</strong>香港酒店業先驅，房務團隊需頻繁往返各樓層運送客房用品與毛巾，人手調度壓力大。</div></div>
+<div class="case-step"><b>02</b><div><strong>導入前痛點</strong>房務配送高度依賴人手往返，員工難以專注於房間清潔與賓客服務本身。</div></div>
+<div class="case-step"><b>03</b><div><strong>BottiZ 方案</strong>引入 W3 梯控配送機械人，自主穿梭各樓層，自動完成客房用品配送。</div></div>
+<div class="case-metrics">
+<div class="case-metric"><small>房務配送效率</small><strong>提升 35%</strong></div>
+<div class="case-metric"><small>員工滿意度</small><strong>同步提升</strong></div>
+</div>
+<p class="case-source">資料來源：Capital · 2025-07-30</p>
+</article>
+
+<article class="case-study-card">
+<img alt="浸信會呂明才小學" src="images/insight_school.webp"/>
+<span class="scene-tag">醫療與教育 · 學校</span>
+<h3>浸信會呂明才小學</h3>
+<div class="case-step"><b>01</b><div><strong>客戶背景</strong>推動校園數字教育，希望讓學生從小接觸 AI 與機械人技術。</div></div>
+<div class="case-step"><b>02</b><div><strong>導入前痛點</strong>缺乏能與學生日常互動、同時兼顧校園物流的智能設備。</div></div>
+<div class="case-step"><b>03</b><div><strong>BottiZ 方案</strong>部署 MiniBot 伴讀小專員與 SwiftBot 配送機械人，分別用於教學輔助與校園物流。</div></div>
+<div class="case-metrics">
+<div class="case-metric"><small>STEM 學習興趣</small><strong>顯著提升</strong></div>
+<div class="case-metric"><small>校園物流</small><strong>同步自動化</strong></div>
+</div>
+<p class="case-source">資料來源：Unwire · 2025-09-18</p>
+</article>
+
+</div>
+</section>
+
+<section class="section">
+<div class="section-head">
+<div>
+<div class="section-kicker">Media Coverage</div>
+<h2>媒體及行業動態</h2>
+</div>
+</div>
+<div class="filters insight-filters" id="filters">
+<button class="filter active" data-filter="all">全部</button>
+<button class="filter" data-filter="interview">人物專訪</button>
+<button class="filter" data-filter="social">社會責任</button>
+<button class="filter" data-filter="business">商業模式</button>
+<button class="filter" data-filter="tech">技術創新</button>
+<button class="filter" data-filter="trend">行業趨勢</button>
+<button class="filter" data-filter="research">市場研究</button>
+<button class="filter" data-filter="community">社區共融</button>
+<button class="filter" data-filter="case">客戶案例</button>
+</div>
+<div class="insight-grid" id="productGrid">
+
+<article class="card insight-card" data-category="interview">
+<img alt="專訪托寶智能方案行政總裁王嘉敏：機械人緩解勞動力短缺" src="images/insight_ceo_interview.webp"/>
+<div class="insight-card-body">
+<span class="scene-tag">人物專訪</span>
+<h4>專訪托寶智能方案行政總裁王嘉敏：機械人緩解勞動力短缺</h4>
+<p>探討機械人方案如何透過配送機械人為酒店及餐飲業提供 ESG 解決方案，提升工作品質與營運效能。</p>
+<div class="insight-meta"><span>星島頭條 StHeadline</span><span>2026-02-15</span></div>
+</div>
+</article>
+
+<article class="card insight-card" data-category="social">
+<img alt="機械人語｜科技賦能SEN人士：與LoveXpress的合作之路" src="images/insight_sen_lovexpress.webp"/>
+<div class="insight-card-body">
+<span class="scene-tag">社會責任</span>
+<h4>機械人語｜科技賦能SEN人士：與LoveXpress的合作之路</h4>
+<p>詳述社交機械人如何成為自閉症兒童的溝通橋樑，展示機械人方案在特殊教育領域的應用深度。</p>
+<div class="insight-meta"><span>Wepro180 科技網</span><span>2026-01-20</span></div>
+</div>
+</article>
+
+<article class="card insight-card" data-category="business">
+<img alt="AI機械人租用24月買斷方案吸客：智能方案降低轉型門檻" src="images/insight_rental_model.webp"/>
+<div class="insight-card-body">
+<span class="scene-tag">商業模式</span>
+<h4>【人工智能】AI機械人租用24月買斷方案吸客：智能方案降低轉型門檻</h4>
+<p>報道智能方案推出的創新商業模式，讓中小企能以更低成本引入智能配送技術。</p>
+<div class="insight-meta"><span>香港經濟日報 HKET</span><span>2025-12-10</span></div>
+</div>
+</article>
+
+<article class="card insight-card" data-category="tech">
+<img alt="智慧消防新紀元：引入消防機械狗實現自動滅火" src="images/insight_firefighting_dog.webp"/>
+<div class="insight-card-body">
+<span class="scene-tag">技術創新</span>
+<h4>智慧消防新紀元：引入消防機械狗實現自動滅火</h4>
+<p>機械人方案進一步擴展至消防安全領域，透過機械人深入火場進行監控與降溫，初步數據顯示能將火災初期控制時間縮短 40%。</p>
+<div class="insight-meta"><span>Capital 資本平台</span><span>2025-11-15</span></div>
+</div>
+</article>
+
+<article class="card insight-card" data-category="trend">
+<img alt="餐飲業勞工不足 AI 機械人助酒樓轉向智能化營運" src="images/insight_restaurant_labor.webp"/>
+<div class="insight-card-body">
+<span class="scene-tag">行業趨勢</span>
+<h4>餐飲業勞工不足 AI 機械人助酒樓轉向智能化營運</h4>
+<p>文匯報專訪客戶案例，展示配送機械人如何減輕樓面負擔，平均可減少 30% 樓面人力需求。</p>
+<div class="insight-meta"><span>香港文匯報</span><span>2025-10-20</span></div>
+</div>
+</article>
+
+<article class="card insight-card" data-category="research">
+<img alt="由商界到學界　為浸信會呂明才小學引入智能機械人" src="images/insight_school.webp"/>
+<div class="insight-card-body">
+<span class="scene-tag">市場研究</span>
+<h4>由商界到學界　為浸信會呂明才小學引入智能機械人</h4>
+<p>早前浸信會呂明才小學更率先引入智能機械人，讓學生從小認識 AI 的應用。</p>
+<div class="insight-meta"><span>Unwire</span><span>2025-09-18</span></div>
+</div>
+</article>
+
+<article class="card insight-card" data-category="community">
+<img alt="機械人助力SEN人士 開啟就業新篇章" src="images/insight_sen_employment.webp"/>
+<div class="insight-card-body">
+<span class="scene-tag">社區共融</span>
+<h4>機械人助力SEN人士 開啟就業新篇章</h4>
+<p>機械人雖缺乏情感，卻能扮演中性且可靠的中介角色，營造出安全、可預測的互動空間。</p>
+<div class="insight-meta"><span>Recruit</span><span>2025-08-25</span></div>
+</div>
+</article>
+
+<article class="card insight-card" data-category="case">
+<img alt="實戰分享：沙田凱悅酒店引入智能機械人實現智慧房務配送" src="images/insight_hyatt_hotel.webp"/>
+<div class="insight-card-body">
+<span class="scene-tag">客戶案例</span>
+<h4>實戰分享：沙田凱悅酒店引入智能機械人實現智慧房務配送</h4>
+<p>作為本港酒店業先驅，沙田凱悅酒店分享優化員工工作流程的寶貴經驗。</p>
+<div class="insight-meta"><span>Capital</span><span>2025-07-30</span></div>
+</div>
+</article>
+
+</div>
+</section>
+
+<section class="cta">
+<div>
+<h2>想成為下一個成功案例？</h2>
+<p>告訴我們您的行業與需求，顧問團隊會建議合適的機型組合及部署方式，並可安排免費示範。</p>
+</div>
+<button class="btn btn-secondary" onclick="openContact()">預約免費諮詢</button>
+</section>
+</main>
+<footer>© BottiZ · Tobot Solution 合作夥伴 · 全場景機器人整合方案</footer>
+
+<div class="modal" id="contactModal" onclick="backdropClose(event,'contactModal')">
+<div class="modal-panel">
+<div class="modal-head">
+<h3>取得方案建議</h3>
+<button aria-label="關閉" class="close" onclick="closeModal('contactModal')">×</button>
+</div>
+<div class="modal-content">
+<form class="form-grid" id="inquiryForm" onsubmit="handleEmailSubmit(event)">
+<label>姓名<input id="nameInput" name="姓名" placeholder="姓名及職位" required="" type="text"/></label>
+<label>公司 / 機構名稱<input id="companyInput" name="公司/機構名稱" placeholder="例如：XX有限公司" type="text"/></label>
+<label>電子郵件<input id="emailInput" name="電子郵件" placeholder="name@company.com" required="" type="email"/></label>
+<label>電話號碼<input id="phoneInput" name="電話號碼" placeholder="例如：9123 4567" type="tel"/></label>
+<label>查詢類型<select id="inquiryTypeSelect" name="查詢類型">
+<option value="產品諮詢">產品諮詢</option>
+<option value="方案評估">方案評估</option>
+<option value="技術支援">技術支援</option>
+<option value="媒體合作">媒體合作</option>
+<option value="其他">其他</option>
+</select></label>
+<label>感興趣的產品 / 方案<input id="interestInput" name="感興趣的產品" placeholder="例如：清潔、配送、接待或巡邏機械人" type="text"/></label>
+<label>詳細說明<textarea id="messageInput" name="詳細說明" placeholder="請簡述您的場景與需求" required="" rows="4"></textarea></label>
+<div class="form-actions">
+<button class="btn btn-primary" id="submitInquiryButton" type="submit">電郵提交</button>
+<button class="btn btn-whatsapp" id="whatsappInquiryButton" onclick="handleWhatsAppSubmit()" type="button">WhatsApp 查詢</button>
+</div>
+<div id="prototypeMessage" style="display:none;padding:12px 14px;border-radius:12px;background:#ecfdf5;color:#047857;font-weight:750;line-height:1.65">已開啟電郵應用，請確認內容後按「傳送」。</div>
+</form>
+</div>
+</div>
+</div>
+<script src="assets/site.js"></script>
+</body>
+</html>

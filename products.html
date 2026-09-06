@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>產品中心｜BottiZ 全場景機器人目錄</title>
+
+<!-- ===== SEO ===== -->
+<meta name="description" content="BottiZ 產品中心：22+ 款機器人型號，涵蓋基礎設施、商業空間、醫療與教育、特種應用四大類別，提供在地化評估、部署與售後維護。"/>
+<meta name="keywords" content="機械人產品,巡邏機械人,清潔機械人,配送機械人,炒菜機械人,招待機械人,BottiZ"/>
+<meta name="robots" content="index,follow"/>
+<link rel="icon" type="image/png" href="images/logo_bottiz.png"/>
+<link rel="apple-touch-icon" href="images/logo_bottiz.png"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="zh_HK"/>
+<meta property="og:site_name" content="BottiZ"/>
+<meta property="og:title" content="產品中心｜BottiZ 全場景機器人目錄"/>
+<meta property="og:description" content="嚴選機械人硬體規格，BottiZ 提供在地化評估、部署與售後維護。"/>
+<meta property="og:url" content="https://example.com/products.html"/>
+
+<link rel="stylesheet" href="assets/site.css"/>
+</head>
+<body>
+<header class="site-header">
+<nav class="nav">
+<a class="brand" href="index.html">
+<div class="brand-mark"><img alt="BottiZ icon" class="brand-icon" src="images/logo_bottiz.png" width="315" height="213" loading="eager" fetchpriority="high" decoding="async"/></div>
+<div>
+          BottiZ
+          <small>Tobot Solution 合作夥伴</small>
+</div>
+</a>
+<button class="nav-toggle" aria-label="Menu" onclick="toggleMobileNav()">☰</button>
+<div class="nav-links">
+<a class="nav-link" href="index.html">首頁</a><a class="nav-link" href="solutions.html">按行業探索</a><a class="nav-link active" href="products.html">產品中心</a><a class="nav-link" href="smart-campus.html">智慧校園</a><a class="nav-link" href="campus-funding.html">校園資助計劃</a><a class="nav-link" href="insights.html">媒體動態</a><a class="nav-link" href="about.html">關於我們</a><a class="nav-link" href="contact.html">聯絡我們</a><div class="language-switcher">
+<span aria-hidden="true" class="language-icon">🌐</span>
+<select aria-label="選擇語言" class="language-select" id="languageSelect">
+<option value="zh-Hant">繁中</option>
+<option value="zh-Hans">简中</option>
+<option value="en">English</option>
+</select>
+</div>
+<button class="btn btn-primary" onclick="openContact()">取得方案建議</button>
+</div>
+</nav>
+</header>
+<main>
+
+<section class="section" style="padding-top:56px">
+<div class="section-head">
+<div>
+<div class="section-kicker">Products</div>
+<h2>產品中心</h2>
+</div>
+<p class="section-desc">嚴選機械人硬體規格，BottiZ 提供在地化評估、部署與售後維護。</p>
+</div>
+<div class="filters" id="filters">
+<button class="filter active" data-filter="all">全部</button>
+<button class="filter" data-filter="infrastructure">基礎設施</button>
+<button class="filter" data-filter="commercial">商業空間</button>
+<button class="filter" data-filter="health-campus">醫療與教育</button>
+<button class="filter" data-filter="specialized">特種應用</button>
+</div>
+<div class="product-grid" id="productGrid">
+<article class="card" data-category="infrastructure">
+<div class="product-media"><span class="official-badge">Securbot</span>
+<img alt="Securbot 六輪巡邏機械人" class="product-image" src="images/tobot_securbot.png" loading="lazy" decoding="async"/></div>
+<div class="card-body">
+<div class="product-code">Bottiz-SEC01</div>
+<h3>Securbot</h3>
+<p class="product-subtitle">六輪巡邏機械人</p>
+<p class="product-copy">六輪全地形巡邏機械人，可自主巡航、異常偵測與即時警報，適用於園區、電站、隧道等大型基礎設施的安全巡檢。</p>
+<div class="tags"><span class="tag">巡邏</span><span class="tag">安防</span><span class="tag">全地形</span></div>
+<div class="card-actions"><a class="btn btn-secondary" href="product-securbot.html">查看詳情</a><button class="btn btn-primary" onclick="openContact('Securbot')">查詢方案</button></div>
+</div>
+</article>
+<article class="card" data-category="infrastructure">
+<div class="product-media"><span class="official-badge">M20Pro</span>
+<img alt="M20Pro 輪足混合動力機械犬" class="product-image" src="images/tobot_m20pro.png" loading="lazy" decoding="async"/></div>
+<div class="card-body">
+<div class="product-code">Bottiz-M20P</div>
+<h3>M20Pro</h3>
+<p class="product-subtitle">輪足混合動力機械犬</p>
+<p class="product-copy">結合輪式與足式運動的混合動力機械犬，可適應複雜地形環境，搭載多種感測模組，適用於電力巡檢、隧道探測與智慧城市巡邏。</p>
+<div class="tags"><span class="tag">機械犬</span><span class="tag">複雜地形</span><span class="tag">巡檢</span></div>
+<div class="card-actions"><a class="btn btn-secondary" href="product-m20pro.html">查看詳情</a><button class="btn btn-primary" onclick="openContact('M20Pro')">查詢方案</button></div>
+</div>
+</article>
+<article class="card" data-category="infrastructure">
+<div class="product-media"><span class="official-badge">Beetle</span>
+<img alt="Beetle 室內外工業級清潔機械人" class="product-image" src="images/tobot_beetle.png" loading="lazy" decoding="async"/></div>
+<div class="card-body">
+<div class="product-code">Bottiz-BTL01</div>
+<h3>Beetle</h3>
+<p class="product-subtitle">室內外工業級清潔機械人</p>
+<p class="product-copy">工業級室內外清潔機械人，具備強大清潔能力與環境感知系統，可於光線不足或人流較多的環境中定位及避障，適合大面積公共設施、園區道路等場景自主作業。</p>
+<div class="tags"><span class="tag">工業清潔</span><span class="tag">室內外</span><span class="tag">自主作業</span></div>
+<div class="card-actions"><a class="btn btn-secondary" href="product-beetle.html">查看詳情</a><button class="btn btn-primary" onclick="openContact('Beetle')">查詢方案</button></div>
+</div>
+</article>
+<article class="card" data-category="infrastructure">
+<div class="product-media"><span class="official-badge">Scrubber 75</span>
+<img alt="Scrubber 75 卓越環境感知清潔機械人" class="product-image" src="images/tobot_scrubber75.png" loading="lazy" decoding="async"/></div>
+<div class="card-body">
+<div class="product-code">Bottiz-S75</div>
+<h3>Scrubber 75</h3>
+<p class="product-subtitle">卓越環境感知清潔機械人</p>
+<p class="product-copy">搭載先進環境感知系統的大型清潔機械人，適用於商場、機場、車站等大面積公共空間的自動化清潔作業。</p>
+<div class="tags"><span class="tag">大面積清潔</span><span class="tag">環境感知</span><span class="tag">公共空間</span></div>
+<div class="card-actions"><a class="btn btn-secondary" href="product-scrubber75.html">查看詳情</a><button class="btn btn-primary" onclick="openContact('Scrubber 75')">查詢方案</button></div>
+</div>
+</article>
+<article class="card" data-category="commercial">
+<div class="product-media"><span class="official-badge">G5</span>
+<img alt="G5 大型餐飲機構用 AI 炒餸機械人" class="product-image" src="images/tobot_g5.png" loading="lazy" decoding="async"/></div>
+<div class="card-body">
+<div class="product-code">Bottiz-G5</div>
+<h3>G5</h3>
+<p class="product-subtitle">大型餐飲機構用 AI 炒餸機械人</p>
+<p class="product-copy">配備獨立翻炒鏟，模擬人手翻炒技藝，精準複製慢推滑炒和高溫生炒等多種中菜烹調方式，是大型餐飲機構的強大生產力工具。</p>
+<div class="tags"><span class="tag">AI 烹飪</span><span class="tag">大型餐飲</span><span class="tag">自動炒菜</span></div>
+<div class="card-actions"><a class="btn btn-secondary" href="product-g5.html">查看詳情</a><button class="btn btn-primary" onclick="openContact('G5')">查詢方案</button></div>
+</div>
+</article>
+<article class="card" data-category="commercial">
+<div class="product-media"><span class="official-badge">G3</span>
+<img alt="G3 中型餐飲企業用 AI 炒餸機械人" class="product-image" src="images/tobot_g3.png" loading="lazy" decoding="async"/></div>
+<div class="card-body">
+<div class="product-code">Bottiz-G3</div>
+<h3>G3</h3>
+<p class="product-subtitle">中型餐飲企業用 AI 炒餸機械人</p>
+<p class="product-copy">具備獨立翻炒鏟系統，能模擬人手翻炒，精準再現慢推滑炒和高溫生炒等技藝，是中型餐飲企業的理想選擇。</p>
+<div class="tags"><span class="tag">AI 烹飪</span><span class="tag">中型餐飲</span><span class="tag">自動炒菜</span></div>
+<div class="card-actions"><a class="btn btn-secondary" href="product-g3.html">查看詳情</a><button class="btn btn-primary" onclick="openContact('G3')">查詢方案</button></div>
+</div>
+</article>
+<article class="card" data-category="commercial">
+<div class="product-media"><span class="official-badge">G2</span>
+<img alt="G2 小型餐飲場所用 AI 炒餸機械人" class="product-image" src="images/tobot_g2.png" loading="lazy" decoding="async"/></div>
+<div class="card-body">
+<div class="product-code">Bottiz-G2</div>
+<h3>G2</h3>
+<p class="product-subtitle">小型餐飲場所用 AI 炒餸機械人</p>
+<p class="product-copy">專為小型餐飲場所設計的智能烹飪解決方案，採用獨立翻炒鏟模擬人手翻炒技藝，並提供 220V 電源選項，適合空間有限的小店。</p>
+<div class="tags"><span class="tag">AI 烹飪</span><span class="tag">小型餐飲</span><span class="tag">自動炒菜</span></div>
+<div class="card-actions"><a class="btn btn-secondary" href="product-g2.html">查看詳情</a><button class="btn btn-primary" onclick="openContact('G2')">查詢方案</button></div>
+</div>
+</article>
+<article class="card" data-category="commercial">
+<div class="product-media"><span class="official-badge">W3</span>
+<img alt="W3 酒店梯控配送機械人" class="product-image" src="images/tobot_w3.png" loading="lazy" decoding="async"/></div>
+<div class="card-body">
+<div class="product-code">Bottiz-W3</div>
+<h3>W3</h3>
+<p class="product-subtitle">酒店梯控配送機械人</p>
+<p class="product-copy">專為酒店場景設計的智能配送機械人，支援電梯自動控制與跨樓層配送，可自主完成客房送物、餐飲配送等任務。</p>
+<div class="tags"><span class="tag">酒店</span><span class="tag">梯控</span><span class="tag">跨樓層配送</span></div>
+<div class="card-actions"><a class="btn btn-secondary" href="product-w3.html">查看詳情</a><button class="btn btn-primary" onclick="openContact('W3')">查詢方案</button></div>
+</div>
+</article>
+<article class="card" data-category="commercial">
+<div class="product-media"><span class="official-badge">KettyBot</span>
+<img alt="KettyBot 大屏幕送遞招待機械人" class="product-image" src="images/tobot_kettybot.jpg" loading="lazy" decoding="async"/></div>
+<div class="card-body">
+<div class="product-code">Bottiz-KB01</div>
+<h3>KettyBot</h3>
+<p class="product-subtitle">大屏幕送遞招待機械人</p>
+<p class="product-copy">配備大尺寸互動屏幕的送遞招待機械人，兼具配送與廣告展示功能，適用於餐廳、酒店大堂、零售門店等商業空間。</p>
+<div class="tags"><span class="tag">送遞</span><span class="tag">招待</span><span class="tag">大屏幕</span></div>
+<div class="card-actions"><a class="btn btn-secondary" href="product-kettybot.html">查看詳情</a><button class="btn btn-primary" onclick="openContact('KettyBot')">查詢方案</button></div>
+</div>
+</article>
+<article class="card" data-category="health-campus">
+<div class="product-media"><span class="official-badge">D-300</span>
+<img alt="D-300 300kg 重型隨行頂升機械人" class="product-image" src="images/tobot_d300.png" loading="lazy" decoding="async"/></div>
+<div class="card-body">
+<div class="product-code">Bottiz-D300</div>
+<h3>D-300</h3>
+<p class="product-subtitle">300kg 重型隨行頂升機械人</p>
+<p class="product-copy">承載力達 300 公斤的重型隨行頂升機械人，適用於醫院物流、校園搬運等場景，可自主跟隨與自動頂升貨架。</p>
+<div class="tags"><span class="tag">重型搬運</span><span class="tag">醫院物流</span><span class="tag">300kg</span></div>
+<div class="card-actions"><a class="btn btn-secondary" href="product-d300.html">查看詳情</a><button class="btn btn-primary" onclick="openContact('D-300')">查詢方案</button></div>
+</div>
+</article>
+<article class="card" data-category="health-campus">
+<div class="product-media"><span class="official-badge">D-150</span>
+<img alt="D-150 150kg 重型隨行頂升機械人" class="product-image" src="images/tobot_d150.png" loading="lazy" decoding="async"/></div>
+<div class="card-body">
+<div class="product-code">Bottiz-D150</div>
+<h3>D-150</h3>
+<p class="product-subtitle">150kg 重型隨行頂升機械人</p>
+<p class="product-copy">承載力達 150 公斤的隨行頂升機械人，靈活適用於醫療機構與教育場所的物資配送與搬運。</p>
+<div class="tags"><span class="tag">重型搬運</span><span class="tag">醫療物流</span><span class="tag">150kg</span></div>
+<div class="card-actions"><a class="btn btn-secondary" href="product-d150.html">查看詳情</a><button class="btn btn-primary" onclick="openContact('D-150')">查詢方案</button></div>
+</div>
+</article>
+<article class="card" data-category="health-campus">
+<div class="product-media"><span class="official-badge">S-100</span>
+<img alt="S-100 100kg 重型多變配送機械人" class="product-image" src="images/tobot_s100.png" loading="lazy" decoding="async"/></div>
+<div class="card-body">
+<div class="product-code">Bottiz-S100</div>
+<h3>S-100</h3>
+<p class="product-subtitle">100kg 重型多變配送機械人</p>
+<p class="product-copy">承載力達 100 公斤的多功能配送機械人，可靈活切換多種配送模式，適用於醫院、校園等場景。</p>
+<div class="tags"><span class="tag">多功能配送</span><span class="tag">校園</span><span class="tag">100kg</span></div>
+<div class="card-actions"><a class="btn btn-secondary" href="product-s100.html">查看詳情</a><button class="btn btn-primary" onclick="openContact('S-100')">查詢方案</button></div>
+</div>
+</article>
+<article class="card" data-category="health-campus">
+<div class="product-media"><span class="official-badge">FlashBot</span>
+<img alt="FlashBot 樓層配送機器人" class="product-image" src="images/tobot_flashbot.png" loading="lazy" decoding="async"/></div>
+<div class="card-body">
+<div class="product-code">Bottiz-FB01</div>
+<h3>FlashBot</h3>
+<p class="product-subtitle">樓層配送機器人</p>
+<p class="product-copy">專為樓層間配送設計的智能機器人，支援電梯聯動，可在醫院、學校等多層建築中自主完成配送任務。</p>
+<div class="tags"><span class="tag">樓層配送</span><span class="tag">電梯聯動</span><span class="tag">醫院</span></div>
+<div class="card-actions"><a class="btn btn-secondary" href="product-flashbot.html">查看詳情</a><button class="btn btn-primary" onclick="openContact('FlashBot')">查詢方案</button></div>
+</div>
+</article>
+<article class="card" data-category="health-campus">
+<div class="product-media"><span class="official-badge">SwiftBot</span>
+<img alt="SwiftBot 通用送遞機械人" class="product-image" src="images/tobot_swiftbot.png" loading="lazy" decoding="async"/></div>
+<div class="card-body">
+<div class="product-code">Bottiz-SW01</div>
+<h3>SwiftBot</h3>
+<p class="product-subtitle">通用送遞機械人</p>
+<p class="product-copy">新一代通用送遞機械人，輕巧靈活，配備多層托盤，適用於校園食堂、醫院餐廳等場景的餐飲配送服務。</p>
+<div class="tags"><span class="tag">通用送遞</span><span class="tag">校園</span><span class="tag">餐飲</span></div>
+<div class="card-actions"><a class="btn btn-secondary" href="product-swiftbot.html">查看詳情</a><button class="btn btn-primary" onclick="openContact('SwiftBot')">查詢方案</button></div>
+</div>
+</article>
+<article class="card" data-category="specialized">
+<div class="product-media"><span class="official-badge">InfoBot</span>
+<img alt="InfoBot 推廣機械人" class="product-image" src="images/tobot_infobot.jpg" loading="lazy" decoding="async"/></div>
+<div class="card-body">
+<div class="product-code">Bottiz-IB01</div>
+<h3>InfoBot</h3>
+<p class="product-subtitle">推廣機械人</p>
+<p class="product-copy">配備 27 吋大型互動屏幕的推廣機械人，可進行自主導覽、資訊展示與互動問答，適用於展覽、科研機構與政府場所。</p>
+<div class="tags"><span class="tag">推廣</span><span class="tag">導覽</span><span class="tag">互動</span></div>
+<div class="card-actions"><a class="btn btn-secondary" href="product-infobot.html">查看詳情</a><button class="btn btn-primary" onclick="openContact('InfoBot')">查詢方案</button></div>
+</div>
+</article>
+<article class="card" data-category="specialized">
+<div class="product-media"><span class="official-badge">MiniBot</span>
+<img alt="MiniBot 招待小專員" class="product-image" src="images/tobot_minibot.jpg" loading="lazy" decoding="async"/></div>
+<div class="card-body">
+<div class="product-code">Bottiz-MB01</div>
+<h3>MiniBot</h3>
+<p class="product-subtitle">招待小專員</p>
+<p class="product-copy">小巧可愛的招待機械人，具備語音互動與自主導航功能，支援 27 種語言，適用於科研實驗室、教育展示與特殊場所的接待服務。</p>
+<div class="tags"><span class="tag">招待</span><span class="tag">語音互動</span><span class="tag">小型</span></div>
+<div class="card-actions"><a class="btn btn-secondary" href="product-minibot.html">查看詳情</a><button class="btn btn-primary" onclick="openContact('MiniBot')">查詢方案</button></div>
+</div>
+</article>
+<article class="card" data-category="specialized">
+<div class="product-media"><span class="official-badge">Phantas</span>
+<img alt="Phantas 中小型設施清潔機械人" class="product-image" src="images/tobot_phantas.png" loading="lazy" decoding="async"/></div>
+<div class="card-body">
+<div class="product-code">Bottiz-PH01</div>
+<h3>Phantas</h3>
+<p class="product-subtitle">中小型設施清潔機械人</p>
+<p class="product-copy">適用於中小型設施的智能清潔機械人，具備精準導航與高效清潔能力，機身小巧靈活，支援多合一地板清潔及零距離邊緣清潔，可應用於實驗室、特殊環境的清潔維護。</p>
+<div class="tags"><span class="tag">清潔</span><span class="tag">中小型</span><span class="tag">精準導航</span></div>
+<div class="card-actions"><a class="btn btn-secondary" href="product-phantas.html">查看詳情</a><button class="btn btn-primary" onclick="openContact('Phantas')">查詢方案</button></div>
+</div>
+</article>
+<article class="card" data-category="health-campus">
+<div class="product-media"><span class="official-badge">Scrubber 50</span>
+<img alt="Scrubber 50 全自動清潔機械人" class="product-image" src="images/tobot_scrubber50.png" loading="lazy" decoding="async"/></div>
+<div class="card-body">
+<div class="product-code">Bottiz-S50</div>
+<h3>Scrubber 50</h3>
+<p class="product-subtitle">全自動清潔機械人</p>
+<p class="product-copy">以全自動清潔及機械人隊伍管理減少人手操作，四合一清潔功能配合自動工作站，適合學校大堂、體育館、禮堂外及寬闊走廊等大中型校園空間。</p>
+<div class="tags"><span class="tag">四合一清潔</span><span class="tag">分區清潔</span><span class="tag">自動工作站</span></div>
+<div class="card-actions"><a class="btn btn-secondary" href="product-scrubber50.html">查看詳情</a><button class="btn btn-primary" onclick="openContact('Scrubber 50')">查詢方案</button></div>
+</div>
+</article>
+</div>
+</section>
+
+<section class="cta">
+<div>
+<h2>未見合適型號？</h2>
+<p>告訴我們您的場景與需求，顧問團隊會建議合適的機型組合及部署方式。</p>
+</div>
+<button class="btn btn-secondary" onclick="openContact()">預約免費諮詢</button>
+</section>
+
+<section class="contact-section" id="contact">
+<div class="contact-panel">
+<div class="contact-brand">
+<div class="brand-mark"><img alt="BottiZ icon" class="brand-icon" src="images/logo_bottiz.png" width="315" height="213" loading="eager" fetchpriority="high" decoding="async"/></div>
+<div>
+<strong>BottiZ</strong>
+<small>Tobot Solution 合作夥伴</small>
+</div>
+</div>
+<p class="contact-description">為教育、商業、醫療及基礎設施提供清潔、配送、接待、教學及巡邏等全場景機械人整合方案。</p>
+<div aria-label="社交媒體" class="social-row">
+<a aria-label="Facebook 官方頁面" class="social-btn" href="https://www.facebook.com/profile.php?id=61591216350595" rel="noopener" target="_blank" title="Facebook">
+<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M13.5 22v-8h2.8l.5-3h-3.3V9.1c0-.9.3-1.6 1.7-1.6H17V4.8c-.4-.1-1.3-.2-2.4-.2-2.4 0-4.1 1.5-4.1 4.2V11H8v3h2.5v8h3z"></path></svg>
+</a>
+<a aria-label="Instagram 官方頁面" class="social-btn" href="https://www.instagram.com/bottiz.ai/" rel="noopener" target="_blank" title="Instagram">
+<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.3A4.7 4.7 0 1 1 7.3 12 4.7 4.7 0 0 1 12 7.3zm0 2A2.7 2.7 0 1 0 14.7 12 2.7 2.7 0 0 0 12 9.3zm5.2-3.5a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1z"></path></svg>
+</a>
+<a aria-label="YouTube 官方頻道" class="social-btn" href="https://www.youtube.com/@BottiZ_AI" rel="noopener" target="_blank" title="YouTube">
+<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M23 12s0-3.4-.4-5c-.2-1.2-1-2-2.1-2.3C18.6 4.2 12 4.2 12 4.2s-6.6 0-8.5.5C2.4 5 1.6 5.8 1.4 7 .9 8.6.9 12 .9 12s0 3.4.5 5c.2 1.2 1 2 2.1 2.3 1.9.5 8.5.5 8.5.5s6.6 0 8.5-.5c1.1-.3 1.9-1.1 2.1-2.3.4-1.6.4-5 .4-5zm-13.3 3.4V8.6l6 3.4-6 3.4z"></path></svg>
+</a>
+<a aria-label="WhatsApp" class="social-btn" href="https://wa.me/85295335639" rel="noopener" target="_blank" title="WhatsApp">
+<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L0 24l6.5-1.7a11.8 11.8 0 0 0 5.6 1.4h.1C18.7 23.7 24 18.4 24 11.9a11.8 11.8 0 0 0-3.5-8.4zM12.2 21.7h-.1a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.5 4.7zm5.4-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.7.1-1.9-.9-3.2-1.7-4.5-3.8-.3-.6.3-.5.9-1.7.1-.2.1-.4 0-.6l-.9-2.2c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"></path></svg>
+</a>
+</div>
+</div>
+<div class="contact-panel">
+<h2 class="contact-title">聯絡我們</h2>
+<div class="contact-list">
+<div class="contact-item">
+<strong>電話</strong>
+<a href="tel:+85295335639">+852 9533 5639</a>
+</div>
+<div class="contact-item">
+<strong>Email</strong>
+<a href="mailto:support@bottiz.com">support@bottiz.com</a>
+</div>
+<div class="contact-item">
+<strong>地址</strong>
+<address class="contact-address">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=West+Wing+2%2FF%2C+822+Lai+Chi+Kok+Road%2C+Cheung+Sha+Wan%2C+Kowloon" rel="noopener" target="_blank">
+                West Wing 2/F, 822 Lai Chi Kok Road, Cheung Sha Wan, Kowloon<br/>
+                九龍長沙灣荔枝角道822號2樓西翼
+              </a>
+</address>
+</div>
+<div class="contact-item">
+<strong>體驗中心</strong>
+<div>
+              荔枝角體驗中心
+              <span class="visit-chip">預約參觀</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>© BottiZ · Tobot Solution 合作夥伴 · 全場景機器人整合方案</footer>
+
+<div class="modal" id="contactModal" onclick="backdropClose(event,'contactModal')">
+<div class="modal-panel">
+<div class="modal-head">
+<h3>取得方案建議</h3>
+<button aria-label="關閉" class="close" onclick="closeModal('contactModal')">×</button>
+</div>
+<div class="modal-content">
+<form class="form-grid" id="inquiryForm" onsubmit="handleEmailSubmit(event)">
+<label>姓名<input id="nameInput" name="姓名" placeholder="姓名及職位" required="" type="text"/></label>
+<label>公司 / 機構名稱<input id="companyInput" name="公司/機構名稱" placeholder="例如：XX有限公司" type="text"/></label>
+<label>電子郵件<input id="emailInput" name="電子郵件" placeholder="name@company.com" required="" type="email"/></label>
+<label>電話號碼<input id="phoneInput" name="電話號碼" placeholder="例如：9123 4567" type="tel"/></label>
+<label>查詢類型<select id="inquiryTypeSelect" name="查詢類型">
+<option value="產品諮詢">產品諮詢</option>
+<option value="方案評估">方案評估</option>
+<option value="技術支援">技術支援</option>
+<option value="媒體合作">媒體合作</option>
+<option value="其他">其他</option>
+</select></label>
+<label>感興趣的產品 / 方案<input id="interestInput" name="感興趣的產品" placeholder="例如：清潔、配送、接待或巡邏機械人" type="text"/></label>
+<label>詳細說明<textarea id="messageInput" name="詳細說明" placeholder="請簡述您的場景與需求" required="" rows="4"></textarea></label>
+<div class="form-actions">
+<button class="btn btn-primary" id="submitInquiryButton" type="submit">電郵提交</button>
+<button class="btn btn-whatsapp" id="whatsappInquiryButton" onclick="handleWhatsAppSubmit()" type="button">WhatsApp 查詢</button>
+</div>
+<div id="prototypeMessage" style="display:none;padding:12px 14px;border-radius:12px;background:#ecfdf5;color:#047857;font-weight:750;line-height:1.65">已開啟電郵應用，請確認內容後按「傳送」。</div>
+</form>
+</div>
+</div>
+</div>
+<script src="assets/site.js"></script>
+<script>
+  (function(){
+    const hash = (window.location.hash || "").replace("#","");
+    if(hash) showProductCategory(hash);
+  })();
+</script>
+</body>
+</html>
