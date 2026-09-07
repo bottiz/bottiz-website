@@ -464,9 +464,14 @@ Object.assign(STATIC_TRANSLATIONS["en"], {"專為香港中小學而設": "Design
       const root = document.querySelector(".hero-carousel");
       if(!root) return;
       const slides = Array.from(root.querySelectorAll(".hero-slide"));
-      const dotsWrap = root.querySelector(".hero-dots");
       if(!slides.length) return;
 
+      if(slides.length === 1){
+        slides[0].classList.add("active");
+        return;
+      }
+
+      const dotsWrap = root.querySelector(".hero-dots");
       let index = 0;
       let timer;
 
