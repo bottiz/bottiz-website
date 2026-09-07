@@ -460,6 +460,43 @@ Object.assign(STATIC_TRANSLATIONS["en"], {"專為香港中小學而設": "Design
       document.getElementById(id)?.scrollIntoView({behavior:"smooth"});
     }
 
+    function initHeroCarousel(){
+      const root = document.querySelector(".hero-carousel");
+      if(!root) return;
+      const slides = Array.from(root.querySelectorAll(".hero-slide"));
+      const dotsWrap = root.querySelector(".hero-dots");
+      if(!slides.length) return;
+
+      let index = 0;
+      let timer;
+
+      const dots = slides.map((_, i) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.setAttribute("aria-label", `第 ${i + 1} 張投影片`);
+        dot.addEventListener("click", () => { show(i); resetTimer(); });
+        dotsWrap?.appendChild(dot);
+        return dot;
+      });
+
+      function show(i){
+        index = (i + slides.length) % slides.length;
+        slides.forEach((slide, si) => slide.classList.toggle("active", si === index));
+        dots.forEach((dot, di) => dot.classList.toggle("active", di === index));
+      }
+
+      function resetTimer(){
+        clearInterval(timer);
+        timer = setInterval(() => show(index + 1), 6500);
+      }
+
+      root.querySelector(".hero-arrow.prev")?.addEventListener("click", () => { show(index - 1); resetTimer(); });
+      root.querySelector(".hero-arrow.next")?.addEventListener("click", () => { show(index + 1); resetTimer(); });
+
+      show(0);
+      resetTimer();
+    }
+
     function initWhatsAppFloat(){
       const link = document.createElement("a");
       link.className = "whatsapp-float";
@@ -684,7 +721,7 @@ Object.assign(STATIC_TRANSLATIONS["en"], {"專為香港中小學而設": "Design
       "重型搬運": "重型搬运",
       "醫院物流": "医院物流",
       "準備好開始了嗎？": "准备好开始了吗？",
-      "瀏覽完整產品目錄或按行業方案，快速找到合適的機器人配置，並可預約免費到場評估。免費諮詢，專人 24 小時內跟進。": "浏览完整产品目录或按行业方案，快速找到合适的机器人配置，并可预约免费到场评估。免费咨询，专人 24 小时内跟进。",
+      "瀏覽完整產品目錄或按行業方案，快速找到合適的機器人配置，並可預約免費到場評估。": "浏览完整产品目录或按行业方案，快速找到合适的机器人配置，并可预约免费到场评估。",
       "瀏覽產品目錄": "浏览产品目录",
       "預約免費諮詢": "预约免费咨询",
       "© BottiZ · Tobot Solution 合作夥伴 · 全場景機器人整合方案": "© BottiZ · Tobot Solution 合作伙伴 · 全场景机器人整合方案",
@@ -877,7 +914,7 @@ Object.assign(STATIC_TRANSLATIONS["en"], {"專為香港中小學而設": "Design
       "重型搬運": "Heavy-Duty Handling",
       "醫院物流": "Hospital Logistics",
       "準備好開始了嗎？": "Ready to Get Started?",
-      "瀏覽完整產品目錄或按行業方案，快速找到合適的機器人配置，並可預約免費到場評估。免費諮詢，專人 24 小時內跟進。": "Browse the full product catalogue or industry solutions to quickly find the right robot configuration, and book a free on-site assessment. Free consultation, with follow-up within 24 hours.",
+      "瀏覽完整產品目錄或按行業方案，快速找到合適的機器人配置，並可預約免費到場評估。": "Browse the full product catalogue or industry solutions to quickly find the right robot configuration, and book a free on-site assessment.",
       "瀏覽產品目錄": "Browse Product Catalogue",
       "預約免費諮詢": "Book a Free Consultation",
       "© BottiZ · Tobot Solution 合作夥伴 · 全場景機器人整合方案": "© BottiZ · Tobot Solution Partner · Full-Scenario Robot Integration",
@@ -2178,5 +2215,16 @@ Object.assign(STATIC_TRANSLATIONS["en"], {"專為香港中小學而設": "Design
       "多層托盤設計": "Multi-Tray Design",
       "10–24 小時": "10–24 Hours"
     });
+    Object.assign(STATIC_TRANSLATIONS["zh-Hans"], {
+      "BottiZ 機械人於香港天際線天台展示": "BottiZ 机器人于香港天际线天台展示",
+      "上一張": "上一张",
+      "下一張": "下一张"
+    });
+    Object.assign(STATIC_TRANSLATIONS["en"], {
+      "BottiZ 機械人於香港天際線天台展示": "BottiZ robots displayed on a rooftop against the Hong Kong skyline",
+      "上一張": "Previous slide",
+      "下一張": "Next slide"
+    });
+    initHeroCarousel();
     initWhatsAppFloat();
     initialiseLanguageSwitcher();
