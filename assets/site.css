@@ -1423,3 +1423,63 @@
 @media(max-width:680px){
   .insight-grid{grid-template-columns:1fr}
 }
+
+/* ===== Industry solutions page v2 (fit cards) ===== */
+.industry-section{padding:56px 0;border-top:1px solid var(--line)}
+.industry-section:first-of-type{border-top:0}
+.industry-section-head{display:flex;gap:32px;justify-content:space-between;align-items:flex-start;margin-bottom:32px;flex-wrap:wrap}
+.industry-section-title{display:flex;align-items:center;gap:16px}
+.industry-section-title .industry-icon{width:56px;height:56px;font-size:22px;border-radius:16px;background:#f4f4f4;color:var(--ink)}
+.industry-section-title h2{margin:0}
+.industry-section-desc{max-width:520px;color:var(--muted);line-height:1.75;margin:0}
+
+.fit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.fit-card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;transition:.2s ease}
+.fit-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.fit-card-media{height:180px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 35%,#fff,#f4f4f4 70%);padding:16px}
+.fit-card-media img{width:80%;height:80%;object-fit:contain}
+.fit-card-body{padding:20px}
+.fit-card-body .fit-tag{display:inline-block;margin-bottom:10px;padding:5px 10px;border-radius:999px;background:#f4f4f4;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.03em}
+.fit-card-body h4{margin:0 0 8px;color:var(--navy);font-size:17px}
+.fit-card-body p{margin:0 0 14px;color:var(--muted);font-size:13.5px;line-height:1.7}
+.fit-card-body a{color:var(--ink);font-weight:600;font-size:13.5px;text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:980px){.fit-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.fit-grid{grid-template-columns:1fr}}
+
+/* ===== Tesla-style homepage ===== */
+.tesla-hero{display:block;max-width:900px;margin:0 auto;padding:120px 24px 8px;text-align:center}
+.tesla-hero .eyebrow{margin:0 auto 20px}
+.tesla-hero h1{font-size:clamp(44px,6vw,80px);line-height:1;letter-spacing:-.03em;margin:0 0 20px}
+.tesla-hero p{max-width:620px;margin:0 auto 32px;color:var(--muted);font-size:19px;line-height:1.7}
+.tesla-hero .hero-actions{justify-content:center}
+.tesla-hero .hero-note{justify-content:center;margin-top:24px}
+
+.tesla-tile-row{max-width:1280px;margin:56px auto 0;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.tesla-tile{display:flex;align-items:center;justify-content:center;aspect-ratio:1/1;padding:20px}
+.tesla-tile img{width:100%;height:100%;object-fit:contain}
+
+.stats-strip{max-width:1000px;margin:64px auto 0;padding:36px 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr)}
+.stats-strip .stat-item strong{font-size:clamp(24px,2.6vw,32px)}
+
+.model-showcase{padding:88px 0}
+.model-showcase.alt{background:#f4f4f4}
+.model-showcase-inner{max-width:1000px;margin:0 auto;padding:0 24px;text-align:center}
+.model-showcase-media{height:380px;display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+.model-showcase-media img{max-width:100%;max-height:100%;object-fit:contain}
+.model-showcase-media.cover{height:340px;border-radius:24px;overflow:hidden}
+.model-showcase-media.cover img{width:100%;height:100%;object-fit:cover}
+.model-showcase h2{font-size:clamp(28px,3.4vw,40px);margin:0 0 10px}
+.model-showcase p{max-width:560px;margin:0 auto 24px;color:var(--muted);font-size:16px;line-height:1.7}
+.model-showcase-links{display:flex;gap:28px;justify-content:center;flex-wrap:wrap}
+.model-showcase-links a{color:var(--ink);font-weight:600;font-size:15px;text-decoration:underline;text-underline-offset:4px}
+
+@media(max-width:900px){
+  .tesla-tile-row{grid-template-columns:1fr 1fr}
+  .stats-strip{grid-template-columns:1fr 1fr;gap:24px 0}
+}
+@media(max-width:680px){
+  .tesla-hero{padding:72px 20px 8px}
+  .model-showcase{padding:64px 0}
+  .model-showcase-media{height:260px}
+}
