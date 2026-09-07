@@ -460,6 +460,84 @@ Object.assign(STATIC_TRANSLATIONS["en"], {"專為香港中小學而設": "Design
       document.getElementById(id)?.scrollIntoView({behavior:"smooth"});
     }
 
+    function initHeroCarousel(){
+      const root = document.querySelector(".hero-carousel");
+      if(!root) return;
+      const slides = Array.from(root.querySelectorAll(".hero-slide"));
+      const dotsWrap = root.querySelector(".hero-dots");
+      if(!slides.length) return;
+
+      let index = 0;
+      let timer;
+
+      const dots = slides.map((_, i) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.setAttribute("aria-label", `第 ${i + 1} 張投影片`);
+        dot.addEventListener("click", () => { show(i); resetTimer(); });
+        dotsWrap?.appendChild(dot);
+        return dot;
+      });
+
+      function show(i){
+        index = (i + slides.length) % slides.length;
+        slides.forEach((slide, si) => slide.classList.toggle("active", si === index));
+        dots.forEach((dot, di) => dot.classList.toggle("active", di === index));
+      }
+
+      function resetTimer(){
+        clearInterval(timer);
+        timer = setInterval(() => show(index + 1), 6500);
+      }
+
+      root.querySelector(".hero-arrow.prev")?.addEventListener("click", () => { show(index - 1); resetTimer(); });
+      root.querySelector(".hero-arrow.next")?.addEventListener("click", () => { show(index + 1); resetTimer(); });
+
+      show(0);
+      resetTimer();
+    }
+
+    function initScrollCarousels(){
+      document.querySelectorAll(".scroll-carousel").forEach(root => {
+        const track = root.querySelector(".scroll-track");
+        const cards = Array.from(root.querySelectorAll(".scroll-card"));
+        const dotsWrap = root.querySelector(".scroll-dots");
+        const arrow = root.querySelector(".scroll-carousel-arrow");
+        if(!track || !cards.length) return;
+
+        const dots = cards.map((_, i) => {
+          const dot = document.createElement("button");
+          dot.type = "button";
+          dot.setAttribute("aria-label", `第 ${i + 1} 項`);
+          dot.addEventListener("click", () => cards[i].scrollIntoView({behavior:"smooth", inline:"start", block:"nearest"}));
+          dotsWrap?.appendChild(dot);
+          return dot;
+        });
+
+        function syncDots(){
+          const trackLeft = track.scrollLeft;
+          let closest = 0, min = Infinity;
+          cards.forEach((card, i) => {
+            const d = Math.abs((card.offsetLeft - track.offsetLeft) - trackLeft);
+            if(d < min){ min = d; closest = i; }
+          });
+          dots.forEach((dot, i) => dot.classList.toggle("active", i === closest));
+        }
+
+        track.addEventListener("scroll", () => {
+          clearTimeout(track._scrollTimer);
+          track._scrollTimer = setTimeout(syncDots, 80);
+        });
+
+        arrow?.addEventListener("click", () => {
+          const cardWidth = cards[0].getBoundingClientRect().width;
+          track.scrollBy({left: cardWidth + 16, behavior:"smooth"});
+        });
+
+        syncDots();
+      });
+    }
+
     function openContact(product=""){
       const interestField = document.getElementById("interestInput");
       if(interestField) interestField.value = product;
@@ -2169,4 +2247,110 @@ Object.assign(STATIC_TRANSLATIONS["en"], {"專為香港中小學而設": "Design
       "多層托盤設計": "Multi-Tray Design",
       "10–24 小時": "10–24 Hours"
     });
+    Object.assign(STATIC_TRANSLATIONS["zh-Hans"], {
+      "智能清潔方案": "智能清洁方案",
+      "把清潔工作交給機械人": "把清洁工作交给机器人",
+      "24 小時穩定執行清潔任務，覆蓋走廊、大堂及公共空間，釋放人手處理更重要的工作。": "24 小时稳定执行清洁任务，覆盖走廊、大堂及公共空间，释放人手处理更重要的工作。",
+      "查看清潔方案": "查看清洁方案",
+      "瀏覽產品 →": "浏览产品 →",
+      "全天候智能巡邏": "全天候智能巡逻",
+      "自主巡航，即時示警": "自主巡航，即时示警",
+      "Securbot 全天候自主巡邏，即時偵測異常，將保安人手釋放到更需要判斷力的崗位。": "Securbot 全天候自主巡逻，即时侦测异常，将保安人手释放到更需要判断力的岗位。",
+      "了解保安方案": "了解保安方案",
+      "查看 Securbot →": "查看 Securbot →",
+      "上一張": "上一张",
+      "下一張": "下一张",
+      "下一項": "下一项",
+      "為何選擇 BottiZ": "为何选择 BottiZ",
+      "全場景機器人整合方案": "全场景机器人整合方案",
+      "由場地評估、方案配置、實機示範，到部署培訓及售後支援，BottiZ 與 Tobot Solution 合作，為您的業務提供一站式機器人整合服務。": "由场地评估、方案配置、实机示范，到部署培训及售后支持，BottiZ 与 Tobot Solution 合作，为您的业务提供一站式机器人整合服务。",
+      "核心行業覆蓋": "核心行业覆盖",
+      "了解更多 →": "了解更多 →",
+      "按行業探索方案": "按行业探索方案",
+      "了解機械人如何融入您的行業日常運作，並為不同崗位釋放人手。": "了解机器人如何融入您的行业日常运作，并为不同岗位释放人手。",
+      "了解方案": "了解方案",
+      "查看產品": "查看产品",
+      "了解香港中小學可申請的資助計劃，如何以更低成本為校園引入機械人方案。": "了解香港中小学可申请的资助计划，如何以更低成本为校园引入机器人方案。",
+      "了解詳情": "了解详情",
+      "產品目錄": "产品目录",
+      "瀏覽 22+ 機器人型號完整規格，按行業、功能及應用場景篩選比較。": "浏览 22+ 机器人型号完整规格，按行业、功能及应用场景筛选比较。",
+      "瀏覽產品": "浏览产品",
+      "本地服務網絡": "本地服务网络",
+      "團隊駐守香港，由到場評估、部署建圖，到日常保養及故障支援，提供貼身本地服務，確保機械人長期穩定運作。": "团队驻守香港，由到场评估、部署建图，到日常保养及故障支持，提供贴身本地服务，确保机器人长期稳定运作。",
+      "預約到場評估": "预约到场评估",
+      "聯絡我們 →": "联系我们 →",
+      "荔枝角": "荔枝角",
+      "本地體驗中心": "本地体验中心",
+      "24小時": "24小时",
+      "故障支援回應": "故障支持响应",
+      "更多機械人系列": "更多机器人系列",
+      "涵蓋清潔、配送及接待場景，按需要組合部署。": "涵盖清洁、配送及接待场景，按需要组合部署。",
+      "清潔機械人系列": "清洁机器人系列",
+      "商用洗地機械人，自動導航完成大範圍地面清潔。": "商用洗地机器人，自动导航完成大范围地面清洁。",
+      "查看清潔系列": "查看清洁系列",
+      "了解更多": "了解更多",
+      "配送機械人系列": "配送机器人系列",
+      "餐飲、物資及樓層配送機械人，減少重複搬運及往返。": "餐饮、物资及楼层配送机器人，减少重复搬运及往返。",
+      "查看配送系列": "查看配送系列",
+      "接待機械人系列": "接待机器人系列",
+      "互動接待與導覽機械人，提供多語言查詢及宣傳展示。": "互动接待与导览机器人，提供多语言查询及宣传展示。",
+      "有問題想查詢？": "有问题想查询？",
+      "Scrubber75 商用洗地機械人": "Scrubber75 商用洗地机械人",
+      "KettyBot 送餐機械人": "KettyBot 送餐机械人",
+      "MiniBot 接待機械人": "MiniBot 接待机械人"
+    });
+    Object.assign(STATIC_TRANSLATIONS["en"], {
+      "智能清潔方案": "Smart Cleaning Solutions",
+      "把清潔工作交給機械人": "Let Robots Handle the Cleaning",
+      "24 小時穩定執行清潔任務，覆蓋走廊、大堂及公共空間，釋放人手處理更重要的工作。": "Runs cleaning tasks reliably around the clock across corridors, lobbies and shared spaces, freeing staff for more important work.",
+      "查看清潔方案": "View Cleaning Solutions",
+      "瀏覽產品 →": "Browse Products →",
+      "全天候智能巡邏": "Round-the-Clock Smart Patrol",
+      "自主巡航，即時示警": "Autonomous Patrol, Real-Time Alerts",
+      "Securbot 全天候自主巡邏，即時偵測異常，將保安人手釋放到更需要判斷力的崗位。": "Securbot patrols autonomously around the clock, detecting anomalies in real time and freeing security staff for roles that need human judgement.",
+      "了解保安方案": "Explore Security Solutions",
+      "查看 Securbot →": "View Securbot →",
+      "上一張": "Previous slide",
+      "下一張": "Next slide",
+      "下一項": "Next item",
+      "為何選擇 BottiZ": "Why BottiZ",
+      "全場景機器人整合方案": "Full-Scenario Robot Integration",
+      "由場地評估、方案配置、實機示範，到部署培訓及售後支援，BottiZ 與 Tobot Solution 合作，為您的業務提供一站式機器人整合服務。": "From site assessment and solution configuration to live demonstration, deployment training and after-sales support, BottiZ partners with Tobot Solution to deliver one-stop robot integration for your business.",
+      "核心行業覆蓋": "Core Industries Covered",
+      "了解更多 →": "Learn More →",
+      "按行業探索方案": "Explore Solutions by Industry",
+      "了解機械人如何融入您的行業日常運作，並為不同崗位釋放人手。": "See how robots fit into your industry's daily operations and free up staff across roles.",
+      "了解方案": "Learn More",
+      "查看產品": "View Products",
+      "了解香港中小學可申請的資助計劃，如何以更低成本為校園引入機械人方案。": "Learn about the funding schemes Hong Kong primary and secondary schools can apply for to bring robot solutions to campus at lower cost.",
+      "了解詳情": "Learn More",
+      "產品目錄": "Product Catalogue",
+      "瀏覽 22+ 機器人型號完整規格，按行業、功能及應用場景篩選比較。": "Browse full specifications for 22+ robot models, filterable by industry, function and use case.",
+      "瀏覽產品": "Browse Products",
+      "本地服務網絡": "Local Service Network",
+      "團隊駐守香港，由到場評估、部署建圖，到日常保養及故障支援，提供貼身本地服務，確保機械人長期穩定運作。": "Our team is based in Hong Kong, providing hands-on local service from site assessment and deployment mapping to routine maintenance and fault support, keeping robots running reliably long term.",
+      "預約到場評估": "Book a Site Assessment",
+      "聯絡我們 →": "Contact Us →",
+      "荔枝角": "Lai Chi Kok",
+      "本地體驗中心": "Local Experience Centre",
+      "24小時": "24-Hour",
+      "故障支援回應": "Fault Support Response",
+      "更多機械人系列": "More Robot Series",
+      "涵蓋清潔、配送及接待場景，按需要組合部署。": "Covering cleaning, delivery and reception scenarios, combined and deployed as needed.",
+      "清潔機械人系列": "Cleaning Robot Series",
+      "商用洗地機械人，自動導航完成大範圍地面清潔。": "Commercial floor-scrubbing robots that navigate autonomously to clean large areas.",
+      "查看清潔系列": "View Cleaning Series",
+      "了解更多": "Learn More",
+      "配送機械人系列": "Delivery Robot Series",
+      "餐飲、物資及樓層配送機械人，減少重複搬運及往返。": "Food, supply and inter-floor delivery robots that cut down repetitive carrying and trips.",
+      "查看配送系列": "View Delivery Series",
+      "接待機械人系列": "Reception Robot Series",
+      "互動接待與導覽機械人，提供多語言查詢及宣傳展示。": "Interactive reception and guidance robots offering multilingual enquiries and promotional displays.",
+      "有問題想查詢？": "Have a question?",
+      "Scrubber75 商用洗地機械人": "Scrubber75 commercial floor-scrubbing robot",
+      "KettyBot 送餐機械人": "KettyBot food delivery robot",
+      "MiniBot 接待機械人": "MiniBot reception robot"
+    });
+    initHeroCarousel();
+    initScrollCarousels();
     initialiseLanguageSwitcher();
