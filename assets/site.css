@@ -1467,3 +1467,32 @@ body.has-fixed-cta{padding-bottom:84px}
   .fixed-cta-actions .btn{flex:1;text-align:center;padding:10px 12px;font-size:13px}
   body.has-fixed-cta{padding-bottom:112px}
 }
+
+/* Floating WhatsApp button (mobile & tablet only) */
+.whatsapp-float{
+  display:none;
+  position:fixed;
+  right:18px;
+  bottom:20px;
+  z-index:45;
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  background:#25d366;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 8px 20px rgba(0,0,0,.22);
+  transition:transform .2s ease;
+}
+.whatsapp-float:hover{transform:scale(1.06)}
+.whatsapp-float svg{width:30px;height:30px;fill:#fff}
+body.has-fixed-cta .whatsapp-float{bottom:100px}
+
+@media(max-width:1024px){
+  .whatsapp-float{display:flex}
+}
+@media(max-width:680px){
+  .whatsapp-float{width:52px;height:52px;right:14px;bottom:16px}
+  .whatsapp-float svg{width:28px;height:28px}
+  body.has-fixed-cta .whatsapp-float{bottom:128px}
+}
