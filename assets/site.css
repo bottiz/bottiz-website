@@ -38,13 +38,13 @@
     }
 
     .nav{
-      max-width:1320px;
+      max-width:1400px;
       margin:auto;
-      padding:14px 28px;
+      padding:16px 32px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:24px;
+      gap:28px;
     }
 
     .brand{
@@ -59,7 +59,7 @@
 
     .brand-icon{
       display:block;
-      height:30px;
+      height:40px;
       width:auto;
       object-fit:contain;
       pointer-events:none;
@@ -69,17 +69,17 @@
     .nav-links{
       display:flex;
       align-items:center;
-      gap:8px;
+      gap:12px;
     }
 
     .nav-link{
       border:0;
       background:transparent;
       color:var(--ink);
-      padding:9px 10px;
+      padding:11px 15px;
       border-radius:12px;
       cursor:pointer;
-      font-size:14px;
+      font-size:14.5px;
       white-space:nowrap;
     }
 
@@ -913,12 +913,12 @@
       position:relative;
       display:inline-flex;
       align-items:center;
-      gap:6px;
-      min-width:102px;
-      height:42px;
-      padding:0 10px;
+      gap:8px;
+      min-width:120px;
+      height:46px;
+      padding:0 14px;
       border:1px solid var(--line);
-      border-radius:13px;
+      border-radius:14px;
       background:rgba(255,255,255,.92);
       color:var(--navy);
       box-shadow:0 6px 18px rgba(0,0,0,.06);
@@ -931,7 +931,7 @@
 
     .language-icon{
       flex:0 0 auto;
-      font-size:15px;
+      font-size:16px;
       line-height:1;
     }
 
@@ -941,12 +941,12 @@
       outline:0;
       appearance:none;
       -webkit-appearance:none;
-      padding:0 18px 0 0;
+      padding:0 20px 0 0;
       background:
-        linear-gradient(45deg,transparent 50%,var(--navy) 50%) calc(100% - 6px) 48%/5px 5px no-repeat,
-        linear-gradient(135deg,var(--navy) 50%,transparent 50%) 100% 48%/5px 5px no-repeat;
+        linear-gradient(45deg,transparent 50%,var(--navy) 50%) calc(100% - 4px) 50%/6px 6px no-repeat,
+        linear-gradient(135deg,var(--navy) 50%,transparent 50%) 100% 50%/6px 6px no-repeat;
       color:var(--navy);
-      font-size:13px;
+      font-size:13.5px;
       font-weight:800;
       cursor:pointer;
     }
