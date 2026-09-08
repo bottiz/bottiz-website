@@ -1320,7 +1320,8 @@
 .industry-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
 .industry-card{padding:32px;border-radius:24px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.06);transition:.2s ease}
 .industry-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.industry-icon{width:52px;height:52px;display:grid;place-items:center;border-radius:15px;font-size:20px;font-weight:900}
+.industry-icon{width:52px;height:52px;display:grid;place-items:center;border-radius:15px}
+.industry-icon svg{width:26px;height:26px}
 .industry-card:nth-child(1) .industry-icon{background:var(--campus-teal-soft);color:var(--campus-teal)}
 .industry-card:nth-child(2) .industry-icon{background:#f4f4f4;color:var(--blue)}
 .industry-card:nth-child(3) .industry-icon{background:var(--campus-warm-soft);color:#3d3d3d}
