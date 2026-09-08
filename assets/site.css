@@ -38,13 +38,13 @@
     }
 
     .nav{
-      max-width:1220px;
+      max-width:1320px;
       margin:auto;
-      padding:14px 24px;
+      padding:14px 28px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:18px;
+      gap:24px;
     }
 
     .brand{
@@ -79,7 +79,7 @@
     .nav-links{
       display:flex;
       align-items:center;
-      gap:4px;
+      gap:8px;
     }
 
     .nav-link{
