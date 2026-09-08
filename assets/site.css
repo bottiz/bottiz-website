@@ -548,44 +548,6 @@
       line-height:1.85;
     }
 
-    .social-row{
-      display:flex;
-      gap:10px;
-      margin-top:24px;
-    }
-
-    .social-btn{
-      width:42px;
-      height:42px;
-      display:grid;
-      place-items:center;
-      border-radius:13px;
-      border:1px solid var(--line);
-      background:#f7f9fc;
-      color:#5f6878;
-      text-decoration:none;
-      transition:.2s ease;
-    }
-
-    .social-btn:hover{
-      transform:translateY(-2px);
-      color:var(--navy);
-      background:#fff;
-      box-shadow:0 8px 20px rgba(0,0,0,.08);
-    }
-
-    .social-btn.disabled{
-      opacity:.5;
-      cursor:not-allowed;
-      pointer-events:none;
-    }
-
-    .social-btn svg{
-      width:21px;
-      height:21px;
-      fill:currentColor;
-    }
-
     .contact-title{
       margin:0 0 22px;
       color:var(--navy);
@@ -609,7 +571,7 @@
 
     .contact-item strong{
       color:var(--navy);
-      font-size:14px;
+      font-size:16px;
     }
 
     .contact-item a{
@@ -625,11 +587,17 @@
       font-style:normal;
     }
 
+    .contact-item div:has(.visit-chip){
+      display:flex;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
     .visit-chip{
       display:inline-flex;
       align-items:center;
       gap:8px;
-      margin-top:4px;
       padding:8px 11px;
       border-radius:999px;
       background:#f4f4f4;
