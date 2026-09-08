@@ -55,11 +55,12 @@
       letter-spacing:.02em;
       color:var(--ink);
       text-decoration:none;
+      flex:0 0 auto;
     }
 
     .brand-icon{
       display:block;
-      height:40px;
+      height:52px;
       width:auto;
       object-fit:contain;
       pointer-events:none;
@@ -69,17 +70,46 @@
     .nav-links{
       display:flex;
       align-items:center;
+      flex:1;
+      gap:20px;
+      min-width:0;
+    }
+
+    .nav-menu{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex:1;
       gap:12px;
+      min-width:0;
+    }
+
+    .nav-actions{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      flex:0 0 auto;
+    }
+
+    @media (min-width:1401px){
+      .nav{
+        display:grid;
+        grid-template-columns:1fr auto 1fr;
+        gap:20px;
+      }
+      .brand{justify-self:start}
+      .nav-links{display:contents}
+      .nav-actions{justify-self:end}
     }
 
     .nav-link{
       border:0;
       background:transparent;
       color:var(--ink);
-      padding:11px 15px;
+      padding:12px 16px;
       border-radius:12px;
       cursor:pointer;
-      font-size:14.5px;
+      font-size:16px;
       white-space:nowrap;
     }
 
@@ -106,6 +136,7 @@
       font-weight:600;
       font-size:15px;
       cursor:pointer;
+      white-space:nowrap;
       transition:.2s ease;
     }
 
@@ -788,9 +819,16 @@
         display:none;
       }
       .nav-links.open{display:flex}
+      .nav-menu,.nav-actions{
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+        gap:4px;
+        width:100%;
+      }
       .nav-links .nav-link{display:block;padding:13px 12px;text-align:left;justify-content:flex-start}
       .nav-links .language-switcher{margin:6px 0}
-      .nav-links > .btn-primary{width:100%}
+      .nav-links .btn-primary{width:100%}
     }
 
     @media (max-width:680px){
@@ -884,9 +922,9 @@
       gap:8px;
       min-width:120px;
       height:46px;
-      padding:0 14px;
+      padding:0 16px;
       border:1px solid var(--line);
-      border-radius:14px;
+      border-radius:999px;
       background:rgba(255,255,255,.92);
       color:var(--navy);
       box-shadow:0 6px 18px rgba(0,0,0,.06);
