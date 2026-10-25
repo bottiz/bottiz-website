@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 // Site audit (zero dependencies): SEO, heading structure, images, links, forms.
 //   node check.mjs            -> prints problems, exit code 1 if any error
-//   node check.mjs --todo     -> also lists every 【待填：…】 placeholder
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -11,7 +10,6 @@ const pages = readdirSync(ROOT).filter((f) => f.endsWith('.html')).sort();
 const src = new Map(pages.map((f) => [f, readFileSync(join(ROOT, f), 'utf8')]));
 const errors = [];
 const warns = [];
-const todo = [];
 const err = (f, m) => errors.push(`${f}: ${m}`);
 const warn = (f, m) => warns.push(`${f}: ${m}`);
 const decode = (s) => s.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
@@ -110,11 +108,12 @@ for (const [f, html] of src) {
   const wording = (zhOnly + head).replace(/悟空機器人/g, '');
   if (/機器人/.test(wording)) err(f, `contains「機器人」x${wording.match(/機器人/g).length}`);
 
-  for (const m of html.matchAll(/【待填：[^】]*】/g)) todo.push(`${f}\t${m[0]}`);
+  // No placeholder wording may reach visitors (HTML text, meta, alt, JSON-LD).
+  const banned = html.match(/待填|TBD|lorem ipsum|coming soon/i);
+  if (banned) err(f, `placeholder wording in output: ${banned[0]}`);
 }
 
-if (process.argv.includes('--todo')) console.log('=== 待填清單 ===\n' + [...new Set(todo)].join('\n'));
 if (warns.length) console.log('--- warnings (' + warns.length + ') ---\n' + warns.join('\n'));
 if (errors.length) console.log('--- errors (' + errors.length + ') ---\n' + errors.join('\n'));
-console.log(`Checked ${pages.length} pages: ${errors.length} errors, ${warns.length} warnings, ${new Set(todo).size} distinct placeholders.`);
+console.log(`Checked ${pages.length} pages: ${errors.length} errors, ${warns.length} warnings.`);
 process.exit(errors.length ? 1 : 0);

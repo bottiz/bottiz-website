@@ -15,7 +15,7 @@
 | 下載檔案（勘察清單、通告範本） | `data/downloads.json` |
 | 翻譯（簡體／英文） | `data/i18n/*.json`，以繁體原文作鍵 |
 
-【待填：…】為尚未提供的內容，清單見 `docs/content-todo.md`（內部文件，不提交、不部署）。
+內容待補的項目記錄在內部文件 `docs/content-todo.md`（不提交、不部署）。網站上不會出現佔位字眼，`node check.mjs` 會檢查。
 
 ## 指令
 

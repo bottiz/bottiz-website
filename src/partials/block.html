@@ -34,7 +34,6 @@
 {{#each items}}<article class="info-card">
 <h3>{{title}}</h3>
 {{#if text}}<p>{{text}}</p>{{/if}}
-{{#if todo}}<p class="todo">{{todo}}</p>{{/if}}
 {{#if link}}<a href="{{link.href}}">{{link.label}} →</a>{{/if}}
 </article>
 {{/each}}</div>
@@ -48,7 +47,6 @@
 {{#each items}}<li>
 <h3>{{title}}</h3>
 {{#if text}}<p>{{text}}</p>{{/if}}
-{{#if todo}}<p class="todo">{{todo}}</p>{{/if}}
 </li>
 {{/each}}</ol>
 </section>
@@ -61,7 +59,7 @@
 <caption class="sr-only">{{caption}}</caption>
 <thead><tr>{{#each headers}}<th scope="col">{{this}}</th>{{/each}}</tr></thead>
 <tbody>
-{{#each rows}}<tr><th scope="row">{{label}}</th>{{#each cells}}<td>{{#if todo}}<span class="todo">{{text}}</span>{{else}}{{text}}{{/if}}</td>{{/each}}</tr>
+{{#each rows}}<tr><th scope="row">{{label}}</th>{{#each cells}}<td>{{this}}</td>{{/each}}</tr>
 {{/each}}</tbody>
 </table>
 </div>
@@ -77,18 +75,6 @@
 <p>{{text}}</p>
 </div>
 <a class="btn {{cta.class}}" href="{{cta.href}}" data-track="{{cta.track}}">{{cta.label}}</a>
-</div>
-</section>
-{{/if}}
-{{#if is_download}}
-<section class="section"{{#if id}} id="{{id}}"{{/if}}>
-<div class="entry-panel">
-<div>
-{{#if kicker}}<div class="section-kicker">{{kicker}}</div>{{/if}}
-<h2>{{download.title}}</h2>
-<p>{{download.description}}</p>
-</div>
-{{#if download.ready}}<a class="btn btn-secondary" href="{{download.file}}" download data-track="download_{{downloadKey}}">下載</a>{{else}}<p class="todo">{{download.file}}</p>{{/if}}
 </div>
 </section>
 {{/if}}
@@ -139,18 +125,6 @@
 </div>
 </section>
 {{/if}}
-{{#if is_people}}
-<section class="section"{{#if id}} id="{{id}}"{{/if}}>
-{{> block-head}}
-<div class="info-grid">
-{{#each members}}<article class="info-card">
-<h3 class="todo">{{name}}</h3>
-<p class="todo">{{role}}</p>
-<p class="todo">{{bio}}</p>
-</article>
-{{/each}}</div>
-</section>
-{{/if}}
 {{#if is_centre}}
 <section class="section"{{#if id}} id="{{id}}"{{/if}}>
 {{> block-head}}
@@ -161,7 +135,7 @@
 </article>
 {{#each extra}}<article class="info-card">
 <h3>{{title}}</h3>
-<p class="todo">{{todo}}</p>
+<p>{{text}}</p>
 </article>
 {{/each}}</div>
 <p class="block-note"><button class="btn btn-primary-blue" type="button" data-open-form data-track="{{cta.track}}">{{cta.label}}</button></p>

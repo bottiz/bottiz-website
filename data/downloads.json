@@ -2,11 +2,6 @@
   "surveyChecklist": {
     "title": "勘察前準備清單",
     "description": "下載勘察前準備清單，預先了解勘察當日需要預備的資料及安排。",
-    "file": "【待填：PDF 檔案】"
-  },
-  "residentNotice": {
-    "title": "住戶／租戶通告範本",
-    "description": "試行或啟用機械人前，可參考範本向住戶、租戶及同事發出通告。",
-    "file": "【待填：通告範本檔案（PDF 或 Word）】"
+    "file": ""
   }
 }

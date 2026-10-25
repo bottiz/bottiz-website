@@ -37,11 +37,11 @@ site.footer = site.footer.replace(/\{\{\s*tagline\.(\w+)\s*\}\}/g, (_, k) => sit
 if (process.env.FORM_ENDPOINT) site.form.endpoint = process.env.FORM_ENDPOINT;
 if (process.env.PRIVACY_URL) site.form.privacyUrl = process.env.PRIVACY_URL;
 if (process.env.ANALYTICS_ID) Object.assign(site.analytics, { enabled: true, measurementId: process.env.ANALYTICS_ID });
-const isTodo = (v) => !v || String(v).startsWith('【待填');
-site.form.endpointConfigured = !isTodo(site.form.endpoint);
+const isBlank = (v) => !v || !String(v).trim();
+site.form.endpointConfigured = !isBlank(site.form.endpoint);
 site.form.format = /^https:\/\/formsubmit\.co\//.test(site.form.endpoint) ? 'formsubmit' : 'json';
-site.form.privacyConfigured = !isTodo(site.form.privacyUrl);
-site.analytics.enabled = Boolean(site.analytics.enabled) && !isTodo(site.analytics.measurementId);
+site.form.privacyConfigured = !isBlank(site.form.privacyUrl);
+site.analytics.enabled = Boolean(site.analytics.enabled) && !isBlank(site.analytics.measurementId);
 
 // Form variants: expand base/overrides, flag control type for the template.
 function resolveForms(raw) {
@@ -62,7 +62,7 @@ function resolveForms(raw) {
   return out;
 }
 data.forms = resolveForms(data.forms);
-for (const item of Object.values(data.downloads || {})) item.ready = !isTodo(item.file);
+for (const item of Object.values(data.downloads || {})) item.ready = !isBlank(item.file);
 for (const form of Object.values(data.forms)) form.download = form.downloadKey && data.downloads[form.downloadKey].ready ? data.downloads[form.downloadKey].file : '';
 data.productList = Object.entries(data.products).map(([key, p]) => ({ key, ...p, categories: p.industries.join(' ') }));
 // WhatsApp deep links: number lives in data/site.json, per-page messages in data/whatsapp.json.
@@ -287,8 +287,6 @@ function decorateBlock(block, name) {
   if (b.type === 'models') {
     b.items = b.models.map(({ key, from }) => modelCard(key, from || b.industry, name));
   }
-  if (b.type === 'download') b.download = data.downloads[b.downloadKey];
-  if (b.type === 'table') b.rows = b.rows.map((r) => ({ ...r, cells: r.cells.map((text) => ({ text, todo: isTodo(text) })) }));
   return b;
 }
 
@@ -304,7 +302,7 @@ function resolveBlocks(name) {
   const content = data[name];
   if (!content) throw new Error(`Unknown content file "${name}"`);
   const blocks = content.blocks.map((block) => decorateBlock(block, name));
-  const faq = (content.faq || []).map((f) => ({ ...f, todo: isTodo(f.a) }));
+  const faq = (content.faq || []).filter((f) => !isBlank(f.a));
   return { blocks, faq };
 }
 
@@ -365,9 +363,8 @@ function resolveProduct(key) {
     whatsappUrl: waProduct(p.name),
     backHref: `products.html#${p.industries[0]}`,
     scenarios: p.scenarios.map((s, i) => ({ ...s, no: String(i + 1).padStart(2, '0') })),
-    siteConditionsReady: !isTodo(p.siteConditions),
-    specPdfReady: !isTodo(p.specPdf),
-    demoVideoReady: !isTodo(p.demoVideo),
+    siteSpecs: p.specs.filter((s) => /最小|爬坡|越障|爬樓梯/.test(s.label)),
+    whatsappInfoUrl: waLink(data.whatsapp.productInfo.replace('{name}', p.name)),
   };
   return {
     productData,
@@ -409,8 +406,7 @@ for (const file of listHtml('src/pages')) {
   page.orgLd = ldJson(organizationLd());
   // data/<name>.json exposed to client scripts as <script type="application/json"> via page.embed.
   page.embedJson = Object.fromEntries((page.embed || []).map((name) => [name, ldJson(data[name])]));
-  const answeredFaq = (page.faq || []).filter((f) => !f.todo);
-  if (answeredFaq.length) page.faqLd = ldJson(faqLd(answeredFaq));
+  if (page.faq?.length) page.faqLd = ldJson(faqLd(page.faq));
   if (page.form !== false) {
     page.formData = data.forms[page.form || 'default'];
     if (!page.formData) throw new Error(`${file}: unknown form variant "${page.form}"`);

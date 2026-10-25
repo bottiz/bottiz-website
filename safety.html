@@ -47,6 +47,54 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "機械人遇到行人或障礙物時會怎樣？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "機械人運行時會偵測周圍環境並避開障礙。實際的避障方式因機型而異，詳情可參考各產品頁，或在勘察及示範時親身查看。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何暫停機械人？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "現場同事可以暫停機械人並人工接管。部署前，我們會為使用的同事說明具體做法。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "發生意外或故障時如何處理？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "請聯絡 BottiZ 本地支援團隊，我們會跟進並安排檢查及維修。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "鏡頭及感應器的資料如何處理？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "各機型配備的感應器及鏡頭不同。涉及影像或資料的使用方式，會在方案階段與您說明，並按您場地的要求安排。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "啟用前需要通知住戶或同事嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "建議在啟用前說明機械人的角色與運行路線，讓住戶、租戶或同事有所預期。BottiZ 可協助規劃溝通方式。"
+      }
+    }
+  ]
+}
+</script>
 <link rel="stylesheet" href="assets/site.css"/>
 <script src="assets/js/track.js" defer></script>
 <script src="assets/js/i18n.js" defer></script>
@@ -86,7 +134,7 @@
 <div class="section-kicker">Safety</div>
 <h1 class="page-title">安全與責任</h1>
 </div>
-<p class="section-desc">機械人與人共用空間，安全與責任必須講清楚。以下列出常見的安全問題，答案確認後會在此列明。</p>
+<p class="section-desc">機械人與人共用空間，安全由勘察、測試、培訓到保養逐步建立。以下是 BottiZ 的做法。</p>
 </div>
 <div class="hero-actions">
 <button class="btn btn-primary-blue" type="button" data-open-form data-track="cta_safety_enquiry">向顧問查詢</button>
@@ -110,33 +158,73 @@
 
 
 
-
-<section class="section" id="people">
+<section class="section" id="process">
 <div class="section-head">
 <div>
-<div class="section-kicker">People</div>
-<h2>與人流共處</h2>
+<div class="section-kicker">Process</div>
+<h2>我們怎樣做</h2>
 </div>
-<p class="section-desc">機械人如何在有行人的空間安全運作。</p>
+<p class="section-desc">從場地勘察到日常保養，每一步都有對應的安排。</p>
+</div>
+
+<ol class="flow-steps">
+<li>
+<h3>到場勘察</h3>
+<p>評估路線、通道、電梯、地面及人流，找出需要留意的位置與時段。</p>
+</li>
+<li>
+<h3>部署前測試</h3>
+<p>路線設定後先在場地測試，確認停靠位置與運行方式，才正式啟用。</p>
+</li>
+<li>
+<h3>人員培訓</h3>
+<p>為使用的同事說明日常操作、運行範圍及遇到情況時的處理方法。</p>
+</li>
+<li>
+<h3>運行及人工接管</h3>
+<p>機械人按既定路線運行；有需要時，同事可以隨時暫停或人工接管。</p>
+</li>
+<li>
+<h3>持續保養與支援</h3>
+<p>提供保養與技術支援，並按使用情況調整路線與安排。</p>
+</li>
+</ol>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section" id="principles">
+<div class="section-head">
+<div>
+<div class="section-kicker">Principles</div>
+<h2>與人共處的原則</h2>
+</div>
+<p class="section-desc">機械人是補位，不是取代人的判斷。</p>
 </div>
 
 <div class="info-grid">
 <article class="info-card">
-<h3>避障與減速</h3>
-
-<p class="todo">【待填：避障及行人安全機制說明】</p>
-
-</article>
-<article class="info-card">
-<h3>緊急停止</h3>
-
-<p class="todo">【待填：緊急停止方式與位置】</p>
+<h3>路線與時段</h3>
+<p>按場地人流安排運行路線與時段，避開繁忙或敏感的區域。</p>
 
 </article>
 <article class="info-card">
-<h3>運作範圍與標示</h3>
+<h3>清楚的分工</h3>
+<p>機械人負責重複工序，判斷與應變由人負責。</p>
 
-<p class="todo">【待填：運作範圍、警示標示及通告安排】</p>
+</article>
+<article class="info-card">
+<h3>事先溝通</h3>
+<p>啟用前說明機械人的角色與路線，讓住戶、租戶或同事有所預期。</p>
 
 </article>
 </div>
@@ -155,134 +243,24 @@
 
 
 
-
-
-<section class="section" id="responsibility">
+<section class="section" id="privacy">
 <div class="section-head">
 <div>
-<div class="section-kicker">Responsibility</div>
-<h2>責任與保險</h2>
+<div class="section-kicker">Privacy</div>
+<h2>查詢資料與私隱</h2>
 </div>
-<p class="section-desc">事故發生時，責任如何分擔。</p>
+<p class="section-desc">我們只會在回覆及跟進您的查詢時使用您提交的資料。</p>
 </div>
 
 <div class="info-grid">
-<article class="info-card">
-<h3>責任分界</h3>
-
-<p class="todo">【待填：客戶、BottiZ 及原廠的責任分界】</p>
-
-</article>
-<article class="info-card">
-<h3>保險</h3>
-
-<p class="todo">【待填：保險範圍、保額及證明文件】</p>
-
-</article>
-<article class="info-card">
-<h3>事故處理</h3>
-
-<p class="todo">【待填：事故通報、調查及跟進流程】</p>
-
-</article>
-</div>
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="section" id="data">
-<div class="section-head">
-<div>
-<div class="section-kicker">Data</div>
-<h2>影像與數據</h2>
-</div>
-<p class="section-desc">機械人收集哪些資料，如何保管。</p>
-</div>
-
-<div class="info-grid">
-<article class="info-card">
-<h3>收集範圍</h3>
-
-<p class="todo">【待填：鏡頭、感應器及運行數據的收集範圍】</p>
-
-</article>
-<article class="info-card">
-<h3>保存與查閱</h3>
-
-<p class="todo">【待填：保存期限、存取權限及查閱安排】</p>
-
-</article>
 <article class="info-card">
 <h3>私隱政策</h3>
-
-<p class="todo">【待填：私隱政策連結及個人資料收集聲明】</p>
-
+<p>了解我們收集哪些資料、如何使用，以及如何聯絡我們查閱或更正。</p>
+<a href="privacy.html">閱讀私隱政策 →</a>
 </article>
 </div>
 
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="section" id="systems">
-<div class="section-head">
-<div>
-<div class="section-kicker">Systems</div>
-<h2>與樓宇系統配合</h2>
-</div>
-<p class="section-desc">機械人與電梯、消防等系統的配合。</p>
-</div>
-
-<div class="info-grid">
-<article class="info-card">
-<h3>電梯</h3>
-
-<p class="todo">【待填：電梯對接與故障時的處理方式】</p>
-
-</article>
-<article class="info-card">
-<h3>消防及應急</h3>
-
-<p class="todo">【待填：消防警報及疏散時機械人的行為】</p>
-
-</article>
-<article class="info-card">
-<h3>停電與斷網</h3>
-
-<p class="todo">【待填：停電及斷網時的處理方式】</p>
-
-</article>
-</div>
-
-</section>
-
-
-
 
 
 
@@ -314,37 +292,27 @@
 <div class="faq-list">
 <details class="faq-item">
 <summary>機械人遇到行人或障礙物時會怎樣？</summary>
-<p class="todo">【待填：答案待確認後填寫】</p>
+<p>機械人運行時會偵測周圍環境並避開障礙。實際的避障方式因機型而異，詳情可參考各產品頁，或在勘察及示範時親身查看。</p>
 </details>
 <details class="faq-item">
-<summary>如何緊急停止機械人？</summary>
-<p class="todo">【待填：答案待確認後填寫】</p>
+<summary>如何暫停機械人？</summary>
+<p>現場同事可以暫停機械人並人工接管。部署前，我們會為使用的同事說明具體做法。</p>
 </details>
 <details class="faq-item">
-<summary>發生碰撞或意外，責任如何分擔？</summary>
-<p class="todo">【待填：答案待確認後填寫】</p>
+<summary>發生意外或故障時如何處理？</summary>
+<p>請聯絡 BottiZ 本地支援團隊，我們會跟進並安排檢查及維修。</p>
 </details>
 <details class="faq-item">
-<summary>機械人有沒有投保？保障範圍是什麼？</summary>
-<p class="todo">【待填：答案待確認後填寫】</p>
+<summary>鏡頭及感應器的資料如何處理？</summary>
+<p>各機型配備的感應器及鏡頭不同。涉及影像或資料的使用方式，會在方案階段與您說明，並按您場地的要求安排。</p>
 </details>
 <details class="faq-item">
-<summary>鏡頭及感應器會收集哪些資料，如何處理？</summary>
-<p class="todo">【待填：答案待確認後填寫】</p>
-</details>
-<details class="faq-item">
-<summary>與電梯及消防系統如何配合？</summary>
-<p class="todo">【待填：答案待確認後填寫】</p>
-</details>
-<details class="faq-item">
-<summary>停電或斷網時，機械人會怎樣？</summary>
-<p class="todo">【待填：答案待確認後填寫】</p>
+<summary>啟用前需要通知住戶或同事嗎？</summary>
+<p>建議在啟用前說明機械人的角色與運行路線，讓住戶、租戶或同事有所預期。BottiZ 可協助規劃溝通方式。</p>
 </details>
 </div>
 
 </section>
-
-
 
 
 
@@ -370,7 +338,6 @@
 <span>WhatsApp 查詢</span></a></div>
 </div>
 </section>
-
 
 
 
@@ -404,6 +371,7 @@
 <ul>
 <li><a href="about.html">關於我們</a></li>
 <li><a href="contact.html">聯絡我們</a></li>
+<li><a href="privacy.html">私隱政策</a></li>
 </ul>
 </div>
 </nav>
@@ -434,8 +402,8 @@
 <div class="field"><label for="inquiryForm-interest">感興趣的產品 / 方案</label><input id="inquiryForm-interest" name="interest" type="text" placeholder="例如：清潔、配送、接待或巡邏機械人" aria-describedby="inquiryForm-e-interest"/><p class="field-error" id="inquiryForm-e-interest" hidden></p></div>
 <div class="field"><label for="inquiryForm-message">詳細說明<span class="req" aria-hidden="true"> *</span></label><textarea id="inquiryForm-message" name="message" rows="4" required aria-required="true" placeholder="請簡述您的場景與需求" aria-describedby="inquiryForm-e-message"></textarea><p class="field-error" id="inquiryForm-e-message" hidden></p></div>
 <div class="field-hp" aria-hidden="true"><label for="inquiryForm-website">請勿填寫此欄</label><input id="inquiryForm-website" name="website" type="text" tabindex="-1" autocomplete="off"/></div>
-<div class="field consent"><label class="consent-label"><input id="inquiryForm-consent" name="consent" type="checkbox" required aria-required="true" aria-describedby="inquiryForm-e-consent"/><span><span>我已閱讀並同意按私隱政策處理以上個人資料，用作回覆查詢及跟進。</span> <span class="todo">【待填：私隱政策連結】</span></span></label><p class="field-error" id="inquiryForm-e-consent" hidden></p></div>
-<p class="form-note"><span>您提交的資料會用於回覆查詢及跟進。</span> <span class="todo">【待填：個人資料收集聲明（收集目的、資料用途、保留期限、查閱及更正途徑）】</span></p>
+<div class="field consent"><label class="consent-label"><input id="inquiryForm-consent" name="consent" type="checkbox" required aria-required="true" aria-describedby="inquiryForm-e-consent"/><span><span>我已閱讀並同意按</span><a href="privacy.html" target="_blank" rel="noopener">私隱政策</a><span>處理以上個人資料，用作回覆查詢及跟進。</span></span></label><p class="field-error" id="inquiryForm-e-consent" hidden></p></div>
+<p class="form-note">您提交的資料會用於回覆查詢及跟進。</p>
 <div class="form-actions">
 <button class="btn btn-primary" type="submit" data-track="form_submit_click">提交查詢</button>
 <button class="btn btn-whatsapp" type="button" data-whatsapp-submit data-track="whatsapp_form_click">WhatsApp 查詢</button>

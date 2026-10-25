@@ -111,15 +111,14 @@
   },
   "form": {
     "endpoint": "https://formsubmit.co/ajax/support@bottiz.com",
-    "privacyUrl": "【待填：私隱政策連結】",
+    "privacyUrl": "privacy.html",
     "consent": "我已閱讀並同意按私隱政策處理以上個人資料，用作回覆查詢及跟進。",
-    "pics": "您提交的資料會用於回覆查詢及跟進。",
-    "picsTodo": "【待填：個人資料收集聲明（收集目的、資料用途、保留期限、查閱及更正途徑）】"
+    "pics": "您提交的資料會用於回覆查詢及跟進。"
   },
   "analytics": {
     "enabled": false,
     "provider": "ga4",
-    "measurementId": "【待填：GA4 Measurement ID】"
+    "measurementId": ""
   },
   "footerLinks": [
     {
@@ -186,6 +185,10 @@
         {
           "href": "contact.html",
           "label": "聯絡我們"
+        },
+        {
+          "href": "privacy.html",
+          "label": "私隱政策"
         }
       ]
     }

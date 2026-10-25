@@ -6,8 +6,8 @@
 {{/each}}</select></div>
 {{/if}}{{#if is_textarea}}<div class="field"><label for="{{formId}}-{{key}}">{{label}}{{#if required}}<span class="req" aria-hidden="true"> *</span>{{/if}}</label><textarea id="{{formId}}-{{key}}" name="{{key}}" rows="{{rows}}"{{#if required}} required aria-required="true"{{/if}} placeholder="{{placeholder|e}}" aria-describedby="{{formId}}-e-{{key}}"></textarea><p class="field-error" id="{{formId}}-e-{{key}}" hidden></p></div>
 {{/if}}{{/each}}<div class="field-hp" aria-hidden="true"><label for="{{formId}}-website">請勿填寫此欄</label><input id="{{formId}}-website" name="website" type="text" tabindex="-1" autocomplete="off"/></div>
-<div class="field consent"><label class="consent-label"><input id="{{formId}}-consent" name="consent" type="checkbox" required aria-required="true" aria-describedby="{{formId}}-e-consent"/><span><span>{{site.form.consent}}</span>{{#if site.form.privacyConfigured}} <a href="{{site.form.privacyUrl|e}}" target="_blank" rel="noopener">私隱政策</a>{{else}} <span class="todo">{{site.form.privacyUrl}}</span>{{/if}}</span></label><p class="field-error" id="{{formId}}-e-consent" hidden></p></div>
-<p class="form-note"><span>{{site.form.pics}}</span> <span class="todo">{{site.form.picsTodo}}</span></p>
+<div class="field consent"><label class="consent-label"><input id="{{formId}}-consent" name="consent" type="checkbox" required aria-required="true" aria-describedby="{{formId}}-e-consent"/><span><span>我已閱讀並同意按</span><a href="{{site.form.privacyUrl|e}}" target="_blank" rel="noopener">私隱政策</a><span>處理以上個人資料，用作回覆查詢及跟進。</span></span></label><p class="field-error" id="{{formId}}-e-consent" hidden></p></div>
+<p class="form-note">{{site.form.pics}}</p>
 <div class="form-actions">
 <button class="btn btn-primary" type="submit" data-track="form_submit_click">{{submitLabel}}</button>
 {{#if whatsapp}}<button class="btn btn-whatsapp" type="button" data-whatsapp-submit data-track="whatsapp_form_click">WhatsApp 查詢</button>{{/if}}
