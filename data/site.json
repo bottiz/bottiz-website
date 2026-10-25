@@ -9,15 +9,45 @@
     "height": 303
   },
   "nav": [
-    { "key": "index", "href": "index.html", "label": "首頁" },
-    { "key": "solutions", "href": "solutions.html", "label": "按行業探索" },
-    { "key": "products", "href": "products.html", "label": "產品中心" },
-    { "key": "smart-campus", "href": "smart-campus.html", "label": "智慧校園" },
-    { "key": "insights", "href": "insights.html", "label": "媒體動態" },
-    { "key": "about", "href": "about.html", "label": "關於我們" },
-    { "key": "contact", "href": "contact.html", "label": "聯絡我們" }
+    {
+      "key": "index",
+      "href": "index.html",
+      "label": "首頁"
+    },
+    {
+      "key": "solutions",
+      "href": "solutions.html",
+      "label": "按行業探索"
+    },
+    {
+      "key": "products",
+      "href": "products.html",
+      "label": "產品中心"
+    },
+    {
+      "key": "smart-campus",
+      "href": "smart-campus.html",
+      "label": "智慧校園"
+    },
+    {
+      "key": "insights",
+      "href": "insights.html",
+      "label": "媒體動態"
+    },
+    {
+      "key": "about",
+      "href": "about.html",
+      "label": "關於我們"
+    },
+    {
+      "key": "contact",
+      "href": "contact.html",
+      "label": "聯絡我們"
+    }
   ],
-  "navCta": { "label": "取得方案建議" },
+  "navCta": {
+    "label": "取得方案建議"
+  },
   "footer": "© BottiZ · 全場景機器人整合方案",
   "contactDescription": "為教育、商業、醫療及基礎設施提供清潔、配送、接待、教學及巡邏等全場景機械人整合方案。",
   "contact": {
@@ -30,5 +60,22 @@
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=West+Wing+2%2FF%2C+822+Lai+Chi+Kok+Road%2C+Cheung+Sha+Wan%2C+Kowloon",
     "experienceCentre": "葵涌華星街2-6號安達工業大廈",
     "hours": "週一至週五 9:00 – 18:00"
+  },
+  "ogImage": "images/og_default.jpg",
+  "ogImageSize": {
+    "width": 1200,
+    "height": 630
+  },
+  "defaultKeywords": "機械人方案,商用機械人,香港,BottiZ",
+  "description": "香港全場景機械人整合方案供應商",
+  "organization": {
+    "streetAddress": "West Wing 2/F, 822 Lai Chi Kok Road, Cheung Sha Wan",
+    "addressLocality": "Kowloon",
+    "addressCountry": "HK",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61591216350595",
+      "https://www.instagram.com/bottiz.ai/",
+      "https://www.youtube.com/@BottiZ_AI"
+    ]
   }
 }

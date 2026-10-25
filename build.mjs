@@ -9,6 +9,7 @@
 // {{#if path}}..{{else}}..{{/if}}, {{#each path}}..{{/each}} (@index, this).
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { join, basename, dirname } from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
@@ -25,6 +26,11 @@ if (existsSync(join(ROOT, 'data'))) {
     data[basename(f, '.json')] = JSON.parse(read('data', f));
   }
 }
+
+const site = data.site;
+const absUrl = (u) => (/^https?:/.test(u) ? u : `${site.url}/${u}`);
+// JSON for <script type="application/ld+json">: keep "<" from closing the tag.
+const ldJson = (obj) => JSON.stringify(obj, null, 2).replace(/</g, '\\u003c');
 
 // ---- templates ------------------------------------------------------------
 const partials = {};
@@ -141,9 +147,97 @@ function getAst(key, tpl) {
   return astCache.get(key);
 }
 
+function organizationLd() {
+  const { name, url, logo, description, contact, organization: o } = site;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name,
+    url: `${url}/`,
+    logo: absUrl(logo.mark),
+    description,
+    email: contact.email,
+    telephone: contact.phoneDisplay,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: o.streetAddress,
+      addressLocality: o.addressLocality,
+      addressCountry: o.addressCountry,
+    },
+    sameAs: o.sameAs,
+  };
+}
+
+// FAQPage markup is generated from the same data the page renders (page.faq).
+function faqLd(faq) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map(({ q, a }) => ({
+      '@type': 'Question',
+      name: q,
+      acceptedAnswer: { '@type': 'Answer', text: a },
+    })),
+  };
+}
+
+// ---- image helpers -------------------------------------------------------
+// Reads intrinsic size from PNG / JPEG / WebP headers so every <img> can carry
+// width/height (prevents layout shift) without a manual step.
+const sizeCache = new Map();
+function imageSize(rel) {
+  if (sizeCache.has(rel)) return sizeCache.get(rel);
+  let size = null;
+  try {
+    const b = readFileSync(join(ROOT, rel));
+    if (b.toString('ascii', 1, 4) === 'PNG') size = { w: b.readUInt32BE(16), h: b.readUInt32BE(20) };
+    else if (b.toString('ascii', 8, 12) === 'WEBP') {
+      const kind = b.toString('ascii', 12, 16);
+      if (kind === 'VP8 ') size = { w: b.readUInt16LE(26) & 0x3fff, h: b.readUInt16LE(28) & 0x3fff };
+      else if (kind === 'VP8L') {
+        const v = b.readUInt32LE(21);
+        size = { w: (v & 0x3fff) + 1, h: ((v >> 14) & 0x3fff) + 1 };
+      } else if (kind === 'VP8X') size = { w: b.readUIntLE(24, 3) + 1, h: b.readUIntLE(27, 3) + 1 };
+    } else if (b[0] === 0xff && b[1] === 0xd8) {
+      let i = 2;
+      while (i < b.length) {
+        if (b[i] !== 0xff) break;
+        const marker = b[i + 1];
+        if (marker >= 0xc0 && marker <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(marker)) {
+          size = { h: b.readUInt16BE(i + 5), w: b.readUInt16BE(i + 7) };
+          break;
+        }
+        i += 2 + b.readUInt16BE(i + 2);
+      }
+    }
+  } catch {
+    /* missing file is reported by check.mjs */
+  }
+  sizeCache.set(rel, size);
+  return size;
+}
+
+// Adds width/height to local images lacking them, and lazy-loading to everything
+// after the first two images (header logo + first visual).
+function optimizeImages(html) {
+  let index = 0;
+  return html.replace(/<img\b([^>]*?)(\/?)>/g, (tag, attrs, close) => {
+    const i = index++;
+    const src = attrs.match(/\bsrc="([^"]+)"/)?.[1];
+    let out = attrs;
+    if (src && !/^https?:|^data:/.test(src) && !/\bwidth="/.test(out)) {
+      const dim = imageSize(src);
+      if (dim) out += ` width="${dim.w}" height="${dim.h}"`;
+    }
+    if (i > 1 && !/\bloading="/.test(out)) out += ' loading="lazy" decoding="async"';
+    return `<img${out}${close}>`;
+  });
+}
+
 // ---- build ----------------------------------------------------------------
 const FRONT = /^<!--page\n([\s\S]*?)\n-->\n?/;
 let count = 0;
+const built = [];
 for (const file of listHtml('src/pages')) {
   const raw = read('src/pages', file);
   const fm = raw.match(FRONT);
@@ -154,15 +248,45 @@ for (const file of listHtml('src/pages')) {
   page.navCta = { ...data.site.navCta, ...page.navCta };
   page.footer = page.footer || data.site.footer;
   page.ogType = page.ogType || 'website';
-  if (page.jsonld) page.jsonldText = JSON.stringify(page.jsonld, null, 2);
+  page.canonical = absUrl(page.slug === 'index.html' ? '' : page.slug);
+  page.ogTitle = page.ogTitle || page.title;
+  page.ogDescription = page.ogDescription || page.description;
+  page.keywords = page.keywords || data.site.defaultKeywords;
+  page.ogImage = absUrl(page.ogImage || data.site.ogImage);
+  page.ogImageAlt = page.ogImageAlt || page.ogTitle;
+  page.orgLd = ldJson(organizationLd());
+  if (page.faq?.length) page.faqLd = ldJson(faqLd(page.faq));
   const navItems = data.site.nav.map((n) => ({ ...n, active: n.key === page.nav }));
   const scopes = [{ page, navItems }, data];
   const content = renderNodes(getAst('page:' + file, raw.slice(fm[0].length)).children, scopes, file);
   const layoutName = page.layout || 'base';
   const html = renderNodes(getAst('layout:' + layoutName, layouts[layoutName]).children, [{ content }, ...scopes], layoutName);
-  writeFileSync(join(ROOT, page.slug), html);
+  writeFileSync(join(ROOT, page.slug), optimizeImages(html));
+  built.push(page);
   count++;
 }
+
+// ---- sitemap.xml & robots.txt ----------------------------------------------
+function lastModified(slug) {
+  try {
+    const out = execFileSync('git', ['log', '-1', '--format=%cs', '--', `src/pages/${slug}`], { cwd: ROOT }).toString().trim();
+    return out || null;
+  } catch {
+    return null;
+  }
+}
+const urlEntries = built
+  .filter((p) => p.sitemap !== false)
+  .map((p) => {
+    const lastmod = lastModified(p.slug);
+    return `  <url>\n    <loc>${p.canonical}</loc>${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ''}\n    <priority>${p.priority ?? '0.6'}</priority>\n  </url>`;
+  })
+  .join('\n');
+writeFileSync(
+  join(ROOT, 'sitemap.xml'),
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlEntries}\n</urlset>\n`,
+);
+writeFileSync(join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${site.url}/sitemap.xml\n`);
 
 if (missing.size) {
   console.warn('Warning: unresolved template variables:\n  ' + [...missing].join('\n  '));

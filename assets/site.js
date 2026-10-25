@@ -452,6 +452,11 @@ Object.assign(STATIC_TRANSLATIONS["en"], {"專為香港中小學而設": "Design
       document.getElementById("products")?.scrollIntoView({behavior:"smooth", block:"start"});
     }
 
+    // products.html#<category> opens with that filter active.
+    if(location.hash && document.querySelector(`.filter[data-filter="${location.hash.slice(1)}"]`)){
+      showProductCategory(location.hash.slice(1));
+    }
+
     function scrollToId(id){
       document.getElementById(id)?.scrollIntoView({behavior:"smooth"});
     }
