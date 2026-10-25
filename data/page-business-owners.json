@@ -152,6 +152,19 @@
       "intro": "先勘察、再示範，確認合適才部署。以下是 BottiZ 落地六步，每步都有明確交付。"
     },
     {
+      "type": "entry",
+      "id": "safety",
+      "kicker": "Safety",
+      "title": "安全與責任",
+      "text": "機械人與人共用空間，安全、責任與私隱須事先講清楚。",
+      "cta": {
+        "label": "了解安全與責任",
+        "href": "safety.html",
+        "class": "btn-secondary",
+        "track": "cta_safety_link"
+      }
+    },
+    {
       "type": "faq",
       "id": "faq",
       "kicker": "FAQ",

@@ -120,7 +120,11 @@
           "title": "影像與數據",
           "todo": "【待填：鏡頭及運行數據的處理與私隱政策】"
         }
-      ]
+      ],
+      "link": {
+        "href": "safety.html",
+        "label": "了解安全與責任"
+      }
     },
     {
       "type": "download",

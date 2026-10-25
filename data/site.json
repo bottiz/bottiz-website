@@ -169,6 +169,10 @@
         {
           "href": "insights.html",
           "label": "媒體動態"
+        },
+        {
+          "href": "safety.html",
+          "label": "安全與責任"
         }
       ]
     },
