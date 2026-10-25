@@ -19,11 +19,11 @@
 </div>
 <h2 class="sr-only">機械人產品列表</h2>
 <div class="filters" id="filters">
-<button class="filter active" data-filter="all">全部</button>
-<button class="filter" data-filter="education">學校及教育</button>
-<button class="filter" data-filter="property">物業管理</button>
-<button class="filter" data-filter="healthcare">醫療及院舍</button>
-<button class="filter" data-filter="security">保安及巡邏</button>
+<button type="button" class="filter active" data-filter="all">全部</button>
+<button type="button" class="filter" data-filter="education">學校及教育</button>
+<button type="button" class="filter" data-filter="property">物業管理</button>
+<button type="button" class="filter" data-filter="healthcare">醫療及院舍</button>
+<button type="button" class="filter" data-filter="security">保安及巡邏</button>
 </div>
 <div class="product-grid" id="productGrid">
 {{#each productList}}{{> product-card}}
@@ -36,7 +36,7 @@
 <h2>未見合適型號？</h2>
 <p>告訴我們您的場景與需求，顧問團隊會建議合適的機型組合及部署方式。</p>
 </div>
-<button class="btn btn-secondary" data-open-form>預約免費諮詢</button>
+<button type="button" class="btn btn-secondary" data-open-form>預約免費諮詢</button>
 </section>
 
 {{> contact-section}}

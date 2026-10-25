@@ -88,7 +88,7 @@
 </h1>
 <p class="hero-copy">由校園清潔、教材及物資運送，到訪客接待、智能圖書及互動學習，BottiZ 從學校日常流程出發，按場地、時段及人手需要配置合適方案。</p>
 <div class="hero-actions">
-<button class="btn btn-primary" data-open-form>預約免費校園示範</button>
+<button type="button" class="btn btn-primary" data-open-form>預約免費校園示範</button>
 <a class="btn btn-secondary" href="#campus-solutions">查看校園應用場景</a>
 </div>
 <div class="hero-note">
@@ -97,7 +97,7 @@
 <span>本地培訓及售後支援</span>
 </div>
 </div>
-<div aria-label="MiniBot 與學生於校園互動" class="hero-photo-card">
+<div class="hero-photo-card">
 <div class="hero-photo-orbit"></div>
 <img alt="MiniBot 與學生於校園互動" class="hero-campus-photo" src="images/hero_minibot_students.webp" width="820" height="820" loading="eager" fetchpriority="high" decoding="async"/>
 <div class="hero-photo-label">
@@ -269,7 +269,7 @@
 </div>
 <p class="section-desc">以下整理各款機械人的建議場景、功能重點及主要規格，方便校方按應用方向進一步比較。</p>
 </div>
-<div class="filters" id="filters"><button class="filter active" data-filter="all">全部</button><button class="filter" data-filter="cleaning">智慧清潔</button><button class="filter" data-filter="delivery">配送／運送</button><button class="filter" data-filter="reception">接待／圖書館</button><button class="filter" data-filter="teaching">教學互動</button></div>
+<div class="filters" id="filters"><button type="button" class="filter active" data-filter="all">全部</button><button type="button" class="filter" data-filter="cleaning">智慧清潔</button><button type="button" class="filter" data-filter="delivery">配送／運送</button><button type="button" class="filter" data-filter="reception">接待／圖書館</button><button type="button" class="filter" data-filter="teaching">教學互動</button></div>
 <div class="product-grid" id="productGrid">
 <article class="card" data-category="cleaning">
 <div class="product-media">
@@ -292,7 +292,7 @@
 </div>
 <div class="card-actions">
 <a class="btn btn-secondary" href="product-beetle.html">查看詳情</a>
-<button class="btn btn-primary" data-open-form="Beetle">查詢方案</button>
+<button type="button" class="btn btn-primary" data-open-form="Beetle">查詢方案</button>
 </div>
 </div>
 </article>
@@ -317,7 +317,7 @@
 </div>
 <div class="card-actions">
 <a class="btn btn-secondary" href="product-phantas.html">查看詳情</a>
-<button class="btn btn-primary" data-open-form="Phantas">查詢方案</button>
+<button type="button" class="btn btn-primary" data-open-form="Phantas">查詢方案</button>
 </div>
 </div>
 </article>
@@ -342,7 +342,7 @@
 </div>
 <div class="card-actions">
 <a class="btn btn-secondary" href="product-scrubber50.html">查看詳情</a>
-<button class="btn btn-primary" data-open-form="Scrubber 50">查詢方案</button>
+<button type="button" class="btn btn-primary" data-open-form="Scrubber 50">查詢方案</button>
 </div>
 </div>
 </article>
@@ -363,7 +363,7 @@
 </div>
 <div class="card-actions">
 <a class="btn btn-secondary" href="product-swiftbot.html">查看詳情</a>
-<button class="btn btn-primary" data-open-form="SwiftBot">查詢方案</button>
+<button type="button" class="btn btn-primary" data-open-form="SwiftBot">查詢方案</button>
 </div>
 </div>
 </article><article class="card" data-category="reception teaching">
@@ -383,7 +383,7 @@
 </div>
 <div class="card-actions">
 <a class="btn btn-secondary" href="product-minibot.html">查看詳情</a>
-<button class="btn btn-primary" data-open-form="MiniBot">查詢方案</button>
+<button type="button" class="btn btn-primary" data-open-form="MiniBot">查詢方案</button>
 </div>
 </div>
 </article></div>
@@ -429,7 +429,7 @@
 <h2>先由一個校園場景開始，安排免費示範</h2>
 <p>告訴我們希望改善的區域、日常工作及校園時段，團隊會先了解場地，再建議合適機型、部署方式及示範方向。</p>
 </div>
-<button class="btn btn-secondary" data-open-form>預約免費校園示範</button>
+<button type="button" class="btn btn-secondary" data-open-form>預約免費校園示範</button>
 </section>
 <section class="contact-section" id="contact">
 <div class="contact-panel">
@@ -527,7 +527,7 @@
 <div class="field"><label for="inquiryForm-interest">感興趣的校園場景</label><input id="inquiryForm-interest" name="interest" type="text" placeholder="例如：走廊清潔、教材運送、訪客接待、智能圖書或互動學習" aria-describedby="inquiryForm-e-interest"/><p class="field-error" id="inquiryForm-e-interest" hidden></p></div>
 <div class="field"><label for="inquiryForm-message">詳細說明<span class="req" aria-hidden="true"> *</span></label><textarea id="inquiryForm-message" name="message" rows="4" required aria-required="true" placeholder="例如：走廊清潔、教材配送、訪客接待、圖書館導覽或互動教學" aria-describedby="inquiryForm-e-message"></textarea><p class="field-error" id="inquiryForm-e-message" hidden></p></div>
 <div class="field-hp" aria-hidden="true"><label for="inquiryForm-website">請勿填寫此欄</label><input id="inquiryForm-website" name="website" type="text" tabindex="-1" autocomplete="off"/></div>
-<div class="field consent"><label class="consent-label" for="inquiryForm-consent"><input id="inquiryForm-consent" name="consent" type="checkbox" required aria-required="true" aria-describedby="inquiryForm-e-consent"/><span><span>我已閱讀並同意按私隱政策處理以上個人資料，用作回覆查詢及跟進。</span> <span class="todo">【待填：私隱政策連結】</span></span></label><p class="field-error" id="inquiryForm-e-consent" hidden></p></div>
+<div class="field consent"><label class="consent-label"><input id="inquiryForm-consent" name="consent" type="checkbox" required aria-required="true" aria-describedby="inquiryForm-e-consent"/><span><span>我已閱讀並同意按私隱政策處理以上個人資料，用作回覆查詢及跟進。</span> <span class="todo">【待填：私隱政策連結】</span></span></label><p class="field-error" id="inquiryForm-e-consent" hidden></p></div>
 <p class="form-note"><span>您提交的資料會用於回覆查詢及跟進。</span> <span class="todo">【待填：個人資料收集聲明（收集目的、資料用途、保留期限、查閱及更正途徑）】</span></p>
 <div class="form-actions">
 <button class="btn btn-primary" type="submit" data-track="form_submit_click">提交查詢</button>
