@@ -30,6 +30,8 @@ if (existsSync(join(ROOT, 'data'))) {
 }
 
 const site = data.site;
+// Shared copy placeholders inside data strings, e.g. footer "{{tagline.zh}}".
+site.footer = site.footer.replace(/\{\{\s*tagline\.(\w+)\s*\}\}/g, (_, k) => site.tagline[k]);
 
 // Environment overrides (deployment-specific values stay out of the repo).
 if (process.env.FORM_ENDPOINT) site.form.endpoint = process.env.FORM_ENDPOINT;
@@ -280,7 +282,8 @@ for (const file of listHtml('src/pages')) {
   const raw = read('src/pages', file);
   const fm = raw.match(FRONT);
   if (!fm) throw new Error(`${file}: missing <!--page ... --> front matter`);
-  const page = JSON.parse(fm[1]);
+  // Front matter strings may use {{site.tagline.zh}} etc., resolved against the data files.
+  const page = JSON.parse(fm[1], (_, v) => (typeof v === 'string' && v.includes('{{') ? renderNodes(parseWithElse(v).children, [data], file) : v));
   page.slug = page.slug || file;
   // Derived, template-friendly fields.
   page.navCta = { ...data.site.navCta, ...page.navCta };

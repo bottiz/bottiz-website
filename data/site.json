@@ -1,5 +1,10 @@
 {
   "name": "BottiZ",
+  "tagline": {
+    "zh": "機械人落地，真正用得上",
+    "en": "Robots, made to work.",
+    "sub": "BottiZ 陪您走完機械人落地的最後一段路：由勘察、試行、部署、培訓到售後，一路同行。"
+  },
   "url": "https://bottiz.com",
   "locale": "zh_HK",
   "logo": {
@@ -48,7 +53,7 @@
   "navCta": {
     "label": "取得方案建議"
   },
-  "footer": "© BottiZ · 全場景機器人整合方案",
+  "footer": "© BottiZ · {{tagline.zh}}",
   "contactDescription": "為教育、商業、醫療及基礎設施提供清潔、配送、接待、教學及巡邏等全場景機械人整合方案。",
   "contact": {
     "phoneDisplay": "+852 9533 5639",
