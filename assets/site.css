@@ -1601,3 +1601,8 @@ footer{padding:40px 24px 28px}
 .product-industries{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 0;font-size:13px}
 .product-industries span{font-weight:800;color:var(--navy)}
 .product-industries a{padding:4px 10px;border-radius:999px;background:#f4f4f4;color:var(--navy);font-weight:700;text-decoration:none}
+@media (max-width:680px){
+  /* icon-only WhatsApp button inside the fixed bottom bar (label stays available to screen readers) */
+  .fixed-cta-actions .btn-whatsapp{min-width:44px;padding-left:12px;padding-right:12px}
+  .fixed-cta-actions .btn-whatsapp span{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+}
