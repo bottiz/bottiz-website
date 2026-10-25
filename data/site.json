@@ -155,6 +155,10 @@
       "heading": "工具及資源",
       "links": [
         {
+          "href": "plans.html",
+          "label": "租買試方案"
+        },
+        {
           "href": "roi.html",
           "label": "人手成本與回本期估算"
         },
