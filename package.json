@@ -1,0 +1,9 @@
+{
+  "name": "bottiz-website",
+  "private": true,
+  "type": "module",
+  "description": "BottiZ static site. Sources in src/ and data/, generated HTML is committed at the repo root for GitHub Pages.",
+  "scripts": {
+    "build": "node build.mjs"
+  }
+}

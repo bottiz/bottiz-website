@@ -1,0 +1,29 @@
+<div class="modal" id="contactModal" onclick="backdropClose(event,'contactModal')">
+<div class="modal-panel">
+<div class="modal-head">
+<h3>索取校園方案</h3>
+<button aria-label="關閉" class="close" onclick="closeModal('contactModal')">×</button>
+</div>
+<div class="modal-content">
+<form class="form-grid" id="inquiryForm" onsubmit="handleEmailSubmit(event)">
+<label>姓名<input id="nameInput" name="姓名" placeholder="姓名及職位" required="" type="text"/></label>
+<label>學校 / 機構名稱<input id="companyInput" name="學校/機構名稱" placeholder="例如：XX小學" type="text"/></label>
+<label>電子郵件<input id="emailInput" name="電子郵件" placeholder="name@school.edu.hk" required="" type="email"/></label>
+<label>電話號碼<input id="phoneInput" name="電話號碼" placeholder="例如：9123 4567" type="tel"/></label>
+<label>查詢類型<select id="inquiryTypeSelect" name="查詢類型">
+<option value="校園方案評估">校園方案評估</option>
+<option value="產品諮詢">產品諮詢</option>
+<option value="技術支援">技術支援</option>
+<option value="其他">其他</option>
+</select></label>
+<label>感興趣的校園場景<input id="interestInput" name="感興趣的產品" placeholder="例如：走廊清潔、教材運送、訪客接待、智能圖書或互動學習" type="text"/></label>
+<label>詳細說明<textarea id="messageInput" name="詳細說明" placeholder="例如：走廊清潔、教材配送、訪客接待、圖書館導覽或互動教學" required="" rows="4"></textarea></label>
+<div class="form-actions">
+<button class="btn btn-primary" id="submitInquiryButton" type="submit">電郵提交</button>
+<button class="btn btn-whatsapp" id="whatsappInquiryButton" onclick="handleWhatsAppSubmit()" type="button">WhatsApp 查詢</button>
+</div>
+<div id="prototypeMessage" style="display:none;padding:12px 14px;border-radius:12px;background:#ecfdf5;color:#047857;font-weight:750;line-height:1.65">已開啟電郵應用，請確認內容後按「傳送」。</div>
+</form>
+</div>
+</div>
+</div>

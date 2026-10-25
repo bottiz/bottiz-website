@@ -1,0 +1,21 @@
+<header class="site-header">
+<nav class="nav">
+<a class="brand" href="index.html">
+<img alt="{{site.name}}" class="brand-icon" src="{{site.logo.full}}" width="{{site.logo.width}}" height="{{site.logo.height}}" loading="eager" fetchpriority="high" decoding="async"/>
+</a>
+<button class="nav-toggle" aria-label="Menu" onclick="toggleMobileNav()">☰</button>
+<div class="nav-links">
+<div class="nav-menu">
+{{#each navItems}}<a class="nav-link{{#if active}} active{{/if}}" href="{{href}}">{{label}}</a>{{/each}}</div>
+<div class="nav-actions"><div class="language-switcher">
+<span aria-hidden="true" class="language-icon">🌐</span>
+<select aria-label="選擇語言" class="language-select" id="languageSelect">
+<option value="zh-Hant">繁中</option>
+<option value="zh-Hans">简中</option>
+<option value="en">English</option>
+</select>
+</div>
+{{#if page.navCta.href}}<a class="btn btn-primary" href="{{page.navCta.href}}">{{page.navCta.label}}</a>{{else}}<button class="btn btn-primary" onclick="openContact()">{{page.navCta.label}}</button>{{/if}}</div>
+</div>
+</nav>
+</header>

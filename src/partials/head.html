@@ -1,0 +1,23 @@
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>{{page.title|e}}</title>
+<meta name="description" content="{{page.description|e}}"/>
+{{#if page.keywords}}<meta name="keywords" content="{{page.keywords|e}}"/>
+{{/if}}<meta name="robots" content="index,follow"/>
+<link rel="icon" type="image/png" href="{{site.logo.mark}}"/>
+<link rel="apple-touch-icon" href="{{site.logo.mark}}"/>
+<meta property="og:type" content="{{page.ogType}}"/>
+<meta property="og:locale" content="{{site.locale}}"/>
+<meta property="og:site_name" content="{{site.name}}"/>
+<meta property="og:title" content="{{page.ogTitle|e}}"/>
+<meta property="og:description" content="{{page.ogDescription|e}}"/>
+<meta property="og:url" content="{{page.ogUrl|e}}"/>
+{{#if page.ogImage}}<meta property="og:image" content="{{page.ogImage|e}}"/>
+{{/if}}{{#if page.twitter}}<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="{{page.twitter.title|e}}"/>
+<meta name="twitter:description" content="{{page.twitter.description|e}}"/>
+<meta name="twitter:image" content="{{page.twitter.image|e}}"/>
+{{/if}}{{#if page.jsonldText}}<script type="application/ld+json">
+{{page.jsonldText}}
+</script>
+{{/if}}<link rel="stylesheet" href="assets/site.css"/>

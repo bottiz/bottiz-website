@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+{{> head}}
+</head>
+<body{{#if page.bodyClass}} class="{{page.bodyClass|e}}"{{/if}}>
+{{> header}}
+<main>
+{{content}}
+</main>
+{{> footer}}
+{{#if page.fixedCta}}{{> fixed-cta-bar}}{{/if}}
+{{#if page.modalDefault}}{{> modal-default}}{{/if}}
+{{#if page.modalCampus}}{{> modal-campus}}{{/if}}
+<script src="assets/site.js"></script>
+{{#if page.inlineScript}}<script>
+{{page.inlineScript}}
+</script>
+{{/if}}</body>
+</html>
