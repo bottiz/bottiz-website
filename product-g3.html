@@ -64,7 +64,7 @@
 <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" type="button" data-nav-toggle>☰</button>
 <div class="nav-links" id="navLinks">
 <div class="nav-menu">
-<a class="nav-link" href="index.html">首頁</a><a class="nav-link" href="solutions.html">按行業探索</a><a class="nav-link active" href="products.html">產品中心</a><a class="nav-link" href="smart-campus.html">智慧校園</a><a class="nav-link" href="insights.html">媒體動態</a><a class="nav-link" href="about.html">關於我們</a><a class="nav-link" href="contact.html">聯絡我們</a></div>
+<a class="nav-link" href="index.html">首頁</a><div class="nav-dropdown"><a class="nav-link" href="solutions.html">按行業探索</a><div class="nav-submenu"><a href="solutions.html#education">學校及教育</a><a href="property-management.html">物業管理</a><a href="solutions.html#healthcare">醫療及院舍</a><a href="solutions.html#security">保安及巡邏</a><a href="business-owners.html">商戶及企業主</a><a href="developers.html">發展商</a></div></div><a class="nav-link active" href="products.html">產品中心</a><a class="nav-link" href="smart-campus.html">智慧校園</a><a class="nav-link" href="insights.html">媒體動態</a><a class="nav-link" href="about.html">關於我們</a><a class="nav-link" href="contact.html">聯絡我們</a></div>
 <div class="nav-actions"><div class="language-switcher">
 <span aria-hidden="true" class="language-icon">🌐</span>
 <select aria-label="選擇語言" class="language-select" id="languageSelect">
@@ -184,7 +184,37 @@
 
 
 </main>
-<footer>© BottiZ · 機械人落地，真正用得上</footer>
+<footer>
+<nav class="footer-nav" aria-label="頁尾導覽">
+<div class="footer-col">
+<h2>行業方案</h2>
+<ul>
+<li><a href="solutions.html#education">學校及教育</a></li>
+<li><a href="property-management.html">物業管理</a></li>
+<li><a href="solutions.html#healthcare">醫療及院舍</a></li>
+<li><a href="solutions.html#security">保安及巡邏</a></li>
+<li><a href="business-owners.html">商戶及企業主</a></li>
+<li><a href="developers.html">發展商</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2>工具及資源</h2>
+<ul>
+<li><a href="roi.html">人手成本與回本期估算</a></li>
+<li><a href="products.html">產品中心</a></li>
+<li><a href="insights.html">媒體動態</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2>關於 BottiZ</h2>
+<ul>
+<li><a href="about.html">關於我們</a></li>
+<li><a href="contact.html">聯絡我們</a></li>
+</ul>
+</div>
+</nav>
+<p class="footer-copy">© BottiZ · 機械人落地，真正用得上</p>
+</footer>
 
 
 <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle" data-modal>

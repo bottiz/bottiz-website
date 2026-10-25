@@ -6,7 +6,7 @@
 <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" type="button" data-nav-toggle>☰</button>
 <div class="nav-links" id="navLinks">
 <div class="nav-menu">
-{{#each navItems}}<a class="nav-link{{#if active}} active{{/if}}" href="{{href}}">{{label}}</a>{{/each}}</div>
+{{#each navItems}}{{#if children}}<div class="nav-dropdown"><a class="nav-link{{#if active}} active{{/if}}" href="{{href}}">{{label}}</a><div class="nav-submenu">{{#each children}}<a href="{{href}}">{{label}}</a>{{/each}}</div></div>{{else}}<a class="nav-link{{#if active}} active{{/if}}" href="{{href}}">{{label}}</a>{{/if}}{{/each}}</div>
 <div class="nav-actions"><div class="language-switcher">
 <span aria-hidden="true" class="language-icon">🌐</span>
 <select aria-label="選擇語言" class="language-select" id="languageSelect">

@@ -1,0 +1,32 @@
+{
+  "kicker": "Process",
+  "title": "BottiZ 落地六步",
+  "intro": "機械人買回來只是開始。每一步都有明確交付，讓您知道做了什麼、下一步是什麼。",
+  "deliverableLabel": "交付",
+  "steps": [
+    {
+      "title": "了解需要",
+      "deliverable": "需求清單與成功指標"
+    },
+    {
+      "title": "場地勘察",
+      "deliverable": "路線、網絡、電梯及人流評估報告"
+    },
+    {
+      "title": "方案配置",
+      "deliverable": "機型組合與 ROI 估算"
+    },
+    {
+      "title": "實機示範",
+      "deliverable": "示範結果與客人回饋"
+    },
+    {
+      "title": "部署及培訓",
+      "deliverable": "驗收清單與培訓記錄"
+    },
+    {
+      "title": "售後支援",
+      "deliverable": "月度成效報告與保養紀錄"
+    }
+  ]
+}

@@ -105,7 +105,9 @@ for (const [f, html] of src) {
 
   // --- wording
   const zhOnly = body.replace(/<script[\s\S]*?<\/script>/g, '');
-  if (f !== 'insights.html' && /機器人/.test(zhOnly + head)) err(f, `contains「機器人」x${(zhOnly + head).match(/機器人/g).length}`);
+  // 「悟空機器人」 is a third-party product name, kept as is.
+  const wording = (zhOnly + head).replace(/悟空機器人/g, '');
+  if (/機器人/.test(wording)) err(f, `contains「機器人」x${wording.match(/機器人/g).length}`);
 
   for (const m of html.matchAll(/【待填：[^】]*】/g)) todo.push(`${f}\t${m[0]}`);
 }

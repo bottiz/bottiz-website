@@ -1,0 +1,138 @@
+{{#if is_hero}}
+<section class="section block-hero"{{#if id}} id="{{id}}"{{/if}}>
+<div class="section-head">
+<div>
+<div class="section-kicker">{{kicker}}</div>
+<h1 class="page-title">{{h1}}</h1>
+</div>
+<p class="section-desc">{{lead}}</p>
+</div>
+<div class="hero-actions">
+{{#each ctas}}{{#if href}}<a class="btn {{class}}" href="{{href}}"{{#if track}} data-track="{{track}}"{{/if}}>{{label}}</a>{{else}}<button class="btn {{class}}" type="button" data-open-form data-track="{{track}}">{{label}}</button>{{/if}}{{/each}}
+</div>
+</section>
+{{/if}}
+{{#if is_columns}}
+<section class="section"{{#if id}} id="{{id}}"{{/if}}>
+{{> block-head}}
+<div class="split-cols">
+{{#each columns}}<div class="split-col">
+<h3>{{heading}}</h3>
+<ul>
+{{#each items}}<li>{{this}}</li>
+{{/each}}</ul>
+</div>
+{{/each}}</div>
+{{#if note}}<p class="block-note">{{note}}</p>{{/if}}
+</section>
+{{/if}}
+{{#if is_cards}}
+<section class="section"{{#if id}} id="{{id}}"{{/if}}>
+{{> block-head}}
+<div class="info-grid">
+{{#each items}}<article class="info-card">
+<h3>{{title}}</h3>
+{{#if text}}<p>{{text}}</p>{{/if}}
+{{#if todo}}<p class="todo">{{todo}}</p>{{/if}}
+{{#if link}}<a href="{{link.href}}">{{link.label}} →</a>{{/if}}
+</article>
+{{/each}}</div>
+</section>
+{{/if}}
+{{#if is_steps}}
+<section class="section"{{#if id}} id="{{id}}"{{/if}}>
+{{> block-head}}
+<ol class="flow-steps">
+{{#each items}}<li>
+<h3>{{title}}</h3>
+{{#if text}}<p>{{text}}</p>{{/if}}
+{{#if todo}}<p class="todo">{{todo}}</p>{{/if}}
+</li>
+{{/each}}</ol>
+</section>
+{{/if}}
+{{#if is_table}}
+<section class="section"{{#if id}} id="{{id}}"{{/if}}>
+{{> block-head}}
+<div class="table-wrap">
+<table class="compare-table">
+<caption class="sr-only">{{caption}}</caption>
+<thead><tr>{{#each headers}}<th scope="col">{{this}}</th>{{/each}}</tr></thead>
+<tbody>
+{{#each rows}}<tr><th scope="row">{{label}}</th>{{#each cells}}<td>{{#if todo}}<span class="todo">{{text}}</span>{{else}}{{text}}{{/if}}</td>{{/each}}</tr>
+{{/each}}</tbody>
+</table>
+</div>
+</section>
+{{/if}}
+{{#if is_entry}}
+<section class="section"{{#if id}} id="{{id}}"{{/if}}>
+<div class="entry-panel">
+<div>
+{{#if kicker}}<div class="section-kicker">{{kicker}}</div>{{/if}}
+<h2>{{title}}</h2>
+<p>{{text}}</p>
+</div>
+<a class="btn {{cta.class}}" href="{{cta.href}}" data-track="{{cta.track}}">{{cta.label}}</a>
+</div>
+</section>
+{{/if}}
+{{#if is_download}}
+<section class="section"{{#if id}} id="{{id}}"{{/if}}>
+<div class="entry-panel">
+<div>
+{{#if kicker}}<div class="section-kicker">{{kicker}}</div>{{/if}}
+<h2>{{download.title}}</h2>
+<p>{{download.description}}</p>
+</div>
+{{#if download.ready}}<a class="btn btn-secondary" href="{{download.file}}" download data-track="download_{{downloadKey}}">下載</a>{{else}}<p class="todo">{{download.file}}</p>{{/if}}
+</div>
+</section>
+{{/if}}
+{{#if is_models}}
+<section class="section"{{#if id}} id="{{id}}"{{/if}}>
+{{> block-head}}
+<div class="fit-grid">
+{{#each items}}<article class="fit-card">
+<div class="fit-card-media"><img alt="{{alt}}" src="{{image}}" loading="lazy"/></div>
+<div class="fit-card-body">
+<span class="fit-tag">{{tag}}</span>
+<h3>{{name}}</h3>
+<p>{{blurb}}</p>
+<a href="{{page}}">了解 {{name}} →</a>
+</div>
+</article>
+{{/each}}</div>
+</section>
+{{/if}}
+{{#if is_process}}
+<section class="section"{{#if id}} id="{{id}}"{{/if}}>
+{{> block-head}}
+{{> process-steps}}
+</section>
+{{/if}}
+{{#if is_faq}}
+<section class="section"{{#if id}} id="{{id}}"{{/if}}>
+{{> block-head}}
+{{> faq}}
+</section>
+{{/if}}
+{{#if is_form}}
+<section class="section"{{#if id}} id="{{id}}"{{/if}}>
+{{> block-head}}
+<div class="form-panel">
+{{#with page.formData}}{{> form}}{{/with}}
+</div>
+</section>
+{{/if}}
+{{#if is_cta}}
+<section class="section">
+<div class="entry-panel">
+<div>
+<h2>{{title}}</h2>
+<p>{{text}}</p>
+</div>
+<button class="btn btn-primary-blue" type="button" data-open-form data-track="{{cta.track}}">{{cta.label}}</button>
+</div>
+</section>
+{{/if}}

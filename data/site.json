@@ -22,7 +22,33 @@
     {
       "key": "solutions",
       "href": "solutions.html",
-      "label": "按行業探索"
+      "label": "按行業探索",
+      "children": [
+        {
+          "href": "solutions.html#education",
+          "label": "學校及教育"
+        },
+        {
+          "href": "property-management.html",
+          "label": "物業管理"
+        },
+        {
+          "href": "solutions.html#healthcare",
+          "label": "醫療及院舍"
+        },
+        {
+          "href": "solutions.html#security",
+          "label": "保安及巡邏"
+        },
+        {
+          "href": "business-owners.html",
+          "label": "商戶及企業主"
+        },
+        {
+          "href": "developers.html",
+          "label": "發展商"
+        }
+      ]
     },
     {
       "key": "products",
@@ -94,5 +120,66 @@
     "enabled": false,
     "provider": "ga4",
     "measurementId": "【待填：GA4 Measurement ID】"
-  }
+  },
+  "footerLinks": [
+    {
+      "heading": "行業方案",
+      "links": [
+        {
+          "href": "solutions.html#education",
+          "label": "學校及教育"
+        },
+        {
+          "href": "property-management.html",
+          "label": "物業管理"
+        },
+        {
+          "href": "solutions.html#healthcare",
+          "label": "醫療及院舍"
+        },
+        {
+          "href": "solutions.html#security",
+          "label": "保安及巡邏"
+        },
+        {
+          "href": "business-owners.html",
+          "label": "商戶及企業主"
+        },
+        {
+          "href": "developers.html",
+          "label": "發展商"
+        }
+      ]
+    },
+    {
+      "heading": "工具及資源",
+      "links": [
+        {
+          "href": "roi.html",
+          "label": "人手成本與回本期估算"
+        },
+        {
+          "href": "products.html",
+          "label": "產品中心"
+        },
+        {
+          "href": "insights.html",
+          "label": "媒體動態"
+        }
+      ]
+    },
+    {
+      "heading": "關於 BottiZ",
+      "links": [
+        {
+          "href": "about.html",
+          "label": "關於我們"
+        },
+        {
+          "href": "contact.html",
+          "label": "聯絡我們"
+        }
+      ]
+    }
+  ]
 }

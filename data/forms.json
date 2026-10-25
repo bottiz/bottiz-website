@@ -185,5 +185,27 @@
     ],
     "whatsapp": false,
     "downloadKey": "surveyChecklist"
+  },
+  "developer": {
+    "base": "default",
+    "title": "發展商設計階段諮詢",
+    "submitLabel": "提交項目資料",
+    "overrides": {
+      "inquiryType": {
+        "options": [
+          "設計階段諮詢",
+          "示範及合作",
+          "其他"
+        ]
+      },
+      "interest": {
+        "label": "項目類型及階段",
+        "placeholder": "例如：住宅／商場／寫字樓，設計中或施工中"
+      },
+      "message": {
+        "label": "項目簡介",
+        "placeholder": "請簡述項目位置、規模及預計落成時間"
+      }
+    }
   }
 }

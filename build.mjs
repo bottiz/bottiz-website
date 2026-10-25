@@ -274,6 +274,28 @@ function optimizeImages(html) {
   });
 }
 
+// ---- page content blocks (data/page-<name>.json, referenced by front matter "content") ----
+function resolveBlocks(name) {
+  const content = data[name];
+  if (!content) throw new Error(`Unknown content file "${name}"`);
+  const blocks = content.blocks.map((block) => {
+    const b = { ...block, [`is_${block.type}`]: true };
+    if (b.type === 'models') {
+      b.items = b.models.map(({ key, from }) => {
+        const p = data.products[key];
+        if (!p) throw new Error(`${name}: unknown product "${key}"`);
+        const fit = p.fit?.[from || b.industry];
+        return { name: p.name, page: p.page, image: p.cardImage, alt: p.cardImageAlt, tag: fit?.tag ?? p.subtitle, blurb: fit?.blurb ?? p.summary };
+      });
+    }
+    if (b.type === 'download') b.download = data.downloads[b.downloadKey];
+    if (b.type === 'table') b.rows = b.rows.map((r) => ({ ...r, cells: r.cells.map((text) => ({ text, todo: String(text).startsWith('【待填') })) }));
+    return b;
+  });
+  const faq = (content.faq || []).map((f) => ({ ...f, todo: String(f.a).startsWith('【待填') }));
+  return { blocks, faq };
+}
+
 // ---- build ----------------------------------------------------------------
 const FRONT = /^<!--page\n([\s\S]*?)\n-->\n?/;
 let count = 0;
@@ -285,6 +307,7 @@ for (const file of listHtml('src/pages')) {
   // Front matter strings may use {{site.tagline.zh}} etc., resolved against the data files.
   const page = JSON.parse(fm[1], (_, v) => (typeof v === 'string' && v.includes('{{') ? renderNodes(parseWithElse(v).children, [data], file) : v));
   page.slug = page.slug || file;
+  if (page.content) Object.assign(page, resolveBlocks(page.content));
   // Derived, template-friendly fields.
   page.navCta = { ...data.site.navCta, ...page.navCta };
   page.footer = page.footer || data.site.footer;
@@ -299,7 +322,8 @@ for (const file of listHtml('src/pages')) {
   page.orgLd = ldJson(organizationLd());
   // data/<name>.json exposed to client scripts as <script type="application/json"> via page.embed.
   page.embedJson = Object.fromEntries((page.embed || []).map((name) => [name, ldJson(data[name])]));
-  if (page.faq?.length) page.faqLd = ldJson(faqLd(page.faq));
+  const answeredFaq = (page.faq || []).filter((f) => !f.todo);
+  if (answeredFaq.length) page.faqLd = ldJson(faqLd(answeredFaq));
   if (page.form !== false) {
     page.formData = data.forms[page.form || 'default'];
     if (!page.formData) throw new Error(`${file}: unknown form variant "${page.form}"`);

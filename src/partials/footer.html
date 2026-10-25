@@ -1,1 +1,11 @@
-<footer>{{page.footer}}</footer>
+<footer>
+<nav class="footer-nav" aria-label="頁尾導覽">
+{{#each site.footerLinks}}<div class="footer-col">
+<h2>{{heading}}</h2>
+<ul>
+{{#each links}}<li><a href="{{href}}">{{label}}</a></li>
+{{/each}}</ul>
+</div>
+{{/each}}</nav>
+<p class="footer-copy">{{page.footer}}</p>
+</footer>

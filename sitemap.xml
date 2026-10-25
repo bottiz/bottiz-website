@@ -6,6 +6,10 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://bottiz.com/business-owners.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bottiz.com/campus-funding.html</loc>
     <lastmod>2026-10-26</lastmod>
     <priority>0.4</priority>
@@ -14,6 +18,10 @@
     <loc>https://bottiz.com/contact.html</loc>
     <lastmod>2026-10-26</lastmod>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://bottiz.com/developers.html</loc>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bottiz.com/</loc>
@@ -118,6 +126,10 @@
   <url>
     <loc>https://bottiz.com/products.html</loc>
     <lastmod>2026-10-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bottiz.com/property-management.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
