@@ -105,6 +105,13 @@
       form.querySelectorAll('button').forEach((b) => { b.disabled = busy; });
     }
 
+    // FormSubmit.co (email relay) wants flat fields; it emails them to the address in the endpoint URL.
+    function toFormSubmit(payload) {
+      const { source, ...fields } = payload;
+      const flat = { ...fields, pagePath: source.pagePath, pageTitle: source.pageTitle, industry: source.industry, cta: source.cta, referrer: source.referrer, landingPath: source.landingPath, language: source.language, ...source.utm };
+      return { ...flat, _subject: `BottiZ 網站查詢｜${payload.name}｜${form.dataset.pageTitle}`, _template: 'table', _captcha: 'false', _honey: '' };
+    }
+
     async function postJson(payload) {
       const controller = new AbortController();
       const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
@@ -112,10 +119,13 @@
         const response = await fetch(form.dataset.endpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify(payload),
+          body: JSON.stringify(form.dataset.format === 'formsubmit' ? toFormSubmit(payload) : payload),
           signal: controller.signal,
         });
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        // FormSubmit answers 200 with {"success":"false"} when the address is not yet activated.
+        const result = await response.json().catch(() => ({}));
+        if (String(result.success) === 'false') throw new Error(result.message || 'Rejected by form service');
       } finally {
         clearTimeout(timer);
       }

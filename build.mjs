@@ -39,6 +39,7 @@ if (process.env.PRIVACY_URL) site.form.privacyUrl = process.env.PRIVACY_URL;
 if (process.env.ANALYTICS_ID) Object.assign(site.analytics, { enabled: true, measurementId: process.env.ANALYTICS_ID });
 const isTodo = (v) => !v || String(v).startsWith('【待填');
 site.form.endpointConfigured = !isTodo(site.form.endpoint);
+site.form.format = /^https:\/\/formsubmit\.co\//.test(site.form.endpoint) ? 'formsubmit' : 'json';
 site.form.privacyConfigured = !isTodo(site.form.privacyUrl);
 site.analytics.enabled = Boolean(site.analytics.enabled) && !isTodo(site.analytics.measurementId);
 
