@@ -6,27 +6,33 @@
   "steps": [
     {
       "title": "了解需要",
-      "deliverable": "需求清單與成功指標"
+      "deliverable": "需求清單與成功指標",
+      "no": "01"
     },
     {
       "title": "場地勘察",
-      "deliverable": "路線、網絡、電梯及人流評估報告"
+      "deliverable": "路線、網絡、電梯及人流評估報告",
+      "no": "02"
     },
     {
       "title": "方案配置",
-      "deliverable": "機型組合與 ROI 估算"
+      "deliverable": "機型組合與 ROI 估算",
+      "no": "03"
     },
     {
       "title": "實機示範",
-      "deliverable": "示範結果與客人回饋"
+      "deliverable": "示範結果與客人回饋",
+      "no": "04"
     },
     {
       "title": "部署及培訓",
-      "deliverable": "驗收清單與培訓記錄"
+      "deliverable": "驗收清單與培訓記錄",
+      "no": "05"
     },
     {
       "title": "售後支援",
-      "deliverable": "月度成效報告與保養紀錄"
+      "deliverable": "月度成效報告與保養紀錄",
+      "no": "06"
     }
   ]
 }

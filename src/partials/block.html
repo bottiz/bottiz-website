@@ -136,3 +136,31 @@
 </div>
 </section>
 {{/if}}
+{{#if is_people}}
+<section class="section"{{#if id}} id="{{id}}"{{/if}}>
+{{> block-head}}
+<div class="info-grid">
+{{#each members}}<article class="info-card">
+<h3 class="todo">{{name}}</h3>
+<p class="todo">{{role}}</p>
+<p class="todo">{{bio}}</p>
+</article>
+{{/each}}</div>
+</section>
+{{/if}}
+{{#if is_centre}}
+<section class="section"{{#if id}} id="{{id}}"{{/if}}>
+{{> block-head}}
+<div class="info-grid">
+<article class="info-card">
+<h3>地址</h3>
+<p>{{site.contact.experienceCentre}}</p>
+</article>
+{{#each extra}}<article class="info-card">
+<h3>{{title}}</h3>
+<p class="todo">{{todo}}</p>
+</article>
+{{/each}}</div>
+<p class="block-note"><button class="btn btn-primary-blue" type="button" data-open-form data-track="{{cta.track}}">{{cta.label}}</button></p>
+</section>
+{{/if}}

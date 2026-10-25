@@ -188,13 +188,8 @@
 </div>
 </div>
 <ol class="deployment-steps">
-<li><b>01</b><strong>了解需要</strong><span>確認希望改善的工作、區域及校園時段。</span></li>
-<li><b>02</b><strong>到校勘察</strong><span>評估路線、通道、地面、網絡及人流。</span></li>
-<li><b>03</b><strong>方案配置</strong><span>建議合適機型、任務流程及校本內容。</span></li>
-<li><b>04</b><strong>實機示範</strong><span>讓校方在真實場地了解操作及效果。</span></li>
-<li><b>05</b><strong>部署及培訓</strong><span>完成建圖、設定及使用人員培訓。</span></li>
-<li><b>06</b><strong>售後支援</strong><span>提供日常使用、保養及後續調整支援。</span></li>
-</ol>
+{{#each process.steps}}<li><b>{{no}}</b><strong>{{title}}</strong><span><i>{{process.deliverableLabel}}</i>{{deliverable}}</span></li>
+{{/each}}</ol>
 </div>
 </section><section class="section" id="products">
 <div class="section-head">
