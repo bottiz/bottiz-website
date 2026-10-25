@@ -11,6 +11,7 @@
   },
   "footer": "© BottiZ · 智慧校園機械人方案",
   "priority": "0.8",
+  "whatsapp": "education",
   "form": "campus"
 }
 -->
@@ -25,6 +26,7 @@
 <div class="hero-actions">
 <button type="button" class="btn btn-primary" data-open-form>預約免費校園示範</button>
 <a class="btn btn-secondary" href="#campus-solutions">查看校園應用場景</a>
+{{> whatsapp-button}}
 </div>
 <div class="hero-note">
 <span>真實校園場景</span>
@@ -359,6 +361,6 @@
 <h2>先由一個校園場景開始，安排免費示範</h2>
 <p>告訴我們希望改善的區域、日常工作及校園時段，團隊會先了解場地，再建議合適機型、部署方式及示範方向。</p>
 </div>
-<button type="button" class="btn btn-secondary" data-open-form>預約免費校園示範</button>
+<div class="cta-actions"><button type="button" class="btn btn-secondary" data-open-form>預約免費校園示範</button>{{> whatsapp-button}}</div>
 </section>
 {{> contact-section}}

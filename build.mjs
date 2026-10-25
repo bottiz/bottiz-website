@@ -65,6 +65,11 @@ data.forms = resolveForms(data.forms);
 for (const item of Object.values(data.downloads || {})) item.ready = !isTodo(item.file);
 for (const form of Object.values(data.forms)) form.download = form.downloadKey && data.downloads[form.downloadKey].ready ? data.downloads[form.downloadKey].file : '';
 data.productList = Object.entries(data.products).map(([key, p]) => ({ key, ...p, categories: p.industries.join(' ') }));
+// WhatsApp deep links: number lives in data/site.json, per-page messages in data/whatsapp.json.
+site.contact.whatsappUrl = `https://wa.me/${site.contact.whatsapp}`;
+const waLink = (text) => `${site.contact.whatsappUrl}?text=${encodeURIComponent(text)}`;
+const waProduct = (name) => waLink(data.whatsapp.product.replace('{name}', name));
+for (const item of data.productList) item.whatsappUrl = waProduct(item.name);
 const absUrl = (u) => (/^https?:/.test(u) ? u : `${site.url}/${u}`);
 // JSON for <script type="application/ld+json">: keep "<" from closing the tag.
 const ldJson = (obj) => JSON.stringify(obj, null, 2).replace(/</g, '\\u003c');
@@ -305,6 +310,7 @@ function resolveProduct(key) {
   const productData = {
     ...p,
     key,
+    whatsappUrl: waProduct(p.name),
     backHref: `products.html#${p.industries[0]}`,
     scenarios: p.scenarios.map((s, i) => ({ ...s, no: String(i + 1).padStart(2, '0') })),
     siteConditionsReady: !isTodo(p.siteConditions),
@@ -357,8 +363,9 @@ for (const file of listHtml('src/pages')) {
     if (!page.formData) throw new Error(`${file}: unknown form variant "${page.form}"`);
     page.formModal = !page.formInline;
   }
+  page.whatsappUrl = page.productData ? page.productData.whatsappUrl : waLink(data.whatsapp.pages[page.whatsapp || 'default'] ?? data.whatsapp.pages.default);
   const navItems = data.site.nav.map((n) => ({ ...n, active: n.key === page.nav }));
-  const scopes = [{ page, navItems }, data];
+  const scopes = [{ page, navItems, whatsappUrl: page.whatsappUrl, contactSource: 'inline' }, data];
   const content = renderNodes(getAst('page:' + file, raw.slice(fm[0].length)).children, scopes, file);
   const layoutName = page.layout || 'base';
   const html = renderNodes(getAst('layout:' + layoutName, layouts[layoutName]).children, [{ content }, ...scopes], layoutName);

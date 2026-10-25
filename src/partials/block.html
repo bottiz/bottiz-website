@@ -9,6 +9,7 @@
 </div>
 <div class="hero-actions">
 {{#each ctas}}{{#if href}}<a class="btn {{class}}" href="{{href}}"{{#if track}} data-track="{{track}}"{{/if}}>{{label}}</a>{{else}}<button class="btn {{class}}" type="button" data-open-form data-track="{{track}}">{{label}}</button>{{/if}}{{/each}}
+{{> whatsapp-button}}
 </div>
 </section>
 {{/if}}
@@ -134,7 +135,7 @@
 <h2>{{title}}</h2>
 <p>{{text}}</p>
 </div>
-<button class="btn btn-primary-blue" type="button" data-open-form data-track="{{cta.track}}">{{cta.label}}</button>
+<div class="cta-actions"><button class="btn btn-primary-blue" type="button" data-open-form data-track="{{cta.track}}">{{cta.label}}</button>{{> whatsapp-button}}</div>
 </div>
 </section>
 {{/if}}

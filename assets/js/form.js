@@ -163,6 +163,7 @@
           await postJson(payload);
           setStatus('已收到您的查詢，我們會盡快與您聯絡。', 'success');
           form.reset();
+          form.querySelector('.form-wa-hint')?.removeAttribute('hidden');
           if (form.dataset.download) startDownload(form.dataset.download);
         } else {
           openMailClient(payload);
@@ -182,6 +183,7 @@
       if (!validate({ skipConsent: true })) return;
       const payload = buildPayload();
       const text = [t('BottiZ 團隊您好：'), '', ...summaryLines(payload)].join('\n');
+      window.trackContactClick?.('form');
       window.open(`https://wa.me/${form.dataset.whatsapp}?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
       setStatus('已開啟 WhatsApp，請確認內容後按「傳送」。', 'success');
     });
@@ -196,6 +198,7 @@
     form.addEventListener('bottiz:form-open', (event) => {
       lastCta = event.detail.cta;
       setStatus('');
+      form.querySelector('.form-wa-hint')?.setAttribute('hidden', '');
       track('form_open', { cta: lastCta });
     });
   }

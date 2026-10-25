@@ -1,9 +1,5 @@
-/* Shared page behaviour: mobile nav, enquiry modal, product filters, WhatsApp button. */
+/* Shared page behaviour: mobile nav, enquiry modal, product filters. */
 (() => {
-  const WHATSAPP_URL =
-    'https://api.whatsapp.com/send/?phone=85295335639&text=%E4%BD%A0%E5%A5%BD%20BottiZ%EF%BC%81%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%E6%A9%9F%E6%A2%B0%E4%BA%BA%E6%96%B9%E6%A1%88%E4%BB%A5%E5%8F%8A%E9%A0%90%E7%B4%84Demo';
-  const WHATSAPP_ICON =
-    '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L0 24l6.5-1.7a11.8 11.8 0 0 0 5.6 1.4h.1C18.7 23.7 24 18.4 24 11.9a11.8 11.8 0 0 0-3.5-8.4zM12.2 21.7h-.1a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.5 4.7zm5.4-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.7.1-1.9-.9-3.2-1.7-4.5-3.8-.3-.6.3-.5.9-1.7.1-.2.1-.4 0-.6l-.9-2.2c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"></path></svg>';
 
   // ---- mobile navigation -----------------------------------------------
   function toggleNav(button) {
@@ -78,14 +74,4 @@
     document.getElementById('products')?.scrollIntoView({ block: 'start' });
   }
 
-  // ---- floating WhatsApp button (shown on tablet/mobile via CSS) -------
-  const whatsapp = document.createElement('a');
-  whatsapp.className = 'whatsapp-float';
-  whatsapp.href = WHATSAPP_URL;
-  whatsapp.target = '_blank';
-  whatsapp.rel = 'noopener';
-  whatsapp.setAttribute('aria-label', 'WhatsApp 查詢');
-  whatsapp.dataset.track = 'whatsapp_float_click';
-  whatsapp.innerHTML = WHATSAPP_ICON;
-  document.body.appendChild(whatsapp);
 })();

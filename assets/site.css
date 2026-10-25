@@ -1449,34 +1449,46 @@ body.has-fixed-cta{padding-bottom:84px}
   body.has-fixed-cta{padding-bottom:112px}
 }
 
-/* Floating WhatsApp button (mobile & tablet only) */
+/* Floating WhatsApp button: icon + label on desktop, icon only on small screens */
 .whatsapp-float{
-  display:none;
   position:fixed;
-  right:18px;
-  bottom:20px;
+  right:calc(18px + env(safe-area-inset-right));
+  bottom:calc(20px + env(safe-area-inset-bottom));
   z-index:45;
-  width:56px;
-  height:56px;
-  border-radius:50%;
-  background:#25d366;
+  display:flex;
   align-items:center;
-  justify-content:center;
+  gap:8px;
+  min-width:52px;
+  min-height:52px;
+  padding:0 16px;
+  border-radius:999px;
+  background:#25d366;
+  color:#fff;
+  font-weight:800;
+  font-size:14px;
   box-shadow:0 8px 20px rgba(0,0,0,.22);
   transition:transform .2s ease;
 }
-.whatsapp-float:hover{transform:scale(1.06)}
-.whatsapp-float svg{width:30px;height:30px;fill:#fff}
-body.has-fixed-cta .whatsapp-float{bottom:100px}
-
+.whatsapp-float:hover{transform:scale(1.04)}
+.whatsapp-float:focus-visible{outline:3px solid #075e54;outline-offset:3px}
+.whatsapp-float svg{width:28px;height:28px;fill:#fff;flex:0 0 auto}
+body.has-fixed-cta .whatsapp-float{bottom:calc(100px + env(safe-area-inset-bottom))}
 @media(max-width:1024px){
-  .whatsapp-float{display:flex}
+  .whatsapp-float{padding:0;width:52px;justify-content:center}
+  .whatsapp-float-label{display:none}
 }
 @media(max-width:680px){
-  .whatsapp-float{width:52px;height:52px;right:14px;bottom:16px}
-  .whatsapp-float svg{width:28px;height:28px}
-  body.has-fixed-cta .whatsapp-float{bottom:128px}
+  .whatsapp-float{right:calc(14px + env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom))}
+  body.has-fixed-cta .whatsapp-float{bottom:calc(128px + env(safe-area-inset-bottom))}
 }
+.btn-whatsapp{display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn-whatsapp .wa-icon{width:18px;height:18px;fill:currentColor;flex:0 0 auto}
+.cta-actions{display:flex;flex-wrap:wrap;gap:12px}
+.form-wa-hint{margin:0;font-size:13px;color:var(--muted)}
+.form-wa-hint a{color:#075e54;font-weight:700;text-decoration:underline}
+.footer-contact{margin:0 0 8px;text-align:center}
+.footer-contact a{text-decoration:underline}
+footer{padding-bottom:84px}
 
 .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 

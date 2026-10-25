@@ -27,6 +27,11 @@
     return stored;
   }
 
+  // Every WhatsApp / phone contact click goes through here, so analytics can be wired in one place.
+  function trackContactClick(source, channel = 'whatsapp') {
+    track(`${channel}_click`, { source: source || 'inline', page: location.pathname });
+  }
+
   // Clicks report themselves: an explicit data-track="event_name" wins, otherwise
   // form-opening CTAs, WhatsApp, phone and email links get a standard event.
   function eventFor(el) {
@@ -39,6 +44,8 @@
     return '';
   }
   document.addEventListener('click', (event) => {
+    const contact = event.target.closest('a[href^="https://wa.me/"], a[href^="tel:"]');
+    if (contact) return trackContactClick(contact.dataset.contactSource, contact.href.startsWith('tel:') ? 'phone' : 'whatsapp');
     const el = event.target.closest('[data-track], [data-open-form], a[href]');
     const name = el && eventFor(el);
     if (name) track(name, { page: location.pathname, label: (el.textContent || '').trim().slice(0, 40) });
@@ -47,4 +54,5 @@
   attribution();
   window.BottizTrack = track;
   window.BottizTrack.attribution = attribution;
+  window.trackContactClick = trackContactClick;
 })();

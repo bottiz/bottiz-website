@@ -10,7 +10,11 @@
 <div class="contact-list">
 <div class="contact-item">
 <strong>電話</strong>
-<a href="tel:{{site.contact.phoneHref}}">{{site.contact.phoneDisplay}}</a>
+<a href="tel:{{site.contact.phoneHref}}" aria-label="致電 BottiZ {{site.contact.phoneDisplay}}">{{site.contact.phoneDisplay}}</a>
+</div>
+<div class="contact-item">
+<strong>WhatsApp</strong>
+<a href="{{page.whatsappUrl|e}}" target="_blank" rel="noopener noreferrer" aria-label="透過 WhatsApp 聯絡 BottiZ，電話 {{site.contact.phoneDisplay}}" data-contact-source="contact-section">{{site.contact.phoneDisplay}}</a>
 </div>
 <div class="contact-item">
 <strong>Email</strong>

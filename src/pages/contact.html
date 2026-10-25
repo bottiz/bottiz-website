@@ -30,11 +30,11 @@
 <div class="contact-list">
 <div class="contact-item">
 <strong>電話</strong>
-<a href="tel:+85295335639">+852 9533 5639</a>
+<a href="tel:{{site.contact.phoneHref}}" aria-label="致電 BottiZ {{site.contact.phoneDisplay}}">{{site.contact.phoneDisplay}}</a>
 </div>
 <div class="contact-item">
 <strong>WhatsApp</strong>
-<a href="https://wa.me/85295335639" rel="noopener" target="_blank">+852 9533 5639</a>
+<a href="{{whatsappUrl|e}}" rel="noopener noreferrer" target="_blank" aria-label="透過 WhatsApp 聯絡 BottiZ，電話 {{site.contact.phoneDisplay}}" data-contact-source="contact">{{site.contact.phoneDisplay}}</a>
 </div>
 <div class="contact-item">
 <strong>電子郵件</strong>

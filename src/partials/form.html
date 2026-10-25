@@ -12,5 +12,6 @@
 <button class="btn btn-primary" type="submit" data-track="form_submit_click">{{submitLabel}}</button>
 {{#if whatsapp}}<button class="btn btn-whatsapp" type="button" data-whatsapp-submit data-track="whatsapp_form_click">WhatsApp 查詢</button>{{/if}}
 </div>
+<p class="form-wa-hint" hidden><span>想更快回覆，可以直接</span> <a href="{{whatsappUrl|e}}" target="_blank" rel="noopener noreferrer" data-contact-source="form-success">WhatsApp 我哋</a></p>
 <p class="form-status" role="status" aria-live="polite" data-i18n-skip hidden></p>
 </form>
