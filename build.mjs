@@ -282,25 +282,76 @@ function optimizeImages(html) {
 }
 
 // ---- page content blocks (data/page-<name>.json, referenced by front matter "content") ----
+function decorateBlock(block, name) {
+  const b = { ...block, [`is_${block.type}`]: true };
+  if (b.type === 'models') {
+    b.items = b.models.map(({ key, from }) => modelCard(key, from || b.industry, name));
+  }
+  if (b.type === 'download') b.download = data.downloads[b.downloadKey];
+  if (b.type === 'table') b.rows = b.rows.map((r) => ({ ...r, cells: r.cells.map((text) => ({ text, todo: isTodo(text) })) }));
+  return b;
+}
+
+// Compact model card used on industry and listing pages: fit text for the industry, else the product summary.
+function modelCard(key, industry, where) {
+  const p = data.products[key];
+  if (!p) throw new Error(`${where}: unknown product "${key}"`);
+  const fit = p.fit?.[industry];
+  return { name: p.name, page: p.page, image: p.cardImage, alt: p.cardImageAlt, tag: fit?.tag ?? p.subtitle, blurb: fit?.blurb ?? p.summary };
+}
+
 function resolveBlocks(name) {
   const content = data[name];
   if (!content) throw new Error(`Unknown content file "${name}"`);
-  const blocks = content.blocks.map((block) => {
-    const b = { ...block, [`is_${block.type}`]: true };
-    if (b.type === 'models') {
-      b.items = b.models.map(({ key, from }) => {
-        const p = data.products[key];
-        if (!p) throw new Error(`${name}: unknown product "${key}"`);
-        const fit = p.fit?.[from || b.industry];
-        return { name: p.name, page: p.page, image: p.cardImage, alt: p.cardImageAlt, tag: fit?.tag ?? p.subtitle, blurb: fit?.blurb ?? p.summary };
-      });
-    }
-    if (b.type === 'download') b.download = data.downloads[b.downloadKey];
-    if (b.type === 'table') b.rows = b.rows.map((r) => ({ ...r, cells: r.cells.map((text) => ({ text, todo: String(text).startsWith('【待填') })) }));
-    return b;
-  });
-  const faq = (content.faq || []).map((f) => ({ ...f, todo: String(f.a).startsWith('【待填') }));
+  const blocks = content.blocks.map((block) => decorateBlock(block, name));
+  const faq = (content.faq || []).map((f) => ({ ...f, todo: isTodo(f.a) }));
   return { blocks, faq };
+}
+
+// ---- industry pages: data/industry-<key>.json rendered by partials/industry.html ----
+function resolveIndustry(key) {
+  const file = `industry-${key}`;
+  const d = structuredClone(data[file]);
+  if (!d) throw new Error(`Unknown industry "${key}"`);
+  const pad = (i) => String(i + 1).padStart(2, '0');
+  const product = (k) => {
+    if (!data.products[k]) throw new Error(`${file}: unknown product "${k}"`);
+    return data.products[k];
+  };
+  d.pains.items = d.pains.items.map((it, i) => ({ ...it, no: pad(i), icon: data.icons[d.pains.icons[i]] }));
+  d.scenes.items = d.scenes.items.map((it) => {
+    const models = (it.models || []).map((k) => ({ name: product(k).name, page: product(k).page }));
+    const lead = it.models?.[0] && product(it.models[0]);
+    return { ...it, models, image: it.image || (lead && { src: lead.cardImage, alt: lead.cardImageAlt, width: 539, height: 538, cls: 'scene-image-product' }) };
+  });
+  d.values.items = d.values.items.map((it, i) => ({ ...it, no: pad(i) }));
+  if (d.models || d.scenes.items.some((s) => s.models.length)) {
+    // models: those in scenes first (grouped by task), then any other model listed for this industry
+    const keys = [...new Set([...d.scenes.items.flatMap((s, i) => data[file].scenes.items[i].models || []), ...Object.keys(data.products).filter((k) => data.products[k].fit?.[key])])];
+    if (d.models) d.models.items = keys.map((k) => modelCard(k, key, file));
+  }
+  d.cases = data.cases.filter((c) => c.industries.includes(key));
+  d.others = data.industries.filter((i) => i.key !== key);
+  d.extras = (d.extras || []).map((x) => decorateBlock(x, file));
+  d.closing = (d.closing || []).map((x) => decorateBlock(x, file));
+  d.stats = d.stats || [];
+  return {
+    ind: d,
+    title: d.seo.title,
+    description: d.seo.description,
+    keywords: d.seo.keywords,
+    ogDescription: d.seo.ogDescription,
+    ogImage: d.seo.ogImage,
+    nav: d.nav,
+    whatsapp: d.whatsapp,
+    industry: key,
+    navCta: d.navCta ? { label: d.navCta } : undefined,
+    footer: d.footer,
+    form: d.form,
+    formInline: d.formInline,
+    faq: d.faq,
+    priority: '0.8',
+  };
 }
 
 // ---- product pages: data/products.json -> page meta + detail template ----
@@ -310,6 +361,7 @@ function resolveProduct(key) {
   const productData = {
     ...p,
     key,
+    industryLinks: p.industries.map((k) => data.industries.find((i) => i.key === k)).filter(Boolean),
     whatsappUrl: waProduct(p.name),
     backHref: `products.html#${p.industries[0]}`,
     scenarios: p.scenarios.map((s, i) => ({ ...s, no: String(i + 1).padStart(2, '0') })),
@@ -342,6 +394,7 @@ for (const file of listHtml('src/pages')) {
   page.slug = page.slug || file;
   if (page.content) Object.assign(page, resolveBlocks(page.content));
   if (page.product) Object.assign(page, resolveProduct(page.product));
+  if (page.industryPage) Object.assign(page, resolveIndustry(page.industryPage));
   // Derived, template-friendly fields.
   page.navCta = { ...data.site.navCta, ...page.navCta };
   page.footer = page.footer || data.site.footer;

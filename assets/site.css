@@ -1585,3 +1585,20 @@ footer{padding:40px 24px 28px}
 .footer-col a:hover{text-decoration:underline}
 .footer-copy{margin:0;text-align:center}
 .deployment-steps i{display:block;font-style:normal;font-size:.85em;font-weight:700;letter-spacing:.04em}
+
+/* ---- industry pages (shared template) ---- */
+.hero-campus-v2.hero-solo{grid-template-columns:minmax(0,860px)}
+.hero-solo .hero-copy-panel{max-width:860px}
+.solution-scene-card img.scene-image-product{height:230px;object-fit:contain;padding:18px;background:radial-gradient(circle at 50% 35%,#fff,#f4f4f4 70%)}
+.scene-models{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px!important}
+.scene-models a{padding:4px 10px;border-radius:999px;background:#f4f4f4;color:var(--navy);font-size:12.5px;font-weight:700;text-decoration:none}
+.scene-models a:hover{background:#e9edf3}
+.model-card .fit-card-body p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.model-card .scene-link{margin-top:8px}
+.case-media img{width:100%;height:100%;object-fit:cover}
+.faq-more{margin-top:20px;text-align:center}
+.faq-more a{font-weight:800}
+.industry-scenes{font-size:13px;color:var(--muted)}
+.product-industries{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 0;font-size:13px}
+.product-industries span{font-weight:800;color:var(--navy)}
+.product-industries a{padding:4px 10px;border-radius:999px;background:#f4f4f4;color:var(--navy);font-weight:700;text-decoration:none}

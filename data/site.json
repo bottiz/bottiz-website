@@ -25,7 +25,7 @@
       "label": "按行業探索",
       "children": [
         {
-          "href": "solutions.html#education",
+          "href": "smart-campus.html",
           "label": "學校及教育"
         },
         {
@@ -33,11 +33,11 @@
           "label": "物業管理"
         },
         {
-          "href": "solutions.html#healthcare",
+          "href": "healthcare.html",
           "label": "醫療及院舍"
         },
         {
-          "href": "solutions.html#security",
+          "href": "security.html",
           "label": "保安及巡邏"
         },
         {
@@ -126,7 +126,7 @@
       "heading": "行業方案",
       "links": [
         {
-          "href": "solutions.html#education",
+          "href": "smart-campus.html",
           "label": "學校及教育"
         },
         {
@@ -134,11 +134,11 @@
           "label": "物業管理"
         },
         {
-          "href": "solutions.html#healthcare",
+          "href": "healthcare.html",
           "label": "醫療及院舍"
         },
         {
-          "href": "solutions.html#security",
+          "href": "security.html",
           "label": "保安及巡邏"
         },
         {

@@ -1,0 +1,56 @@
+[
+  {
+    "key": "education",
+    "name": "學校及教育",
+    "en": "Education",
+    "href": "smart-campus.html",
+    "pain": "清潔、運送與接待佔去教職員大量時間。",
+    "scenes": "課室、禮堂、圖書館及開放日",
+    "icon": "<path d=\"M12 3 2 8l10 5 10-5-10-5Z\"></path><path d=\"M6 10.2V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-5.8\"></path><path d=\"M22 8v6\"></path>"
+  },
+  {
+    "key": "property",
+    "name": "物業管理",
+    "en": "Property",
+    "href": "property-management.html",
+    "pain": "人手難請，公共空間人流複雜。",
+    "scenes": "商場、寫字樓、酒店及屋苑",
+    "icon": "<rect height=\"18\" rx=\"1.5\" width=\"16\" x=\"4\" y=\"3\"></rect><path d=\"M9 7.5h1M14 7.5h1M9 11.5h1M14 11.5h1M9 15.5h1M14 15.5h1\"></path><path d=\"M10 21v-4h4v4\"></path>"
+  },
+  {
+    "key": "healthcare",
+    "name": "醫療及院舍",
+    "en": "Healthcare",
+    "href": "healthcare.html",
+    "pain": "搬運與配送佔去護理人員照顧的時間。",
+    "scenes": "醫院、院舍及診所",
+    "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"></circle><path d=\"M12 8v8M8 12h8\"></path>"
+  },
+  {
+    "key": "security",
+    "name": "保安及巡邏",
+    "en": "Security",
+    "href": "security.html",
+    "pain": "巡邏範圍大、夜更長，容易疲勞與遺漏。",
+    "scenes": "園區、廠房及基礎設施",
+    "icon": "<path d=\"M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z\"></path><path d=\"m9 12 2 2 4-4\"></path>"
+  },
+  {
+    "key": "business",
+    "name": "商戶及企業主",
+    "en": "Business",
+    "href": "business-owners.html",
+    "pain": "請人難、留人難，又擔心買了用不上。",
+    "scenes": "餐飲、酒店及門店",
+    "icon": "<path d=\"M4 9l1.5-5h13L20 9\"></path><path d=\"M4 9v11h16V9\"></path><path d=\"M9 20v-6h6v6\"></path>"
+  },
+  {
+    "key": "developer",
+    "name": "發展商",
+    "en": "Developers",
+    "href": "developers.html",
+    "pain": "入伙後才發現電梯、通道及充電位沒有預留。",
+    "scenes": "住宅、商場及酒店項目",
+    "icon": "<path d=\"M3 21h18\"></path><path d=\"M6 21V8l6-4 6 4v13\"></path><path d=\"M10 12h4M10 16h4\"></path>"
+  }
+]

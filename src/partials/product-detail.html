@@ -15,6 +15,7 @@
 <p class="product-detail-tagline">{{subtitle}}</p>
 <p class="product-detail-intro">{{summary}}</p>
 <div class="tags">{{#each tags}}<span class="tag">{{this}}</span>{{/each}}</div>
+<p class="product-industries"><span>適用行業</span>{{#each industryLinks}}<a href="{{href}}">{{name}}</a>{{/each}}</p>
 <div class="hero-actions">
 <button type="button" class="btn btn-primary" data-open-form="{{name}}">查詢方案</button>
 <a class="btn btn-secondary" href="{{backHref}}">查看同類產品</a>

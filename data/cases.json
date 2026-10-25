@@ -1,0 +1,29 @@
+[
+  {
+    "id": "hyatt",
+    "industries": [
+      "property",
+      "business"
+    ],
+    "title": "沙田凱悅酒店",
+    "image": "images/insight_hyatt_hotel.webp",
+    "imageAlt": "沙田凱悅酒店",
+    "tag": "酒店配送",
+    "text": "房務團隊需頻繁往返各樓層運送客房用品與毛巾。引入 W3 梯控配送機械人後，由機械人自主穿梭樓層完成配送。",
+    "source": "Capital · 2025-07-30",
+    "href": "insights.html#case-hyatt"
+  },
+  {
+    "id": "school",
+    "industries": [
+      "education"
+    ],
+    "title": "浸信會呂明才小學",
+    "image": "images/insight_school.webp",
+    "imageAlt": "浸信會呂明才小學",
+    "tag": "校園應用",
+    "text": "學校推動數字教育，部署 MiniBot 伴讀小專員與 SwiftBot 配送機械人，分別用於教學輔助與校園物流。",
+    "source": "Unwire · 2025-09-18",
+    "href": "insights.html#case-school"
+  }
+]

@@ -1,0 +1,198 @@
+{{#with page.ind}}
+<section class="hero hero-campus-v2{{#if hero.photo}}{{else}} hero-solo{{/if}}">
+<div class="hero-copy-panel">
+<span class="eyebrow"><span class="dot"></span>{{hero.eyebrow}}</span>
+<h1 class="hero-title">
+{{#each hero.lines}}<span class="heading-line">{{this}}</span>
+{{/each}}</h1>
+<p class="hero-copy">{{hero.lead}}</p>
+<div class="hero-actions">
+{{#if hero.ctaHref}}<a class="btn btn-primary" href="{{hero.ctaHref}}">{{hero.cta}}</a>{{else}}<button type="button" class="btn btn-primary" data-open-form>{{hero.cta}}</button>{{/if}}
+<a class="btn btn-secondary" href="{{hero.secondary.href}}">{{hero.secondary.label}}</a>
+{{> whatsapp-button}}
+</div>
+<div class="hero-note">
+{{#each hero.notes}}<span>{{this}}</span>
+{{/each}}</div>
+</div>
+{{#if hero.photo}}<div class="hero-photo-card">
+<div class="hero-photo-orbit"></div>
+<img alt="{{hero.photo.alt}}" class="hero-campus-photo" src="{{hero.photo.src}}" width="{{hero.photo.width}}" height="{{hero.photo.height}}" loading="eager" fetchpriority="high" decoding="async"/>
+<div class="hero-photo-label">
+<span>{{hero.photo.label}}</span>
+<strong>{{hero.photo.labelStrong}}</strong>
+</div>
+{{#each hero.photo.floats}}<div class="hero-float hero-float-{{#if @index}}two{{else}}one{{/if}}"><b>{{title}}</b><small>{{text}}</small></div>
+{{/each}}</div>{{/if}}
+</section>
+{{#if stats}}<section class="stats-bar">
+<div class="stats-bar-inner">
+{{#each stats}}<div class="stat-item"><strong>{{value}}</strong><span>{{label}}</span></div>
+{{/each}}</div>
+</section>{{/if}}
+<section class="section campus-needs" id="needs">
+<div class="section-head">
+<div>
+<div class="section-kicker">{{pains.kicker}}</div>
+<h2 class="section-title-split">
+{{#each pains.title}}<span class="heading-line">{{this}}</span>
+{{/each}}</h2>
+</div>
+<p class="section-desc">{{pains.intro}}</p>
+</div>
+<div class="needs-grid">
+{{#each pains.items}}<article class="need-card">
+<div class="need-number">{{no}}</div>
+<div class="need-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 24 24">{{icon}}</svg></div>
+<h3>{{title}}</h3>
+<p>{{text}}</p>
+<div class="need-answer"><span>BottiZ 如何協助</span>{{answer}}</div>
+</article>
+{{/each}}</div>
+</section>
+<section class="section campus-day" id="day">
+<div class="section-head">
+<div>
+<div class="section-kicker">{{day.kicker}}</div>
+<h2 class="section-title-split">{{#each day.title}}<span class="heading-line">{{this}}</span>{{/each}}</h2>
+</div>
+<p class="section-desc">{{day.intro}}</p>
+</div>
+<div class="day-timeline">
+{{#each day.items}}<article class="day-step">
+<time>{{time}}</time>
+<div class="day-dot"></div>
+<h3>{{title}}</h3>
+<p>{{text}}</p>
+</article>
+{{/each}}</div>
+</section>
+<section class="section campus-solutions" id="scenes">
+<div class="section-head">
+<div>
+<div class="section-kicker">{{scenes.kicker}}</div>
+<h2 class="section-title-split">
+{{#each scenes.title}}<span class="heading-line">{{this}}</span>
+{{/each}}</h2>
+</div>
+<p class="section-desc">{{scenes.intro}}</p>
+</div>
+<div class="solution-scene-grid">
+{{#each scenes.items}}<article class="solution-scene-card">
+{{#if image}}<img alt="{{image.alt}}"{{#if image.cls}} class="{{image.cls}}"{{/if}} src="{{image.src}}" width="{{image.width}}" height="{{image.height}}" loading="lazy" decoding="async"/>{{/if}}
+<div class="scene-card-body">
+<span class="scene-tag">{{tag}}</span>
+<h3>{{title}}</h3>
+<p>{{text}}</p>
+{{#if models}}<p class="scene-models">{{#each models}}<a href="{{page}}">{{name}}</a>{{/each}}</p>{{/if}}
+{{#if link}}<a class="scene-link" href="{{link.href}}">{{link.label}} <b>→</b></a>{{else}}<a class="scene-link" href="#models">查看合適機械人 <b>→</b></a>{{/if}}
+</div>
+</article>
+{{/each}}</div>
+</section>
+{{#each extras}}{{> block}}{{/each}}
+<section class="section deployment" id="process">
+<div class="deployment-shell">
+<div class="deployment-intro">
+<div class="section-kicker">{{deploy.kicker}}</div>
+<h2 class="section-title-split">{{#each deploy.title}}<span class="heading-line">{{this}}</span>{{/each}}</h2>
+<p>{{deploy.intro}}</p>
+<div class="support-badges">
+{{#each deploy.badges}}<span>{{this}}</span>
+{{/each}}</div>
+</div>
+<ol class="deployment-steps">
+{{#each process.steps}}<li><b>{{no}}</b><strong>{{title}}</strong><span><i>{{process.deliverableLabel}}</i>{{deliverable}}</span></li>
+{{/each}}</ol>
+</div>
+</section>
+{{#if models}}<section class="section" id="models">
+<div class="section-head">
+<div>
+<div class="section-kicker">{{models.kicker}}</div>
+<h2>{{models.title.0}}</h2>
+</div>
+<p class="section-desc">{{models.intro}}</p>
+</div>
+<div class="fit-grid">
+{{#each models.items}}<article class="fit-card model-card">
+<div class="fit-card-media"><img alt="{{alt}}" src="{{image}}" width="539" height="538" loading="lazy" decoding="async"/></div>
+<div class="fit-card-body">
+<span class="fit-tag">{{tag}}</span>
+<h3>{{name}}</h3>
+<p>{{blurb}}</p>
+<a class="scene-link" href="{{page}}">查看詳情<span class="sr-only"> {{name}}</span> <b>→</b></a>
+</div>
+</article>
+{{/each}}</div>
+</section>{{/if}}
+<section class="section" id="values">
+<div class="section-head">
+<div>
+<div class="section-kicker">{{values.kicker}}</div>
+<h2 class="section-title-split">{{#each values.title}}<span class="heading-line">{{this}}</span>{{/each}}</h2>
+</div>
+<p class="section-desc">{{values.intro}}</p>
+</div>
+<div class="value-grid">
+{{#each values.items}}<div class="value-card">
+<div class="value-icon">{{no}}</div>
+<h3>{{title}}</h3>
+<p>{{text}}</p>
+</div>
+{{/each}}</div>
+</section>
+{{#if cases}}<section class="section" id="cases">
+<div class="section-head">
+<div>
+<div class="section-kicker">Case Studies</div>
+<h2>相關案例</h2>
+</div>
+</div>
+<div class="fit-grid">
+{{#each cases}}<article class="fit-card model-card">
+<div class="fit-card-media case-media"><img alt="{{imageAlt}}" src="{{image}}" loading="lazy" decoding="async"/></div>
+<div class="fit-card-body">
+<span class="fit-tag">{{tag}}</span>
+<h3>{{title}}</h3>
+<p>{{text}}</p>
+<a class="scene-link" href="{{href}}">閱讀案例 <b>→</b></a>
+</div>
+</article>
+{{/each}}</div>
+</section>{{/if}}
+{{#each closing}}{{> block}}{{/each}}
+<section class="section" id="faq">
+<div class="section-head">
+<div>
+<div class="section-kicker">FAQ</div>
+<h2>常見問答</h2>
+</div>
+</div>
+{{> faq}}
+{{#if safetyLink}}<p class="block-note faq-more"><span>機械人與人共用空間，了解 BottiZ 的安全與責任做法。</span> <a href="safety.html">安全與責任 <b>→</b></a></p>{{/if}}
+</section>
+<section class="section" id="others">
+<div class="section-head">
+<div>
+<div class="section-kicker">More Industries</div>
+<h2>其他行業</h2>
+</div>
+</div>
+<div class="info-grid">
+{{#each others}}<article class="info-card">
+<h3>{{name}}</h3>
+<p>{{pain}}</p>
+<a href="{{href}}">了解{{name}}方案 <b>→</b></a>
+</article>
+{{/each}}</div>
+</section>
+<section class="cta">
+<div>
+<h2>{{cta.title}}</h2>
+<p>{{cta.text}}</p>
+</div>
+<div class="cta-actions">{{#if cta.href}}<a class="btn btn-secondary" href="{{cta.href}}">{{cta.button}}</a>{{else}}<button type="button" class="btn btn-secondary" data-open-form>{{cta.button}}</button>{{/if}}{{> whatsapp-button}}</div>
+</section>
+{{/with}}
+{{> contact-section}}
