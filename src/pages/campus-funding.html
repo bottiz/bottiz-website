@@ -27,7 +27,9 @@
       "q": "BottiZ 如何協助撰寫申請文件？",
       "a": "我們提供完整的申請範本、KPI 規劃建議及過往成功案例參考，並由專業顧問一對一協助審視申請內容，確保文件完整、合規及具說服力。"
     }
-  ]
+  ],
+  "form": "funding",
+  "formInline": true
 }
 -->
 
@@ -166,18 +168,6 @@
 <div class="contact-panel" style="max-width:640px;margin:0 auto">
 <h2 class="contact-title" style="text-align:center">預約免費專業諮詢</h2>
 <p class="section-desc" style="text-align:center;margin:0 auto 22px;max-width:none">填寫以下表格，我們的顧問將在 24 小時內與您聯絡。</p>
-<form class="form-grid" id="inquiryForm" onsubmit="handleEmailSubmit(event)">
-<input id="inquiryTypeSelect" type="hidden" value="智啟校園資助計劃"/>
-<label>學校名稱 *<input id="companyInput" name="學校名稱" placeholder="請輸入學校名稱" required="" type="text"/></label>
-<label>聯絡人姓名及職銜 *<input id="nameInput" name="聯絡人姓名及職銜" placeholder="例如：陳老師（IT 主任）" required="" type="text"/></label>
-<label>電子郵件 *<input id="emailInput" name="電子郵件" placeholder="name@school.edu.hk" required="" type="email"/></label>
-<label>感興趣的設備或服務<input id="interestInput" name="感興趣的設備或服務" placeholder="例如：悟空機器人、CyberPi、教師培訓工作坊" type="text"/></label>
-<div class="form-actions">
-<button class="btn btn-primary" id="submitInquiryButton" type="submit">提交諮詢需求</button>
-<button class="btn btn-whatsapp" id="whatsappInquiryButton" onclick="handleWhatsAppSubmit()" type="button">WhatsApp 查詢</button>
-</div>
-<div id="prototypeMessage" style="display:none;padding:12px 14px;border-radius:12px;background:#ecfdf5;color:#047857;font-weight:750;line-height:1.65">已開啟電郵應用，請確認內容後按「傳送」。</div>
-<p style="margin:4px 0 0;color:var(--muted);font-size:12px;text-align:center">您的資料絕對保密，僅用於此次諮詢跟進。</p>
-</form>
+{{#with page.formData}}{{> form}}{{/with}}
 </div>
 </section>

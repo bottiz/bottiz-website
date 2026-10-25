@@ -10,8 +10,8 @@
     "label": "預約免費示範"
   },
   "footer": "© BottiZ · 智慧校園機械人方案",
-  "modalCampus": true,
-  "priority": "0.8"
+  "priority": "0.8",
+  "form": "campus"
 }
 -->
 <section class="hero hero-campus-v2">
@@ -23,7 +23,7 @@
 </h1>
 <p class="hero-copy">由校園清潔、教材及物資運送，到訪客接待、智能圖書及互動學習，BottiZ 從學校日常流程出發，按場地、時段及人手需要配置合適方案。</p>
 <div class="hero-actions">
-<button class="btn btn-primary" onclick="openContact()">預約免費校園示範</button>
+<button class="btn btn-primary" data-open-form>預約免費校園示範</button>
 <a class="btn btn-secondary" href="#campus-solutions">查看校園應用場景</a>
 </div>
 <div class="hero-note">
@@ -144,7 +144,7 @@
 <span class="scene-tag">01 · 智慧清潔</span>
 <h3>走廊、大堂、禮堂及戶外範圍</h3>
 <p>按空間大小、地面材質、人流及清潔時段，配置適合的室內或室內外清潔機械人。</p>
-<button class="scene-link" onclick="showProductCategory('cleaning')">查看合適機械人 <b>→</b></button>
+<a class="scene-link" href="solutions.html#education">查看合適機械人 <b>→</b></a>
 </div>
 </article>
 <article class="solution-scene-card">
@@ -153,7 +153,7 @@
 <span class="scene-tag">02 · 教材及物資運送</span>
 <h3>校務處、教員室、課室及活動場地</h3>
 <p>分擔文件、圖書、教材、教具及活動物資的固定路線運送，減少重複搬運。</p>
-<button class="scene-link" onclick="showProductCategory('delivery')">查看合適機械人 <b>→</b></button>
+<a class="scene-link" href="solutions.html#education">查看合適機械人 <b>→</b></a>
 </div>
 </article>
 <article class="solution-scene-card">
@@ -162,7 +162,7 @@
 <span class="scene-tag">03 · 訪客接待與校園導賞</span>
 <h3>校門、接待處、開放日及家長日</h3>
 <p>載入校本資訊及導賞內容，支援多語言查詢、校園介紹、方向指引及活動資訊。</p>
-<button class="scene-link" onclick="showProductCategory('reception')">查看合適機械人 <b>→</b></button>
+<a class="scene-link" href="solutions.html#education">查看合適機械人 <b>→</b></a>
 </div>
 </article>
 <article class="solution-scene-card">
@@ -171,7 +171,7 @@
 <span class="scene-tag">04 · 智能圖書與互動學習</span>
 <h3>圖書館、閱讀角、課堂及學生導賞</h3>
 <p>配合圖書內容、語音互動、校園導賞及機械人課程，讓科技成為可參與的學習體驗。</p>
-<button class="scene-link" onclick="showProductCategory('teaching')">查看合適機械人 <b>→</b></button>
+<a class="scene-link" href="solutions.html#education">查看合適機械人 <b>→</b></a>
 </div>
 </article>
 </div>
@@ -227,7 +227,7 @@
 </div>
 <div class="card-actions">
 <a class="btn btn-secondary" href="product-beetle.html">查看詳情</a>
-<button class="btn btn-primary" onclick="openContact('Beetle')">查詢方案</button>
+<button class="btn btn-primary" data-open-form="Beetle">查詢方案</button>
 </div>
 </div>
 </article>
@@ -252,7 +252,7 @@
 </div>
 <div class="card-actions">
 <a class="btn btn-secondary" href="product-phantas.html">查看詳情</a>
-<button class="btn btn-primary" onclick="openContact('Phantas')">查詢方案</button>
+<button class="btn btn-primary" data-open-form="Phantas">查詢方案</button>
 </div>
 </div>
 </article>
@@ -277,7 +277,7 @@
 </div>
 <div class="card-actions">
 <a class="btn btn-secondary" href="product-scrubber50.html">查看詳情</a>
-<button class="btn btn-primary" onclick="openContact('Scrubber 50')">查詢方案</button>
+<button class="btn btn-primary" data-open-form="Scrubber 50">查詢方案</button>
 </div>
 </div>
 </article>
@@ -298,7 +298,7 @@
 </div>
 <div class="card-actions">
 <a class="btn btn-secondary" href="product-swiftbot.html">查看詳情</a>
-<button class="btn btn-primary" onclick="openContact('SwiftBot')">查詢方案</button>
+<button class="btn btn-primary" data-open-form="SwiftBot">查詢方案</button>
 </div>
 </div>
 </article><article class="card" data-category="reception teaching">
@@ -318,7 +318,7 @@
 </div>
 <div class="card-actions">
 <a class="btn btn-secondary" href="product-minibot.html">查看詳情</a>
-<button class="btn btn-primary" onclick="openContact('MiniBot')">查詢方案</button>
+<button class="btn btn-primary" data-open-form="MiniBot">查詢方案</button>
 </div>
 </div>
 </article></div>
@@ -364,6 +364,6 @@
 <h2>先由一個校園場景開始，安排免費示範</h2>
 <p>告訴我們希望改善的區域、日常工作及校園時段，團隊會先了解場地，再建議合適機型、部署方式及示範方向。</p>
 </div>
-<button class="btn btn-secondary" onclick="openContact()">預約免費校園示範</button>
+<button class="btn btn-secondary" data-open-form>預約免費校園示範</button>
 </section>
 {{> contact-section}}

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>人手成本與回本期估算｜BottiZ</title>
+<meta name="description" content="輸入現有人手、月薪及可由機械人分擔的工序比例，粗略估算每月節省與回本期；結果僅供參考，實際視場地而定。"/>
+<meta name="keywords" content="機械人回本期,人手成本估算,機械人ROI,機械人租賃,預約勘察,BottiZ"/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://bottiz.com/roi.html"/>
+<link rel="icon" type="image/png" href="images/logo_bottiz_mark.png"/>
+<link rel="apple-touch-icon" href="images/logo_bottiz_mark.png"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="zh_HK"/>
+<meta property="og:site_name" content="BottiZ"/>
+<meta property="og:title" content="人手成本與回本期估算｜BottiZ"/>
+<meta property="og:description" content="輸入現有人手、月薪及可由機械人分擔的工序比例，粗略估算每月節省與回本期；結果僅供參考，實際視場地而定。"/>
+<meta property="og:url" content="https://bottiz.com/roi.html"/>
+<meta property="og:image" content="https://bottiz.com/images/og_default.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="人手成本與回本期估算｜BottiZ"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="人手成本與回本期估算｜BottiZ"/>
+<meta name="twitter:description" content="輸入現有人手、月薪及可由機械人分擔的工序比例，粗略估算每月節省與回本期；結果僅供參考，實際視場地而定。"/>
+<meta name="twitter:image" content="https://bottiz.com/images/og_default.jpg"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "BottiZ",
+  "url": "https://bottiz.com/",
+  "logo": "https://bottiz.com/images/logo_bottiz_mark.png",
+  "description": "香港全場景機械人整合方案供應商",
+  "email": "support@bottiz.com",
+  "telephone": "+852 9533 5639",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "West Wing 2/F, 822 Lai Chi Kok Road, Cheung Sha Wan",
+    "addressLocality": "Kowloon",
+    "addressCountry": "HK"
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61591216350595",
+    "https://www.instagram.com/bottiz.ai/",
+    "https://www.youtube.com/@BottiZ_AI"
+  ]
+}
+</script>
+<link rel="stylesheet" href="assets/site.css"/>
+<script src="assets/js/track.js" defer></script>
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/form.js" defer></script>
+<script src="assets/js/roi.js" defer></script>
+
+
+</head>
+<body>
+<header class="site-header">
+<nav class="nav">
+<a class="brand" href="index.html">
+<img alt="BottiZ" class="brand-icon" src="images/logo_bottiz_full.png" width="1272" height="303" loading="eager" fetchpriority="high" decoding="async"/>
+</a>
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" type="button" data-nav-toggle>☰</button>
+<div class="nav-links" id="navLinks">
+<div class="nav-menu">
+<a class="nav-link" href="index.html">首頁</a><a class="nav-link" href="solutions.html">按行業探索</a><a class="nav-link" href="products.html">產品中心</a><a class="nav-link" href="smart-campus.html">智慧校園</a><a class="nav-link" href="insights.html">媒體動態</a><a class="nav-link" href="about.html">關於我們</a><a class="nav-link" href="contact.html">聯絡我們</a></div>
+<div class="nav-actions"><div class="language-switcher">
+<span aria-hidden="true" class="language-icon">🌐</span>
+<select aria-label="選擇語言" class="language-select" id="languageSelect">
+<option value="zh-Hant">繁中</option>
+<option value="zh-Hans">简中</option>
+<option value="en">English</option>
+</select>
+</div>
+<button class="btn btn-primary" type="button" data-open-form data-track="cta_nav_click">取得方案建議</button></div>
+</div>
+</nav>
+</header>
+
+<main>
+<section class="section" style="padding-top:64px;padding-bottom:16px">
+<div class="section-head">
+<div>
+<div class="section-kicker">Estimate</div>
+<h1 class="page-title">人手成本與回本期估算</h1>
+</div>
+<p class="section-desc">填寫貴單位的人手情況，粗略了解機械人分擔工序後的每月節省與回本期。數字由您輸入，未填寫的欄位不會被預設。</p>
+</div>
+</section>
+
+<section class="section roi-section" style="padding-top:0">
+<div class="roi-layout">
+<form id="roiForm" class="roi-inputs" novalidate aria-describedby="roiDisclaimer">
+<h2 class="roi-title">您的情況</h2>
+
+<div class="field">
+<label for="roi-headcount">現有人手數目（人）</label>
+<input id="roi-headcount" name="headcount" type="number" inputmode="decimal" min="0" step="1" aria-describedby="roi-headcount-hint">
+<p class="field-hint" id="roi-headcount-hint">現時負責有關工序的員工人數。</p>
+</div>
+
+<div class="field">
+<label for="roi-monthlySalary">平均月薪（港元／人）</label>
+<input id="roi-monthlySalary" name="monthlySalary" type="number" inputmode="decimal" min="0" step="100" aria-describedby="roi-monthlySalary-hint">
+<p class="field-hint" id="roi-monthlySalary-hint">每名員工的平均月薪成本。</p>
+</div>
+
+<div class="field">
+<label for="roi-hoursPerDay">每日工時（小時）</label>
+<input id="roi-hoursPerDay" name="hoursPerDay" type="number" inputmode="decimal" min="0" step="0.5" aria-describedby="roi-hoursPerDay-hint">
+<p class="field-hint" id="roi-hoursPerDay-hint">每名員工每日負責有關工序的時數。</p>
+</div>
+
+<div class="field">
+<label for="roi-replaceShare">擬由機械人分擔的工序比例（%）</label>
+<input id="roi-replaceShare" name="replaceShare" type="number" inputmode="decimal" min="0" step="5" aria-describedby="roi-replaceShare-hint">
+<p class="field-hint" id="roi-replaceShare-hint">0 至 100；其餘工序仍由員工處理。</p>
+</div>
+
+<div class="field">
+<label for="roi-investment">預計機械人投資（選填）（港元）</label>
+<input id="roi-investment" name="investment" type="number" inputmode="decimal" min="0" step="1000" aria-describedby="roi-investment-hint">
+<p class="field-hint" id="roi-investment-hint">如採購、試行或安裝費用，請按實際報價填寫。</p>
+</div>
+
+<div class="field">
+<label for="roi-monthlyRunningCost">預計每月營運成本（選填）（港元）</label>
+<input id="roi-monthlyRunningCost" name="monthlyRunningCost" type="number" inputmode="decimal" min="0" step="100" aria-describedby="roi-monthlyRunningCost-hint">
+<p class="field-hint" id="roi-monthlyRunningCost-hint">如月租、保養或耗材。</p>
+</div>
+
+<div class="field">
+<label for="roi-workingDays">每月工作日數（選填）（日）</label>
+<input id="roi-workingDays" name="workingDays" type="number" inputmode="decimal" min="1" step="1" aria-describedby="roi-workingDays-hint">
+<p class="field-hint" id="roi-workingDays-hint">未填寫時，以 26 日計算。</p>
+</div>
+
+</form>
+
+<div class="roi-results" aria-live="polite">
+<h2 class="roi-title">估算結果</h2>
+<dl class="roi-list">
+
+<div class="roi-row">
+<dt>現有每月人手成本</dt>
+<dd><span data-result="labourCost">—</span></dd>
+</div>
+
+<div class="roi-row">
+<dt>每月可由機械人分擔工時</dt>
+<dd><span data-result="coveredHours">—</span> <small>小時</small></dd>
+</div>
+
+<div class="roi-row">
+<dt>估算每月節省（已扣營運成本）</dt>
+<dd><span data-result="netMonthlySaving">—</span></dd>
+</div>
+
+<div class="roi-row">
+<dt>估算每年節省</dt>
+<dd><span data-result="annualSaving">—</span></dd>
+</div>
+
+<div class="roi-row">
+<dt>估算回本期</dt>
+<dd><span data-result="paybackMonths">—</span> <small>個月</small></dd>
+</div>
+
+</dl>
+<p class="roi-note" id="roiNote"></p>
+<p class="roi-disclaimer" id="roiDisclaimer">僅供參考，實際視場地而定。</p>
+<div class="roi-actions">
+<button class="btn btn-primary" type="button" data-open-form data-track="cta_roi_survey">預約勘察</button>
+</div>
+<details class="roi-formulas">
+<summary>計算方式</summary>
+<ul>
+
+<li>每月人手成本 ＝ 人手數目 × 平均月薪</li>
+
+<li>每月分擔工時 ＝ 人手數目 × 每日工時 × 每月工作日數 × 分擔比例</li>
+
+<li>每月節省 ＝ 每月人手成本 × 分擔比例 － 每月營運成本</li>
+
+<li>回本期 ＝ 預計投資 ÷ 每月節省（每月節省須大於零）</li>
+
+</ul>
+</details>
+</div>
+</div>
+<script type="application/json" id="roi-config">{
+  "assumptions": {
+    "fallbackWorkingDays": 26,
+    "monthsPerYear": 12
+  },
+  "inputs": [
+    {
+      "key": "headcount",
+      "label": "現有人手數目",
+      "unit": "人",
+      "min": 0,
+      "step": 1,
+      "hint": "現時負責有關工序的員工人數。"
+    },
+    {
+      "key": "monthlySalary",
+      "label": "平均月薪",
+      "unit": "港元／人",
+      "min": 0,
+      "step": 100,
+      "hint": "每名員工的平均月薪成本。"
+    },
+    {
+      "key": "hoursPerDay",
+      "label": "每日工時",
+      "unit": "小時",
+      "min": 0,
+      "max": 24,
+      "step": 0.5,
+      "hint": "每名員工每日負責有關工序的時數。"
+    },
+    {
+      "key": "replaceShare",
+      "label": "擬由機械人分擔的工序比例",
+      "unit": "%",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "hint": "0 至 100；其餘工序仍由員工處理。"
+    },
+    {
+      "key": "investment",
+      "label": "預計機械人投資（選填）",
+      "unit": "港元",
+      "min": 0,
+      "step": 1000,
+      "hint": "如採購、試行或安裝費用，請按實際報價填寫。"
+    },
+    {
+      "key": "monthlyRunningCost",
+      "label": "預計每月營運成本（選填）",
+      "unit": "港元",
+      "min": 0,
+      "step": 100,
+      "hint": "如月租、保養或耗材。"
+    },
+    {
+      "key": "workingDays",
+      "label": "每月工作日數（選填）",
+      "unit": "日",
+      "min": 1,
+      "max": 31,
+      "step": 1,
+      "hint": "未填寫時，以 26 日計算。"
+    }
+  ],
+  "results": [
+    {
+      "key": "labourCost",
+      "label": "現有每月人手成本",
+      "format": "currency"
+    },
+    {
+      "key": "coveredHours",
+      "label": "每月可由機械人分擔工時",
+      "format": "hours",
+      "unit": "小時"
+    },
+    {
+      "key": "netMonthlySaving",
+      "label": "估算每月節省（已扣營運成本）",
+      "format": "currency"
+    },
+    {
+      "key": "annualSaving",
+      "label": "估算每年節省",
+      "format": "currency"
+    },
+    {
+      "key": "paybackMonths",
+      "label": "估算回本期",
+      "format": "months",
+      "unit": "個月"
+    }
+  ],
+  "formulas": [
+    "每月人手成本 ＝ 人手數目 × 平均月薪",
+    "每月分擔工時 ＝ 人手數目 × 每日工時 × 每月工作日數 × 分擔比例",
+    "每月節省 ＝ 每月人手成本 × 分擔比例 － 每月營運成本",
+    "回本期 ＝ 預計投資 ÷ 每月節省（每月節省須大於零）"
+  ]
+}</script>
+</section>
+
+<section class="section" style="padding-top:0">
+<aside class="lead-magnet" aria-labelledby="lead-magnet-title">
+<h2 id="lead-magnet-title">勘察前準備清單</h2>
+<p>下載勘察前準備清單，預先了解勘察當日需要預備的資料及安排。</p>
+<p class="todo">【待填：PDF 檔案】</p>
+<details class="lead-details">
+<summary>或留低聯絡資料（選填），方便我們於勘察前跟進</summary>
+<form class="form-grid enquiry-form" id="leadForm" data-enquiry data-form="lead" data-endpoint="【待填：表單後端網址】" data-endpoint-ready="false" data-whatsapp="85295335639" data-mailto="support@bottiz.com" data-industry="" data-page-title="人手成本與回本期估算｜BottiZ" novalidate>
+<input type="hidden" name="inquiryType" value="勘察前準備清單"/>
+<div class="field"><label for="leadForm-name">姓名（選填）</label><input id="leadForm-name" name="name" type="text" placeholder="您的姓名" autocomplete="name" aria-describedby="leadForm-e-name"/><p class="field-error" id="leadForm-e-name" hidden></p></div>
+<div class="field"><label for="leadForm-email">電子郵件<span class="req" aria-hidden="true"> *</span></label><input id="leadForm-email" name="email" type="email" required aria-required="true" placeholder="name@company.com" autocomplete="email" aria-describedby="leadForm-e-email"/><p class="field-error" id="leadForm-e-email" hidden></p></div>
+<div class="field-hp" aria-hidden="true"><label for="leadForm-website">請勿填寫此欄</label><input id="leadForm-website" name="website" type="text" tabindex="-1" autocomplete="off"/></div>
+<div class="field consent"><label class="consent-label" for="leadForm-consent"><input id="leadForm-consent" name="consent" type="checkbox" required aria-required="true" aria-describedby="leadForm-e-consent"/><span><span>我已閱讀並同意按私隱政策處理以上個人資料，用作回覆查詢及跟進。</span> <span class="todo">【待填：私隱政策連結】</span></span></label><p class="field-error" id="leadForm-e-consent" hidden></p></div>
+<p class="form-note"><span>您提交的資料會用於回覆查詢及跟進。</span> <span class="todo">【待填：個人資料收集聲明（收集目的、資料用途、保留期限、查閱及更正途徑）】</span></p>
+<div class="form-actions">
+<button class="btn btn-primary" type="submit" data-track="form_submit_click">留低資料並下載</button>
+
+</div>
+<p class="form-status" role="status" aria-live="polite" data-i18n-skip hidden></p>
+</form>
+
+</details>
+</aside>
+
+</section>
+
+</main>
+<footer>© BottiZ · 全場景機器人整合方案</footer>
+
+
+<div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle" data-modal>
+<div class="modal-panel">
+<div class="modal-head">
+<h3 id="contactModalTitle">取得方案建議</h3>
+<button aria-label="關閉" class="close" type="button" data-close-modal>×</button>
+</div>
+<div class="modal-content">
+<form class="form-grid enquiry-form" id="inquiryForm" data-enquiry data-form="default" data-endpoint="【待填：表單後端網址】" data-endpoint-ready="false" data-whatsapp="85295335639" data-mailto="support@bottiz.com" data-industry="" data-page-title="人手成本與回本期估算｜BottiZ" novalidate>
+<div class="field"><label for="inquiryForm-name">姓名<span class="req" aria-hidden="true"> *</span></label><input id="inquiryForm-name" name="name" type="text" required aria-required="true" placeholder="姓名及職位" autocomplete="name" aria-describedby="inquiryForm-e-name"/><p class="field-error" id="inquiryForm-e-name" hidden></p></div>
+<div class="field"><label for="inquiryForm-company">公司 / 機構名稱</label><input id="inquiryForm-company" name="company" type="text" placeholder="例如：XX有限公司" autocomplete="organization" aria-describedby="inquiryForm-e-company"/><p class="field-error" id="inquiryForm-e-company" hidden></p></div>
+<div class="field"><label for="inquiryForm-email">電子郵件<span class="req" aria-hidden="true"> *</span></label><input id="inquiryForm-email" name="email" type="email" required aria-required="true" placeholder="name@company.com" autocomplete="email" aria-describedby="inquiryForm-e-email"/><p class="field-error" id="inquiryForm-e-email" hidden></p></div>
+<div class="field"><label for="inquiryForm-phone">電話號碼</label><input id="inquiryForm-phone" name="phone" type="tel" placeholder="例如：9123 4567" autocomplete="tel" aria-describedby="inquiryForm-e-phone"/><p class="field-error" id="inquiryForm-e-phone" hidden></p></div>
+<div class="field"><label for="inquiryForm-inquiryType">查詢類型</label><select id="inquiryForm-inquiryType" name="inquiryType">
+<option value="產品諮詢">產品諮詢</option>
+<option value="方案評估">方案評估</option>
+<option value="技術支援">技術支援</option>
+<option value="媒體合作">媒體合作</option>
+<option value="其他">其他</option>
+</select></div>
+<div class="field"><label for="inquiryForm-interest">感興趣的產品 / 方案</label><input id="inquiryForm-interest" name="interest" type="text" placeholder="例如：清潔、配送、接待或巡邏機械人" aria-describedby="inquiryForm-e-interest"/><p class="field-error" id="inquiryForm-e-interest" hidden></p></div>
+<div class="field"><label for="inquiryForm-message">詳細說明<span class="req" aria-hidden="true"> *</span></label><textarea id="inquiryForm-message" name="message" rows="4" required aria-required="true" placeholder="請簡述您的場景與需求" aria-describedby="inquiryForm-e-message"></textarea><p class="field-error" id="inquiryForm-e-message" hidden></p></div>
+<div class="field-hp" aria-hidden="true"><label for="inquiryForm-website">請勿填寫此欄</label><input id="inquiryForm-website" name="website" type="text" tabindex="-1" autocomplete="off"/></div>
+<div class="field consent"><label class="consent-label" for="inquiryForm-consent"><input id="inquiryForm-consent" name="consent" type="checkbox" required aria-required="true" aria-describedby="inquiryForm-e-consent"/><span><span>我已閱讀並同意按私隱政策處理以上個人資料，用作回覆查詢及跟進。</span> <span class="todo">【待填：私隱政策連結】</span></span></label><p class="field-error" id="inquiryForm-e-consent" hidden></p></div>
+<p class="form-note"><span>您提交的資料會用於回覆查詢及跟進。</span> <span class="todo">【待填：個人資料收集聲明（收集目的、資料用途、保留期限、查閱及更正途徑）】</span></p>
+<div class="form-actions">
+<button class="btn btn-primary" type="submit" data-track="form_submit_click">提交查詢</button>
+<button class="btn btn-whatsapp" type="button" data-whatsapp-submit data-track="whatsapp_form_click">WhatsApp 查詢</button>
+</div>
+<p class="form-status" role="status" aria-live="polite" data-i18n-skip hidden></p>
+</form>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>

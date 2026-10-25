@@ -48,7 +48,11 @@
 }
 </script>
 <link rel="stylesheet" href="assets/site.css"/>
-<script src="assets/site.js" defer></script>
+<script src="assets/js/track.js" defer></script>
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/form.js" defer></script>
+
 
 </head>
 <body>
@@ -57,8 +61,8 @@
 <a class="brand" href="index.html">
 <img alt="BottiZ" class="brand-icon" src="images/logo_bottiz_full.png" width="1272" height="303" loading="eager" fetchpriority="high" decoding="async"/>
 </a>
-<button class="nav-toggle" aria-label="Menu" onclick="toggleMobileNav()">☰</button>
-<div class="nav-links">
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" type="button" data-nav-toggle>☰</button>
+<div class="nav-links" id="navLinks">
 <div class="nav-menu">
 <a class="nav-link" href="index.html">首頁</a><a class="nav-link" href="solutions.html">按行業探索</a><a class="nav-link active" href="products.html">產品中心</a><a class="nav-link" href="smart-campus.html">智慧校園</a><a class="nav-link" href="insights.html">媒體動態</a><a class="nav-link" href="about.html">關於我們</a><a class="nav-link" href="contact.html">聯絡我們</a></div>
 <div class="nav-actions"><div class="language-switcher">
@@ -69,7 +73,7 @@
 <option value="en">English</option>
 </select>
 </div>
-<button class="btn btn-primary" onclick="openContact()">取得方案建議</button></div>
+<button class="btn btn-primary" type="button" data-open-form data-track="cta_nav_click">取得方案建議</button></div>
 </div>
 </nav>
 </header>
@@ -93,7 +97,7 @@
 <p class="product-detail-intro">六輪全地形巡邏機械人，可自主巡航、異常偵測與即時警報，適用於園區、電站、隧道等大型基礎設施的安全巡檢。</p>
 <div class="tags"><span class="tag">巡邏</span><span class="tag">安防</span><span class="tag">全地形</span></div>
 <div class="hero-actions">
-<button class="btn btn-primary" onclick="openContact('Securbot')">查詢方案</button>
+<button class="btn btn-primary" data-open-form="Securbot">查詢方案</button>
 <a class="btn btn-secondary" href="products.html#infrastructure">查看同類產品</a>
 </div>
 </div>
@@ -139,7 +143,7 @@
 <h2>有興趣了解 Securbot 如何應用於您的場景？</h2>
 <p>告訴我們您的行業與需求，顧問團隊會建議合適的配置及部署方式，並可安排免費示範。</p>
 </div>
-<button class="btn btn-secondary" onclick="openContact('Securbot')">預約免費示範</button>
+<button class="btn btn-secondary" data-open-form="Securbot">預約免費示範</button>
 </section>
 
 <section class="contact-section" id="contact">
@@ -185,37 +189,40 @@
 <footer>© BottiZ · 全場景機器人整合方案</footer>
 
 
-<div class="modal" id="contactModal" onclick="backdropClose(event,'contactModal')">
+<div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle" data-modal>
 <div class="modal-panel">
 <div class="modal-head">
-<h3>取得方案建議</h3>
-<button aria-label="關閉" class="close" onclick="closeModal('contactModal')">×</button>
+<h3 id="contactModalTitle">取得方案建議</h3>
+<button aria-label="關閉" class="close" type="button" data-close-modal>×</button>
 </div>
 <div class="modal-content">
-<form class="form-grid" id="inquiryForm" onsubmit="handleEmailSubmit(event)">
-<label>姓名<input id="nameInput" name="姓名" placeholder="姓名及職位" required="" type="text"/></label>
-<label>公司 / 機構名稱<input id="companyInput" name="公司/機構名稱" placeholder="例如：XX有限公司" type="text"/></label>
-<label>電子郵件<input id="emailInput" name="電子郵件" placeholder="name@company.com" required="" type="email"/></label>
-<label>電話號碼<input id="phoneInput" name="電話號碼" placeholder="例如：9123 4567" type="tel"/></label>
-<label>查詢類型<select id="inquiryTypeSelect" name="查詢類型">
+<form class="form-grid enquiry-form" id="inquiryForm" data-enquiry data-form="default" data-endpoint="【待填：表單後端網址】" data-endpoint-ready="false" data-whatsapp="85295335639" data-mailto="support@bottiz.com" data-industry="" data-page-title="Securbot 六輪巡邏機械人｜BottiZ 產品中心" novalidate>
+<div class="field"><label for="inquiryForm-name">姓名<span class="req" aria-hidden="true"> *</span></label><input id="inquiryForm-name" name="name" type="text" required aria-required="true" placeholder="姓名及職位" autocomplete="name" aria-describedby="inquiryForm-e-name"/><p class="field-error" id="inquiryForm-e-name" hidden></p></div>
+<div class="field"><label for="inquiryForm-company">公司 / 機構名稱</label><input id="inquiryForm-company" name="company" type="text" placeholder="例如：XX有限公司" autocomplete="organization" aria-describedby="inquiryForm-e-company"/><p class="field-error" id="inquiryForm-e-company" hidden></p></div>
+<div class="field"><label for="inquiryForm-email">電子郵件<span class="req" aria-hidden="true"> *</span></label><input id="inquiryForm-email" name="email" type="email" required aria-required="true" placeholder="name@company.com" autocomplete="email" aria-describedby="inquiryForm-e-email"/><p class="field-error" id="inquiryForm-e-email" hidden></p></div>
+<div class="field"><label for="inquiryForm-phone">電話號碼</label><input id="inquiryForm-phone" name="phone" type="tel" placeholder="例如：9123 4567" autocomplete="tel" aria-describedby="inquiryForm-e-phone"/><p class="field-error" id="inquiryForm-e-phone" hidden></p></div>
+<div class="field"><label for="inquiryForm-inquiryType">查詢類型</label><select id="inquiryForm-inquiryType" name="inquiryType">
 <option value="產品諮詢">產品諮詢</option>
 <option value="方案評估">方案評估</option>
 <option value="技術支援">技術支援</option>
 <option value="媒體合作">媒體合作</option>
 <option value="其他">其他</option>
-</select></label>
-<label>感興趣的產品 / 方案<input id="interestInput" name="感興趣的產品" placeholder="例如：清潔、配送、接待或巡邏機械人" type="text"/></label>
-<label>詳細說明<textarea id="messageInput" name="詳細說明" placeholder="請簡述您的場景與需求" required="" rows="4"></textarea></label>
+</select></div>
+<div class="field"><label for="inquiryForm-interest">感興趣的產品 / 方案</label><input id="inquiryForm-interest" name="interest" type="text" placeholder="例如：清潔、配送、接待或巡邏機械人" aria-describedby="inquiryForm-e-interest"/><p class="field-error" id="inquiryForm-e-interest" hidden></p></div>
+<div class="field"><label for="inquiryForm-message">詳細說明<span class="req" aria-hidden="true"> *</span></label><textarea id="inquiryForm-message" name="message" rows="4" required aria-required="true" placeholder="請簡述您的場景與需求" aria-describedby="inquiryForm-e-message"></textarea><p class="field-error" id="inquiryForm-e-message" hidden></p></div>
+<div class="field-hp" aria-hidden="true"><label for="inquiryForm-website">請勿填寫此欄</label><input id="inquiryForm-website" name="website" type="text" tabindex="-1" autocomplete="off"/></div>
+<div class="field consent"><label class="consent-label" for="inquiryForm-consent"><input id="inquiryForm-consent" name="consent" type="checkbox" required aria-required="true" aria-describedby="inquiryForm-e-consent"/><span><span>我已閱讀並同意按私隱政策處理以上個人資料，用作回覆查詢及跟進。</span> <span class="todo">【待填：私隱政策連結】</span></span></label><p class="field-error" id="inquiryForm-e-consent" hidden></p></div>
+<p class="form-note"><span>您提交的資料會用於回覆查詢及跟進。</span> <span class="todo">【待填：個人資料收集聲明（收集目的、資料用途、保留期限、查閱及更正途徑）】</span></p>
 <div class="form-actions">
-<button class="btn btn-primary" id="submitInquiryButton" type="submit">電郵提交</button>
-<button class="btn btn-whatsapp" id="whatsappInquiryButton" onclick="handleWhatsAppSubmit()" type="button">WhatsApp 查詢</button>
+<button class="btn btn-primary" type="submit" data-track="form_submit_click">提交查詢</button>
+<button class="btn btn-whatsapp" type="button" data-whatsapp-submit data-track="whatsapp_form_click">WhatsApp 查詢</button>
 </div>
-<div id="prototypeMessage" style="display:none;padding:12px 14px;border-radius:12px;background:#ecfdf5;color:#047857;font-weight:750;line-height:1.65">已開啟電郵應用，請確認內容後按「傳送」。</div>
+<p class="form-status" role="status" aria-live="polite" data-i18n-skip hidden></p>
 </form>
-</div>
-</div>
-</div>
 
+</div>
+</div>
+</div>
 
 </body>
 </html>

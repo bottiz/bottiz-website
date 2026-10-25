@@ -3,8 +3,8 @@
 <a class="brand" href="index.html">
 <img alt="{{site.name}}" class="brand-icon" src="{{site.logo.full}}" width="{{site.logo.width}}" height="{{site.logo.height}}" loading="eager" fetchpriority="high" decoding="async"/>
 </a>
-<button class="nav-toggle" aria-label="Menu" onclick="toggleMobileNav()">☰</button>
-<div class="nav-links">
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" type="button" data-nav-toggle>☰</button>
+<div class="nav-links" id="navLinks">
 <div class="nav-menu">
 {{#each navItems}}<a class="nav-link{{#if active}} active{{/if}}" href="{{href}}">{{label}}</a>{{/each}}</div>
 <div class="nav-actions"><div class="language-switcher">
@@ -15,7 +15,7 @@
 <option value="en">English</option>
 </select>
 </div>
-{{#if page.navCta.href}}<a class="btn btn-primary" href="{{page.navCta.href}}">{{page.navCta.label}}</a>{{else}}<button class="btn btn-primary" onclick="openContact()">{{page.navCta.label}}</button>{{/if}}</div>
+{{#if page.navCta.href}}<a class="btn btn-primary" href="{{page.navCta.href}}" data-track="cta_nav_click">{{page.navCta.label}}</a>{{else}}<button class="btn btn-primary" type="button" data-open-form data-track="cta_nav_click">{{page.navCta.label}}</button>{{/if}}</div>
 </div>
 </nav>
 </header>

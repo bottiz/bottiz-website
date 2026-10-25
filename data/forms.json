@@ -1,0 +1,189 @@
+{
+  "default": {
+    "title": "取得方案建議",
+    "submitLabel": "提交查詢",
+    "fields": [
+      {
+        "key": "name",
+        "label": "姓名",
+        "control": "input",
+        "type": "text",
+        "required": true,
+        "placeholder": "姓名及職位",
+        "autocomplete": "name"
+      },
+      {
+        "key": "company",
+        "label": "公司 / 機構名稱",
+        "control": "input",
+        "type": "text",
+        "placeholder": "例如：XX有限公司",
+        "autocomplete": "organization"
+      },
+      {
+        "key": "email",
+        "label": "電子郵件",
+        "control": "input",
+        "type": "email",
+        "required": true,
+        "placeholder": "name@company.com",
+        "autocomplete": "email"
+      },
+      {
+        "key": "phone",
+        "label": "電話號碼",
+        "control": "input",
+        "type": "tel",
+        "placeholder": "例如：9123 4567",
+        "autocomplete": "tel"
+      },
+      {
+        "key": "inquiryType",
+        "label": "查詢類型",
+        "control": "select",
+        "options": [
+          "產品諮詢",
+          "方案評估",
+          "技術支援",
+          "媒體合作",
+          "其他"
+        ]
+      },
+      {
+        "key": "interest",
+        "label": "感興趣的產品 / 方案",
+        "control": "input",
+        "type": "text",
+        "placeholder": "例如：清潔、配送、接待或巡邏機械人"
+      },
+      {
+        "key": "message",
+        "label": "詳細說明",
+        "control": "textarea",
+        "required": true,
+        "rows": 4,
+        "placeholder": "請簡述您的場景與需求"
+      }
+    ]
+  },
+  "contact": {
+    "base": "default",
+    "title": "送出查詢",
+    "overrides": {
+      "inquiryType": {
+        "options": [
+          "產品諮詢",
+          "方案評估",
+          "智啟校園資助計劃",
+          "技術支援",
+          "媒體合作",
+          "其他"
+        ]
+      }
+    }
+  },
+  "campus": {
+    "base": "default",
+    "title": "索取校園方案",
+    "overrides": {
+      "company": {
+        "label": "學校 / 機構名稱",
+        "placeholder": "例如：XX小學"
+      },
+      "email": {
+        "placeholder": "name@school.edu.hk"
+      },
+      "inquiryType": {
+        "options": [
+          "產品諮詢",
+          "校園方案評估",
+          "技術支援",
+          "其他"
+        ]
+      },
+      "interest": {
+        "label": "感興趣的校園場景",
+        "placeholder": "例如：走廊清潔、教材運送、訪客接待、智能圖書或互動學習"
+      },
+      "message": {
+        "placeholder": "例如：走廊清潔、教材配送、訪客接待、圖書館導覽或互動教學"
+      }
+    }
+  },
+  "funding": {
+    "title": "預約免費專業諮詢",
+    "submitLabel": "提交諮詢需求",
+    "fields": [
+      {
+        "key": "inquiryType",
+        "control": "hidden",
+        "value": "智啟校園資助計劃"
+      },
+      {
+        "key": "company",
+        "label": "學校名稱",
+        "control": "input",
+        "type": "text",
+        "required": true,
+        "placeholder": "請輸入學校名稱",
+        "autocomplete": "organization"
+      },
+      {
+        "key": "name",
+        "label": "聯絡人姓名及職銜",
+        "control": "input",
+        "type": "text",
+        "required": true,
+        "placeholder": "例如：陳老師（IT 主任）",
+        "autocomplete": "name"
+      },
+      {
+        "key": "email",
+        "label": "電子郵件",
+        "control": "input",
+        "type": "email",
+        "required": true,
+        "placeholder": "name@school.edu.hk",
+        "autocomplete": "email"
+      },
+      {
+        "key": "interest",
+        "label": "感興趣的設備或服務",
+        "control": "input",
+        "type": "text",
+        "placeholder": "例如：悟空機器人、CyberPi、教師培訓工作坊"
+      }
+    ]
+  },
+  "lead": {
+    "formId": "leadForm",
+    "title": "索取勘察前準備清單",
+    "submitLabel": "留低資料並下載",
+    "fields": [
+      {
+        "key": "inquiryType",
+        "control": "hidden",
+        "value": "勘察前準備清單"
+      },
+      {
+        "key": "name",
+        "label": "姓名（選填）",
+        "control": "input",
+        "type": "text",
+        "placeholder": "您的姓名",
+        "autocomplete": "name"
+      },
+      {
+        "key": "email",
+        "label": "電子郵件",
+        "control": "input",
+        "type": "email",
+        "required": true,
+        "placeholder": "name@company.com",
+        "autocomplete": "email"
+      }
+    ],
+    "whatsapp": false,
+    "downloadKey": "surveyChecklist"
+  }
+}

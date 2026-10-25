@@ -10,7 +10,6 @@
 </main>
 {{> footer}}
 {{#if page.fixedCta}}{{> fixed-cta-bar}}{{/if}}
-{{#if page.modalDefault}}{{> modal-default}}{{/if}}
-{{#if page.modalCampus}}{{> modal-campus}}{{/if}}
+{{#if page.formModal}}{{#with page.formData}}{{> modal}}{{/with}}{{/if}}
 </body>
 </html>

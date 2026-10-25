@@ -6,13 +6,15 @@
 //   data/*.json          content & config, exposed to templates by file name
 //
 // Template syntax: {{path}} raw, {{path|e}} HTML-escaped, {{> partial}},
-// {{#if path}}..{{else}}..{{/if}}, {{#each path}}..{{/each}} (@index, this).
-import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
+// {{#if path}}..{{else}}..{{/if}}, {{#each path}}..{{/each}}, {{#with path}}..{{/with}}.
+import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from 'node:fs';
 import { join, basename, dirname } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
+// OUT_DIR lets you build a throw-away copy (e.g. with a test FORM_ENDPOINT) without touching the repo root.
+const OUT = process.env.OUT_DIR || ROOT;
 const read = (...p) => readFileSync(join(ROOT, ...p), 'utf8');
 const listHtml = (dir) => readdirSync(join(ROOT, dir)).filter((f) => f.endsWith('.html'));
 
@@ -28,6 +30,37 @@ if (existsSync(join(ROOT, 'data'))) {
 }
 
 const site = data.site;
+
+// Environment overrides (deployment-specific values stay out of the repo).
+if (process.env.FORM_ENDPOINT) site.form.endpoint = process.env.FORM_ENDPOINT;
+if (process.env.PRIVACY_URL) site.form.privacyUrl = process.env.PRIVACY_URL;
+if (process.env.ANALYTICS_ID) Object.assign(site.analytics, { enabled: true, measurementId: process.env.ANALYTICS_ID });
+const isTodo = (v) => !v || String(v).startsWith('【待填');
+site.form.endpointConfigured = !isTodo(site.form.endpoint);
+site.form.privacyConfigured = !isTodo(site.form.privacyUrl);
+site.analytics.enabled = Boolean(site.analytics.enabled) && !isTodo(site.analytics.measurementId);
+
+// Form variants: expand base/overrides, flag control type for the template.
+function resolveForms(raw) {
+  const out = {};
+  for (const [key, def] of Object.entries(raw)) {
+    const base = def.base ? raw[def.base] : null;
+    let fields = JSON.parse(JSON.stringify(def.fields || base.fields));
+    for (const [fieldKey, patch] of Object.entries(def.overrides || {})) {
+      const f = fields.find((x) => x.key === fieldKey);
+      if (!f) throw new Error(`forms.${key}: unknown field "${fieldKey}"`);
+      Object.assign(f, patch);
+    }
+    fields = fields.map((f) => ({ ...f, [`is_${f.control}`]: true }));
+    out[key] = { key, formId: 'inquiryForm', whatsapp: true, title: base?.title, submitLabel: base?.submitLabel, ...def, fields };
+    delete out[key].base;
+    delete out[key].overrides;
+  }
+  return out;
+}
+data.forms = resolveForms(data.forms);
+for (const item of Object.values(data.downloads || {})) item.ready = !isTodo(item.file);
+for (const form of Object.values(data.forms)) form.download = form.downloadKey && data.downloads[form.downloadKey].ready ? data.downloads[form.downloadKey].file : '';
 const absUrl = (u) => (/^https?:/.test(u) ? u : `${site.url}/${u}`);
 // JSON for <script type="application/ld+json">: keep "<" from closing the tag.
 const ldJson = (obj) => JSON.stringify(obj, null, 2).replace(/</g, '\\u003c');
@@ -125,6 +158,11 @@ function renderNodes(nodes, scopes, ctxName) {
         const v = lookup(n.path, scopes);
         const truthy = Array.isArray(v) ? v.length > 0 : Boolean(v);
         out += renderNodes(truthy ? n.children : n.alt || [], scopes, ctxName);
+        break;
+      }
+      case 'with': {
+        const v = lookup(n.path, scopes);
+        if (v) out += renderNodes(n.children, [{ ...v, this: v }, ...scopes], ctxName);
         break;
       }
       case 'each': {
@@ -248,6 +286,7 @@ for (const file of listHtml('src/pages')) {
   page.navCta = { ...data.site.navCta, ...page.navCta };
   page.footer = page.footer || data.site.footer;
   page.ogType = page.ogType || 'website';
+  page.industry = page.industry || '';
   page.canonical = absUrl(page.slug === 'index.html' ? '' : page.slug);
   page.ogTitle = page.ogTitle || page.title;
   page.ogDescription = page.ogDescription || page.description;
@@ -255,15 +294,28 @@ for (const file of listHtml('src/pages')) {
   page.ogImage = absUrl(page.ogImage || data.site.ogImage);
   page.ogImageAlt = page.ogImageAlt || page.ogTitle;
   page.orgLd = ldJson(organizationLd());
+  // data/<name>.json exposed to client scripts as <script type="application/json"> via page.embed.
+  page.embedJson = Object.fromEntries((page.embed || []).map((name) => [name, ldJson(data[name])]));
   if (page.faq?.length) page.faqLd = ldJson(faqLd(page.faq));
+  if (page.form !== false) {
+    page.formData = data.forms[page.form || 'default'];
+    if (!page.formData) throw new Error(`${file}: unknown form variant "${page.form}"`);
+    page.formModal = !page.formInline;
+  }
   const navItems = data.site.nav.map((n) => ({ ...n, active: n.key === page.nav }));
   const scopes = [{ page, navItems }, data];
   const content = renderNodes(getAst('page:' + file, raw.slice(fm[0].length)).children, scopes, file);
   const layoutName = page.layout || 'base';
   const html = renderNodes(getAst('layout:' + layoutName, layouts[layoutName]).children, [{ content }, ...scopes], layoutName);
-  writeFileSync(join(ROOT, page.slug), optimizeImages(html));
+  writeFileSync(join(OUT, page.slug), optimizeImages(html));
   built.push(page);
   count++;
+}
+
+// ---- translations: data/i18n/<lang>.json -> assets/i18n/<lang>.json (loaded on demand)
+mkdirSync(join(OUT, 'assets/i18n'), { recursive: true });
+for (const lang of ['zh-Hans', 'en']) {
+  writeFileSync(join(OUT, `assets/i18n/${lang}.json`), JSON.stringify(JSON.parse(read('data/i18n', `${lang}.json`))));
 }
 
 // ---- sitemap.xml & robots.txt ----------------------------------------------
@@ -283,10 +335,10 @@ const urlEntries = built
   })
   .join('\n');
 writeFileSync(
-  join(ROOT, 'sitemap.xml'),
+  join(OUT, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlEntries}\n</urlset>\n`,
 );
-writeFileSync(join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${site.url}/sitemap.xml\n`);
+writeFileSync(join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${site.url}/sitemap.xml\n`);
 
 if (missing.size) {
   console.warn('Warning: unresolved template variables:\n  ' + [...missing].join('\n  '));

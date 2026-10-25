@@ -28,4 +28,11 @@
 {{page.faqLd}}
 </script>
 {{/if}}<link rel="stylesheet" href="assets/site.css"/>
-<script src="assets/site.js" defer></script>
+{{#if site.analytics.enabled}}<script async src="https://www.googletagmanager.com/gtag/js?id={{site.analytics.measurementId|e}}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','{{site.analytics.measurementId|e}}');</script>
+{{/if}}<script src="assets/js/track.js" defer></script>
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/form.js" defer></script>
+{{#each page.scripts}}<script src="assets/js/{{this}}.js" defer></script>
+{{/each}}

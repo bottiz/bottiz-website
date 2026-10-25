@@ -1,0 +1,16 @@
+<form class="form-grid enquiry-form" id="{{formId}}" data-enquiry data-form="{{key}}"{{#if download}} data-download="{{download|e}}"{{/if}} data-endpoint="{{site.form.endpoint|e}}" data-endpoint-ready="{{site.form.endpointConfigured}}" data-whatsapp="{{site.contact.whatsapp}}" data-mailto="{{site.contact.email}}" data-industry="{{page.industry}}" data-page-title="{{page.title|e}}" novalidate>
+{{#each fields}}{{#if is_hidden}}<input type="hidden" name="{{key}}" value="{{value|e}}"/>
+{{/if}}{{#if is_input}}<div class="field"><label for="{{formId}}-{{key}}">{{label}}{{#if required}}<span class="req" aria-hidden="true"> *</span>{{/if}}</label><input id="{{formId}}-{{key}}" name="{{key}}" type="{{type}}"{{#if required}} required aria-required="true"{{/if}} placeholder="{{placeholder|e}}"{{#if autocomplete}} autocomplete="{{autocomplete}}"{{/if}} aria-describedby="{{formId}}-e-{{key}}"/><p class="field-error" id="{{formId}}-e-{{key}}" hidden></p></div>
+{{/if}}{{#if is_select}}<div class="field"><label for="{{formId}}-{{key}}">{{label}}</label><select id="{{formId}}-{{key}}" name="{{key}}">
+{{#each options}}<option value="{{this|e}}">{{this}}</option>
+{{/each}}</select></div>
+{{/if}}{{#if is_textarea}}<div class="field"><label for="{{formId}}-{{key}}">{{label}}{{#if required}}<span class="req" aria-hidden="true"> *</span>{{/if}}</label><textarea id="{{formId}}-{{key}}" name="{{key}}" rows="{{rows}}"{{#if required}} required aria-required="true"{{/if}} placeholder="{{placeholder|e}}" aria-describedby="{{formId}}-e-{{key}}"></textarea><p class="field-error" id="{{formId}}-e-{{key}}" hidden></p></div>
+{{/if}}{{/each}}<div class="field-hp" aria-hidden="true"><label for="{{formId}}-website">請勿填寫此欄</label><input id="{{formId}}-website" name="website" type="text" tabindex="-1" autocomplete="off"/></div>
+<div class="field consent"><label class="consent-label" for="{{formId}}-consent"><input id="{{formId}}-consent" name="consent" type="checkbox" required aria-required="true" aria-describedby="{{formId}}-e-consent"/><span><span>{{site.form.consent}}</span>{{#if site.form.privacyConfigured}} <a href="{{site.form.privacyUrl|e}}" target="_blank" rel="noopener">私隱政策</a>{{else}} <span class="todo">{{site.form.privacyUrl}}</span>{{/if}}</span></label><p class="field-error" id="{{formId}}-e-consent" hidden></p></div>
+<p class="form-note"><span>{{site.form.pics}}</span> <span class="todo">{{site.form.picsTodo}}</span></p>
+<div class="form-actions">
+<button class="btn btn-primary" type="submit" data-track="form_submit_click">{{submitLabel}}</button>
+{{#if whatsapp}}<button class="btn btn-whatsapp" type="button" data-whatsapp-submit data-track="whatsapp_form_click">WhatsApp 查詢</button>{{/if}}
+</div>
+<p class="form-status" role="status" aria-live="polite" data-i18n-skip hidden></p>
+</form>

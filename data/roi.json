@@ -1,0 +1,28 @@
+{
+  "assumptions": {
+    "fallbackWorkingDays": 26,
+    "monthsPerYear": 12
+  },
+  "inputs": [
+    { "key": "headcount", "label": "現有人手數目", "unit": "人", "min": 0, "step": 1, "hint": "現時負責有關工序的員工人數。" },
+    { "key": "monthlySalary", "label": "平均月薪", "unit": "港元／人", "min": 0, "step": 100, "hint": "每名員工的平均月薪成本。" },
+    { "key": "hoursPerDay", "label": "每日工時", "unit": "小時", "min": 0, "max": 24, "step": 0.5, "hint": "每名員工每日負責有關工序的時數。" },
+    { "key": "replaceShare", "label": "擬由機械人分擔的工序比例", "unit": "%", "min": 0, "max": 100, "step": 5, "hint": "0 至 100；其餘工序仍由員工處理。" },
+    { "key": "investment", "label": "預計機械人投資（選填）", "unit": "港元", "min": 0, "step": 1000, "hint": "如採購、試行或安裝費用，請按實際報價填寫。" },
+    { "key": "monthlyRunningCost", "label": "預計每月營運成本（選填）", "unit": "港元", "min": 0, "step": 100, "hint": "如月租、保養或耗材。" },
+    { "key": "workingDays", "label": "每月工作日數（選填）", "unit": "日", "min": 1, "max": 31, "step": 1, "hint": "未填寫時，以 26 日計算。" }
+  ],
+  "results": [
+    { "key": "labourCost", "label": "現有每月人手成本", "format": "currency" },
+    { "key": "coveredHours", "label": "每月可由機械人分擔工時", "format": "hours", "unit": "小時" },
+    { "key": "netMonthlySaving", "label": "估算每月節省（已扣營運成本）", "format": "currency" },
+    { "key": "annualSaving", "label": "估算每年節省", "format": "currency" },
+    { "key": "paybackMonths", "label": "估算回本期", "format": "months", "unit": "個月" }
+  ],
+  "formulas": [
+    "每月人手成本 ＝ 人手數目 × 平均月薪",
+    "每月分擔工時 ＝ 人手數目 × 每日工時 × 每月工作日數 × 分擔比例",
+    "每月節省 ＝ 每月人手成本 × 分擔比例 － 每月營運成本",
+    "回本期 ＝ 預計投資 ÷ 每月節省（每月節省須大於零）"
+  ]
+}

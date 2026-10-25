@@ -1,0 +1,66 @@
+<!--page
+{
+  "title": "人手成本與回本期估算｜BottiZ",
+  "description": "輸入現有人手、月薪及可由機械人分擔的工序比例，粗略估算每月節省與回本期；結果僅供參考，實際視場地而定。",
+  "keywords": "機械人回本期,人手成本估算,機械人ROI,機械人租賃,預約勘察,BottiZ",
+  "nav": "",
+  "priority": "0.7",
+  "form": "default",
+  "scripts": ["roi"],
+  "embed": ["roi"]
+}
+-->
+<section class="section" style="padding-top:64px;padding-bottom:16px">
+<div class="section-head">
+<div>
+<div class="section-kicker">Estimate</div>
+<h1 class="page-title">人手成本與回本期估算</h1>
+</div>
+<p class="section-desc">填寫貴單位的人手情況，粗略了解機械人分擔工序後的每月節省與回本期。數字由您輸入，未填寫的欄位不會被預設。</p>
+</div>
+</section>
+
+<section class="section roi-section" style="padding-top:0">
+<div class="roi-layout">
+<form id="roiForm" class="roi-inputs" novalidate aria-describedby="roiDisclaimer">
+<h2 class="roi-title">您的情況</h2>
+{{#each roi.inputs}}
+<div class="field">
+<label for="roi-{{key}}">{{label}}（{{unit}}）</label>
+<input id="roi-{{key}}" name="{{key}}" type="number" inputmode="decimal" min="{{min}}" step="{{step}}" aria-describedby="roi-{{key}}-hint">
+<p class="field-hint" id="roi-{{key}}-hint">{{hint}}</p>
+</div>
+{{/each}}
+</form>
+
+<div class="roi-results" aria-live="polite">
+<h2 class="roi-title">估算結果</h2>
+<dl class="roi-list">
+{{#each roi.results}}
+<div class="roi-row">
+<dt>{{label}}</dt>
+<dd><span data-result="{{key}}">—</span>{{#if unit}} <small>{{unit}}</small>{{/if}}</dd>
+</div>
+{{/each}}
+</dl>
+<p class="roi-note" id="roiNote"></p>
+<p class="roi-disclaimer" id="roiDisclaimer">僅供參考，實際視場地而定。</p>
+<div class="roi-actions">
+<button class="btn btn-primary" type="button" data-open-form data-track="cta_roi_survey">預約勘察</button>
+</div>
+<details class="roi-formulas">
+<summary>計算方式</summary>
+<ul>
+{{#each roi.formulas}}
+<li>{{this}}</li>
+{{/each}}
+</ul>
+</details>
+</div>
+</div>
+<script type="application/json" id="roi-config">{{page.embedJson.roi}}</script>
+</section>
+
+<section class="section" style="padding-top:0">
+{{> lead-magnet}}
+</section>

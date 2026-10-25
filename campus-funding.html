@@ -88,7 +88,11 @@
 }
 </script>
 <link rel="stylesheet" href="assets/site.css"/>
-<script src="assets/site.js" defer></script>
+<script src="assets/js/track.js" defer></script>
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/form.js" defer></script>
+
 
 </head>
 <body>
@@ -97,8 +101,8 @@
 <a class="brand" href="index.html">
 <img alt="BottiZ" class="brand-icon" src="images/logo_bottiz_full.png" width="1272" height="303" loading="eager" fetchpriority="high" decoding="async"/>
 </a>
-<button class="nav-toggle" aria-label="Menu" onclick="toggleMobileNav()">☰</button>
-<div class="nav-links">
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" type="button" data-nav-toggle>☰</button>
+<div class="nav-links" id="navLinks">
 <div class="nav-menu">
 <a class="nav-link" href="index.html">首頁</a><a class="nav-link" href="solutions.html">按行業探索</a><a class="nav-link" href="products.html">產品中心</a><a class="nav-link" href="smart-campus.html">智慧校園</a><a class="nav-link" href="insights.html">媒體動態</a><a class="nav-link" href="about.html">關於我們</a><a class="nav-link" href="contact.html">聯絡我們</a></div>
 <div class="nav-actions"><div class="language-switcher">
@@ -109,7 +113,7 @@
 <option value="en">English</option>
 </select>
 </div>
-<a class="btn btn-primary" href="#funding-form">預約免費諮詢</a></div>
+<a class="btn btn-primary" href="#funding-form" data-track="cta_nav_click">預約免費諮詢</a></div>
 </div>
 </nav>
 </header>
@@ -269,25 +273,27 @@
 <div class="contact-panel" style="max-width:640px;margin:0 auto">
 <h2 class="contact-title" style="text-align:center">預約免費專業諮詢</h2>
 <p class="section-desc" style="text-align:center;margin:0 auto 22px;max-width:none">填寫以下表格，我們的顧問將在 24 小時內與您聯絡。</p>
-<form class="form-grid" id="inquiryForm" onsubmit="handleEmailSubmit(event)">
-<input id="inquiryTypeSelect" type="hidden" value="智啟校園資助計劃"/>
-<label>學校名稱 *<input id="companyInput" name="學校名稱" placeholder="請輸入學校名稱" required="" type="text"/></label>
-<label>聯絡人姓名及職銜 *<input id="nameInput" name="聯絡人姓名及職銜" placeholder="例如：陳老師（IT 主任）" required="" type="text"/></label>
-<label>電子郵件 *<input id="emailInput" name="電子郵件" placeholder="name@school.edu.hk" required="" type="email"/></label>
-<label>感興趣的設備或服務<input id="interestInput" name="感興趣的設備或服務" placeholder="例如：悟空機器人、CyberPi、教師培訓工作坊" type="text"/></label>
+<form class="form-grid enquiry-form" id="inquiryForm" data-enquiry data-form="funding" data-endpoint="【待填：表單後端網址】" data-endpoint-ready="false" data-whatsapp="85295335639" data-mailto="support@bottiz.com" data-industry="" data-page-title="智啟校園資助計劃｜BottiZ 一站式機械人 AI 配套" novalidate>
+<input type="hidden" name="inquiryType" value="智啟校園資助計劃"/>
+<div class="field"><label for="inquiryForm-company">學校名稱<span class="req" aria-hidden="true"> *</span></label><input id="inquiryForm-company" name="company" type="text" required aria-required="true" placeholder="請輸入學校名稱" autocomplete="organization" aria-describedby="inquiryForm-e-company"/><p class="field-error" id="inquiryForm-e-company" hidden></p></div>
+<div class="field"><label for="inquiryForm-name">聯絡人姓名及職銜<span class="req" aria-hidden="true"> *</span></label><input id="inquiryForm-name" name="name" type="text" required aria-required="true" placeholder="例如：陳老師（IT 主任）" autocomplete="name" aria-describedby="inquiryForm-e-name"/><p class="field-error" id="inquiryForm-e-name" hidden></p></div>
+<div class="field"><label for="inquiryForm-email">電子郵件<span class="req" aria-hidden="true"> *</span></label><input id="inquiryForm-email" name="email" type="email" required aria-required="true" placeholder="name@school.edu.hk" autocomplete="email" aria-describedby="inquiryForm-e-email"/><p class="field-error" id="inquiryForm-e-email" hidden></p></div>
+<div class="field"><label for="inquiryForm-interest">感興趣的設備或服務</label><input id="inquiryForm-interest" name="interest" type="text" placeholder="例如：悟空機器人、CyberPi、教師培訓工作坊" aria-describedby="inquiryForm-e-interest"/><p class="field-error" id="inquiryForm-e-interest" hidden></p></div>
+<div class="field-hp" aria-hidden="true"><label for="inquiryForm-website">請勿填寫此欄</label><input id="inquiryForm-website" name="website" type="text" tabindex="-1" autocomplete="off"/></div>
+<div class="field consent"><label class="consent-label" for="inquiryForm-consent"><input id="inquiryForm-consent" name="consent" type="checkbox" required aria-required="true" aria-describedby="inquiryForm-e-consent"/><span><span>我已閱讀並同意按私隱政策處理以上個人資料，用作回覆查詢及跟進。</span> <span class="todo">【待填：私隱政策連結】</span></span></label><p class="field-error" id="inquiryForm-e-consent" hidden></p></div>
+<p class="form-note"><span>您提交的資料會用於回覆查詢及跟進。</span> <span class="todo">【待填：個人資料收集聲明（收集目的、資料用途、保留期限、查閱及更正途徑）】</span></p>
 <div class="form-actions">
-<button class="btn btn-primary" id="submitInquiryButton" type="submit">提交諮詢需求</button>
-<button class="btn btn-whatsapp" id="whatsappInquiryButton" onclick="handleWhatsAppSubmit()" type="button">WhatsApp 查詢</button>
+<button class="btn btn-primary" type="submit" data-track="form_submit_click">提交諮詢需求</button>
+<button class="btn btn-whatsapp" type="button" data-whatsapp-submit data-track="whatsapp_form_click">WhatsApp 查詢</button>
 </div>
-<div id="prototypeMessage" style="display:none;padding:12px 14px;border-radius:12px;background:#ecfdf5;color:#047857;font-weight:750;line-height:1.65">已開啟電郵應用，請確認內容後按「傳送」。</div>
-<p style="margin:4px 0 0;color:var(--muted);font-size:12px;text-align:center">您的資料絕對保密，僅用於此次諮詢跟進。</p>
+<p class="form-status" role="status" aria-live="polite" data-i18n-skip hidden></p>
 </form>
+
 </div>
 </section>
 
 </main>
 <footer>© BottiZ · 全場景機器人整合方案</footer>
-
 
 
 

@@ -1,0 +1,9 @@
+<aside class="lead-magnet" aria-labelledby="lead-magnet-title">
+<h2 id="lead-magnet-title">{{downloads.surveyChecklist.title}}</h2>
+<p>{{downloads.surveyChecklist.description}}</p>
+{{#if downloads.surveyChecklist.ready}}<a class="btn btn-secondary" href="{{downloads.surveyChecklist.file|e}}" download data-track="download_survey_checklist">直接下載 PDF</a>{{else}}<p class="todo">{{downloads.surveyChecklist.file}}</p>{{/if}}
+<details class="lead-details">
+<summary>或留低聯絡資料（選填），方便我們於勘察前跟進</summary>
+{{#with forms.lead}}{{> form}}{{/with}}
+</details>
+</aside>
