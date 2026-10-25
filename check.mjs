@@ -85,7 +85,8 @@ for (const [f, html] of src) {
       err(f, `broken link: ${href}`);
       continue;
     }
-    if (hash && src.has(target) && !new RegExp(`\\bid="${hash}"`).test(src.get(target))) err(f, `missing anchor: ${href}`);
+    // #hash may be an element id or a product filter button (data-filter).
+    if (hash && src.has(target) && !new RegExp(`\\b(id|data-filter)="${hash}"`).test(src.get(target))) err(f, `missing anchor: ${href}`);
   }
 
   // --- forms

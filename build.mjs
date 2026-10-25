@@ -63,6 +63,7 @@ function resolveForms(raw) {
 data.forms = resolveForms(data.forms);
 for (const item of Object.values(data.downloads || {})) item.ready = !isTodo(item.file);
 for (const form of Object.values(data.forms)) form.download = form.downloadKey && data.downloads[form.downloadKey].ready ? data.downloads[form.downloadKey].file : '';
+data.productList = Object.entries(data.products).map(([key, p]) => ({ key, ...p, categories: p.industries.join(' ') }));
 const absUrl = (u) => (/^https?:/.test(u) ? u : `${site.url}/${u}`);
 // JSON for <script type="application/ld+json">: keep "<" from closing the tag.
 const ldJson = (obj) => JSON.stringify(obj, null, 2).replace(/</g, '\\u003c');
@@ -296,6 +297,31 @@ function resolveBlocks(name) {
   return { blocks, faq };
 }
 
+// ---- product pages: data/products.json -> page meta + detail template ----
+function resolveProduct(key) {
+  const p = data.products[key];
+  if (!p) throw new Error(`Unknown product "${key}"`);
+  const productData = {
+    ...p,
+    key,
+    backHref: `products.html#${p.industries[0]}`,
+    scenarios: p.scenarios.map((s, i) => ({ ...s, no: String(i + 1).padStart(2, '0') })),
+    siteConditionsReady: !isTodo(p.siteConditions),
+    specPdfReady: !isTodo(p.specPdf),
+    demoVideoReady: !isTodo(p.demoVideo),
+  };
+  return {
+    productData,
+    title: `${p.name} ${p.subtitle}｜BottiZ 產品中心`,
+    description: p.summary,
+    ogTitle: p.seo.ogTitle,
+    ogType: 'product',
+    keywords: p.seo.keywords,
+    nav: 'products',
+    priority: '0.6',
+  };
+}
+
 // ---- build ----------------------------------------------------------------
 const FRONT = /^<!--page\n([\s\S]*?)\n-->\n?/;
 let count = 0;
@@ -308,6 +334,7 @@ for (const file of listHtml('src/pages')) {
   const page = JSON.parse(fm[1], (_, v) => (typeof v === 'string' && v.includes('{{') ? renderNodes(parseWithElse(v).children, [data], file) : v));
   page.slug = page.slug || file;
   if (page.content) Object.assign(page, resolveBlocks(page.content));
+  if (page.product) Object.assign(page, resolveProduct(page.product));
   // Derived, template-friendly fields.
   page.navCta = { ...data.site.navCta, ...page.navCta };
   page.footer = page.footer || data.site.footer;

@@ -1,0 +1,12 @@
+<article class="card" data-category="{{categories}}">
+<div class="product-media"><span class="official-badge">{{name}}</span>
+<img alt="{{cardImageAlt}}" class="product-image" src="{{cardImage}}" loading="lazy" decoding="async"/></div>
+<div class="card-body">
+<div class="product-code">{{code}}</div>
+<h3>{{name}}</h3>
+<p class="product-subtitle">{{subtitle}}</p>
+<p class="product-copy">{{summary}}</p>
+<div class="tags">{{#each tags}}<span class="tag">{{this}}</span>{{/each}}</div>
+<div class="card-actions"><a class="btn btn-secondary" href="{{page}}">查看詳情</a><button class="btn btn-primary" data-open-form="{{name}}">查詢方案</button></div>
+</div>
+</article>

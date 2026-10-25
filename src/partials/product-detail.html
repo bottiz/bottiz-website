@@ -1,0 +1,69 @@
+{{#with page.productData}}
+<section class="section" style="padding-top:40px;padding-bottom:0">
+<a class="industry-link" href="{{backHref}}">← 返回產品中心</a>
+</section>
+
+<section class="section product-detail-hero">
+<div class="product-detail-media">
+<span class="official-badge">{{name}}</span>
+<img alt="{{heroImageAlt}}" class="product-image" src="{{heroImage}}" loading="eager" decoding="async"/>
+</div>
+<div class="product-detail-copy">
+<div class="section-kicker">{{category}}</div>
+<div class="product-code">{{code}}</div>
+<h1>{{name}}</h1>
+<p class="product-detail-tagline">{{subtitle}}</p>
+<p class="product-detail-intro">{{summary}}</p>
+<div class="tags">{{#each tags}}<span class="tag">{{this}}</span>{{/each}}</div>
+<div class="hero-actions">
+<button class="btn btn-primary" data-open-form="{{name}}">查詢方案</button>
+<a class="btn btn-secondary" href="{{backHref}}">查看同類產品</a>
+</div>
+</div>
+</section>
+
+<section class="section" style="padding-top:8px">
+<h2 class="detail-section-title" style="font-size:22px;margin-bottom:18px">關鍵功能</h2>
+<ul class="detail-list product-detail-features">
+{{#each features}}<li>{{this}}</li>
+{{/each}}</ul>
+</section>
+
+<section class="section" style="padding-top:8px">
+<h2 class="detail-section-title" style="font-size:22px;margin-bottom:18px">技術規格</h2>
+<div class="detail-spec-grid product-detail-specs">
+{{#each specs}}<div class="detail-spec"><small>{{label}}</small><strong>{{value}}</strong></div>
+{{/each}}</div>
+<div class="detail-source-note">{{specNote}}</div>
+</section>
+
+<section class="section" style="padding-top:8px">
+<h2 class="detail-section-title" style="font-size:22px;margin-bottom:18px">應用場景</h2>
+<div class="value-grid">
+{{#each scenarios}}<div class="value-card"><div class="value-icon">{{no}}</div><h3>{{title}}</h3><p>{{text}}</p></div>
+{{/each}}</div>
+</section>
+
+<section class="section" style="padding-top:8px" id="site-conditions">
+<h2 class="detail-section-title" style="font-size:22px;margin-bottom:18px">適用場地條件</h2>
+{{#if siteConditionsReady}}<p>{{siteConditions}}</p>{{else}}<p class="todo">{{siteConditions}}</p>{{/if}}
+</section>
+
+<section class="section" style="padding-top:8px" id="downloads">
+<h2 class="detail-section-title" style="font-size:22px;margin-bottom:18px">規格下載及示範影片</h2>
+<ul class="detail-list">
+<li>規格表：{{#if specPdfReady}}<a href="{{specPdf}}" download data-track="download_spec_{{key}}">下載 PDF</a>{{else}}<span class="todo">{{specPdf}}</span>{{/if}}</li>
+<li>示範影片：{{#if demoVideoReady}}<a href="{{demoVideo}}" rel="noopener" target="_blank">觀看影片</a>{{else}}<span class="todo">{{demoVideo}}</span>{{/if}}</li>
+</ul>
+</section>
+
+<section class="cta">
+<div>
+<h2>有興趣了解 {{name}} 如何應用於您的場景？</h2>
+<p>告訴我們您的行業與需求，顧問團隊會建議合適的配置及部署方式，並可安排免費示範。</p>
+</div>
+<button class="btn btn-secondary" data-open-form="{{name}}">預約免費示範</button>
+</section>
+{{/with}}
+
+{{> contact-section}}

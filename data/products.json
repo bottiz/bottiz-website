@@ -1,4 +1,208 @@
 {
+ "securbot": {
+  "name": "Securbot",
+  "page": "product-securbot.html",
+  "image": "images/tobot_securbot.png",
+  "imageAlt": "Securbot",
+  "fit": {
+   "property": {
+    "tag": "屋苑及園區保安巡邏",
+    "blurb": "可加裝滅火、消毒等模組，適合大型屋苑及工業物業的日常保安巡邏及緊急應變支援。"
+   },
+   "security": {
+    "tag": "核心巡邏及安防監控",
+    "blurb": "多功能六輪驅動配合 360° 全方位監控，可識別人臉、車牌及人群聚集，是園區、電站及基礎設施保安巡邏的核心方案。"
+   }
+  },
+  "code": "Bottiz-SEC01",
+  "subtitle": "六輪巡邏機械人",
+  "summary": "六輪全地形巡邏機械人，可自主巡航、異常偵測與即時警報，適用於園區、電站、隧道等大型基礎設施的安全巡檢。",
+  "tags": [
+   "巡邏",
+   "安防",
+   "全地形"
+  ],
+  "industries": [
+   "property",
+   "security"
+  ],
+  "cardImage": "images/tobot_securbot.png",
+  "cardImageAlt": "Securbot 六輪巡邏機械人",
+  "category": "基礎設施",
+  "intro": "六輪全地形巡邏機械人，可自主巡航、異常偵測與即時警報，適用於園區、電站、隧道等大型基礎設施的安全巡檢。",
+  "heroImage": "images/tobot_securbot.png",
+  "heroImageAlt": "Securbot 六輪巡邏機械人",
+  "features": [
+   "多功能六輪驅動系統，可適應斜坡、障礙物、裂縫、沙地、雪地及草地等各種地形",
+   "多軸轉向設計，實現 360° 全方位監控，無視覺死角",
+   "支援模組化擴充：可加裝滅火裝置、消毒裝置、防暴裝備等",
+   "運用 AI 影像分析技術，識別人臉、車牌、人群聚集及火警偵測"
+  ],
+  "specs": [
+   {
+    "label": "機身尺寸",
+    "value": "720 x 660 x 1350–1650mm"
+   },
+   {
+    "label": "淨重",
+    "value": "90kg"
+   },
+   {
+    "label": "行駛速度",
+    "value": "0–6km/h"
+   },
+   {
+    "label": "最大載重",
+    "value": "200kg"
+   },
+   {
+    "label": "爬坡能力",
+    "value": "30°"
+   },
+   {
+    "label": "越障能力",
+    "value": "10cm 高"
+   },
+   {
+    "label": "高清夜視鏡頭",
+    "value": "150° 廣角，1080p"
+   },
+   {
+    "label": "熱成像鏡頭",
+    "value": "384 × 288p 全屏測溫"
+   },
+   {
+    "label": "變焦鏡頭",
+    "value": "2.7~8mm，200 萬像素"
+   }
+  ],
+  "specNote": "實際功能、續航、效率及部署方式會受路線、人流、網絡、場地及配置影響，最終以正式方案及實機為準。",
+  "scenarios": [
+   {
+    "title": "電力站及變電站巡檢",
+    "text": "定時自主巡邏高風險設備區域，即時偵測異常溫度及煙火，減少人員進入危險區域的需要。"
+   },
+   {
+    "title": "大型園區及工業廠房夜間保安",
+    "text": "配合人臉及車牌識別，24 小時不間斷監控出入口及周邊範圍，即時通報異常。"
+   },
+   {
+    "title": "隧道及地下管道監測",
+    "text": "於狹長、光線不足環境中自主巡查，透過熱成像及變焦鏡頭及早發現結構或設備異常。"
+   }
+  ],
+  "seo": {
+   "keywords": "Securbot,Securbot 六輪巡邏機械人,機械人方案,BottiZ",
+   "ogTitle": "Securbot 六輪巡邏機械人｜BottiZ"
+  },
+  "specPdf": "【待填：規格表 PDF】",
+  "demoVideo": "【待填：示範影片連結】",
+  "siteConditions": "【待填：場地條件（通道闊度、坡度與地面、電梯、網絡、充電位）】"
+ },
+ "m20pro": {
+  "name": "M20Pro",
+  "page": "product-m20pro.html",
+  "image": "images/tobot_m20pro.png",
+  "imageAlt": "M20Pro",
+  "fit": {
+   "property": {
+    "tag": "大型屋苑戶外巡邏",
+    "blurb": "機身小巧可穿梭斜坡及狹窄空間，適合大型屋苑戶外範圍及地下停車場的保安巡邏。"
+   },
+   "security": {
+    "tag": "複雜地形巡檢",
+    "blurb": "輪足混合驅動可攀樓梯、越障，適合基礎設施在狹窄管道、樓梯及高低不平範圍執行保安巡檢。"
+   }
+  },
+  "code": "Bottiz-M20P",
+  "subtitle": "輪足混合動力機械犬",
+  "summary": "結合輪式與足式運動的混合動力機械犬，可適應複雜地形環境，搭載多種感測模組，適用於電力巡檢、隧道探測與智慧城市巡邏。",
+  "tags": [
+   "機械犬",
+   "複雜地形",
+   "巡檢"
+  ],
+  "industries": [
+   "property",
+   "security"
+  ],
+  "cardImage": "images/tobot_m20pro.png",
+  "cardImageAlt": "M20Pro 輪足混合動力機械犬",
+  "category": "基礎設施",
+  "intro": "結合輪式與足式運動的混合動力機械犬，可適應複雜地形環境，搭載多種感測模組，適用於電力巡檢、隧道探測與智慧城市巡邏。",
+  "heroImage": "images/tobot_m20pro.png",
+  "heroImageAlt": "M20Pro 輪足混合動力機械犬",
+  "features": [
+   "輪足混合驅動系統，能應付極端地形變化，輕鬆爬樓梯及越過障礙物",
+   "機身小巧，適合於狹窄及受限空間內穿梭",
+   "可加裝訂製鏡頭、滅火裝置等其他配件",
+   "運用 AI 影像分析技術，識別人臉、車牌、人群聚集及火警偵測"
+  ],
+  "specs": [
+   {
+    "label": "機身尺寸",
+    "value": "820 × 430 × 570mm"
+   },
+   {
+    "label": "機身重量",
+    "value": "33kg"
+   },
+   {
+    "label": "最高行走速度",
+    "value": "5 m/s"
+   },
+   {
+    "label": "最大負載能力",
+    "value": "15–50 kg"
+   },
+   {
+    "label": "爬樓梯能力",
+    "value": "可攀爬 25cm 高梯級"
+   },
+   {
+    "label": "爬坡能力",
+    "value": "可攀爬 45° 斜坡"
+   },
+   {
+    "label": "越障能力",
+    "value": "可越過 80cm 高障礙物"
+   },
+   {
+    "label": "廣角鏡頭",
+    "value": "2 個"
+   },
+   {
+    "label": "充電時間",
+    "value": "1.5 小時"
+   },
+   {
+    "label": "續航時間",
+    "value": "2.5–3 小時"
+   }
+  ],
+  "specNote": "實際功能、續航、效率及部署方式會受路線、人流、網絡、場地及配置影響，最終以正式方案及實機為準。",
+  "scenarios": [
+   {
+    "title": "電力及隧道複雜地形巡檢",
+    "text": "取代人手進入樓梯、狹窄管道及高低不平的設施範圍，執行定期巡檢及異常偵測。"
+   },
+   {
+    "title": "智慧城市戶外巡邏",
+    "text": "於行人路、斜坡及公園等混合地形穿梭，協助保安及市政人員擴大巡邏覆蓋範圍。"
+   },
+   {
+    "title": "災害現場初步偵察",
+    "text": "配合鏡頭及感測模組，於人員未能安全進入的環境中先行偵察，回傳即時影像。"
+   }
+  ],
+  "seo": {
+   "keywords": "M20Pro,M20Pro 輪足混合動力機械犬,機械人方案,BottiZ",
+   "ogTitle": "M20Pro 輪足混合動力機械犬｜BottiZ"
+  },
+  "specPdf": "【待填：規格表 PDF】",
+  "demoVideo": "【待填：示範影片連結】",
+  "siteConditions": "【待填：場地條件（通道闊度、坡度與地面、電梯、網絡、充電位）】"
+ },
  "beetle": {
   "name": "Beetle",
   "page": "product-beetle.html",
@@ -27,67 +231,256 @@
    "property"
   ],
   "cardImage": "images/tobot_beetle.png",
-  "cardImageAlt": "Beetle 室內外工業級清潔機械人"
- },
- "scrubber50": {
-  "name": "Scrubber 50",
-  "page": "product-scrubber50.html",
-  "image": "images/tobot_scrubber50.png",
-  "imageAlt": "Scrubber 50",
-  "fit": {
-   "education": {
-    "tag": "大堂、禮堂及體育館清潔",
-    "blurb": "四合一清潔配合自動工作站，適合學校大堂、禮堂外圍及體育館等大中型室內空間，於課餘時段自動完成清潔。"
+  "cardImageAlt": "Beetle 室內外工業級清潔機械人",
+  "category": "基礎設施",
+  "intro": "工業級室內外清潔機械人，具備強大清潔能力與環境感知系統，可於光線不足或人流較多的環境中定位及避障，適合大面積公共設施、園區道路等場景自主作業。",
+  "heroImage": "images/tobot_beetle.png",
+  "heroImageAlt": "Beetle 室內外工業級清潔機械人",
+  "features": [
+   "即使在光線不足或人流較多的環境中，亦能精準定位及避障",
+   "智能定點清潔模式，主動識別污漬範圍並集中清潔",
+   "大容量電池，續航 4–8 小時",
+   "45 公升垃圾箱，可收集紙屑、木屑、塑膠碎片、煙蒂、小石及螺絲等較重雜物",
+   "支援自主開關門或搭乘電梯"
+  ],
+  "specs": [
+   {
+    "label": "機身尺寸",
+    "value": "990 × 750 × 1510mm"
    },
+   {
+    "label": "機身重量",
+    "value": "102kg"
+   },
+   {
+    "label": "清潔寬度",
+    "value": "750mm"
+   },
+   {
+    "label": "最大清潔效率",
+    "value": "3,240 m²/h"
+   },
+   {
+    "label": "垃圾箱容量",
+    "value": "45L"
+   },
+   {
+    "label": "電池容量",
+    "value": "40Ah"
+   },
+   {
+    "label": "續航時間",
+    "value": "約 3 小時"
+   },
+   {
+    "label": "充電時間",
+    "value": "少於 2.5 小時"
+   },
+   {
+    "label": "最高移動速度",
+    "value": "1.2 m/s"
+   },
+   {
+    "label": "最小轉彎寬度",
+    "value": "1,250mm"
+   }
+  ],
+  "specNote": "實際功能、續航、效率及部署方式會受路線、人流、網絡、場地及配置影響，最終以正式方案及實機為準。",
+  "scenarios": [
+   {
+    "title": "戶外通道及後勤區域",
+    "text": "適合校門、停車場、貨物裝卸區等戶外及後勤範圍的日常清潔，減省人手來回搬運清潔工具的時間。"
+   },
+   {
+    "title": "大型園區及工業廠房",
+    "text": "自主完成園區道路及大面積公共設施的例行清潔，配合定點清潔模式集中處理污漬熱點。"
+   },
+   {
+    "title": "跨樓層清潔任務",
+    "text": "支援自主搭乘電梯，可安排跨樓層的清潔路線，減少人手調動。"
+   }
+  ],
+  "seo": {
+   "keywords": "Beetle,Beetle 室內外工業級清潔機械人,機械人方案,BottiZ",
+   "ogTitle": "Beetle 室內外工業級清潔機械人｜BottiZ"
+  },
+  "specPdf": "【待填：規格表 PDF】",
+  "demoVideo": "【待填：示範影片連結】",
+  "siteConditions": "【待填：場地條件（通道闊度、坡度與地面、電梯、網絡、充電位）】"
+ },
+ "scrubber75": {
+  "name": "Scrubber 75",
+  "page": "product-scrubber75.html",
+  "image": "images/tobot_scrubber75.png",
+  "imageAlt": "Scrubber 75",
+  "fit": {
    "property": {
-    "tag": "大型商場及會所清潔",
-    "blurb": "分區清潔規劃配合機械人隊伍管理，適合大型商場、會所及大堂等高人流公共空間的例行清潔。"
+    "tag": "商場及機場大堂清潔",
+    "blurb": "搭載先進環境感知系統，適合商場、機場、車站等大面積公共空間，靈活閃避行人完成大範圍地面清潔。"
    }
   },
-  "code": "Bottiz-S50",
-  "subtitle": "全自動清潔機械人",
-  "summary": "以全自動清潔及機械人隊伍管理減少人手操作，四合一清潔功能配合自動工作站，適合學校大堂、體育館、禮堂外及寬闊走廊等大中型校園空間。",
+  "code": "Bottiz-S75",
+  "subtitle": "卓越環境感知清潔機械人",
+  "summary": "搭載先進環境感知系統的大型清潔機械人，適用於商場、機場、車站等大面積公共空間的自動化清潔作業。",
   "tags": [
-   "四合一清潔",
-   "分區清潔",
-   "自動工作站"
+   "大面積清潔",
+   "環境感知",
+   "公共空間"
   ],
   "industries": [
-   "education",
    "property"
   ],
-  "cardImage": "images/tobot_scrubber50.png",
-  "cardImageAlt": "Scrubber 50 全自動清潔機械人"
- },
- "phantas": {
-  "name": "Phantas",
-  "page": "product-phantas.html",
-  "image": "images/tobot_phantas.png",
-  "imageAlt": "Phantas",
-  "fit": {
-   "education": {
-    "tag": "課室及圖書館精細清潔",
-    "blurb": "機身小巧靈活，支援零距離邊緣清潔及自動定點清洗，適合課室、圖書館及走廊等中小型室內空間。"
+  "cardImage": "images/tobot_scrubber75.png",
+  "cardImageAlt": "Scrubber 75 卓越環境感知清潔機械人",
+  "category": "基礎設施",
+  "intro": "搭載先進環境感知系統的大型清潔機械人，適用於商場、機場、車站等大面積公共空間的自動化清潔作業。",
+  "heroImage": "images/tobot_scrubber75.png",
+  "heroImageAlt": "Scrubber 75 卓越環境感知清潔機械人",
+  "features": [
+   "節水設計，降低耗水量",
+   "油污清潔模式，應對高油污地面",
+   "四合一清潔：擦地、掃地、拖塵及除油",
+   "6 小時長效電池"
+  ],
+  "specs": [
+   {
+    "label": "機身尺寸",
+    "value": "1370 x 962 x 1417mm"
    },
+   {
+    "label": "機身重量",
+    "value": "400kg"
+   },
+   {
+    "label": "清潔寬度",
+    "value": "750mm"
+   },
+   {
+    "label": "最大清潔效率",
+    "value": "3,000 m²/h"
+   },
+   {
+    "label": "清水／污水箱",
+    "value": "75L / 50L"
+   },
+   {
+    "label": "最高清潔速度",
+    "value": "1.1 m/s"
+   },
+   {
+    "label": "續航時間",
+    "value": "4–6 小時"
+   }
+  ],
+  "specNote": "實際功能、續航、效率及部署方式會受路線、人流、網絡、場地及配置影響，最終以正式方案及實機為準。",
+  "scenarios": [
+   {
+    "title": "商場及機場大堂",
+    "text": "應付高人流公共空間的大範圍地面清潔，配合環境感知系統靈活閃避行人及設施。"
+   },
+   {
+    "title": "車站及大型公共設施",
+    "text": "四合一清潔模式一次過完成擦地、掃地及除油，減少多台設備輪流作業的時間。"
+   },
+   {
+    "title": "油污較重的後勤及裝卸區",
+    "text": "油污清潔模式專門應對廚餘或裝卸區常見的頑固油漬地面。"
+   }
+  ],
+  "seo": {
+   "keywords": "Scrubber,Scrubber 75 卓越環境感知清潔機械人,機械人方案,BottiZ",
+   "ogTitle": "Scrubber 75 卓越環境感知清潔機械人｜BottiZ"
+  },
+  "specPdf": "【待填：規格表 PDF】",
+  "demoVideo": "【待填：示範影片連結】",
+  "siteConditions": "【待填：場地條件（通道闊度、坡度與地面、電梯、網絡、充電位）】"
+ },
+ "g5": {
+  "name": "G5",
+  "page": "product-g5.html",
+  "image": "images/tobot_g5.png",
+  "imageAlt": "G5",
+  "fit": {
    "healthcare": {
-    "tag": "診所及病房精細清潔",
-    "blurb": "地板種類自動識別配合精準導航，適合診所、病房及院舍公共空間等對地面衛生要求較高的環境。"
+    "tag": "院舍及醫院中央廚房",
+    "blurb": "25kW 大火力配合雲端食譜同步，可應付大型院舍或醫院中央廚房同時為大量院友／病人備餐的高產能需求。"
    }
   },
-  "code": "Bottiz-PH01",
-  "subtitle": "中小型設施清潔機械人",
-  "summary": "適用於中小型設施的智能清潔機械人，具備精準導航與高效清潔能力，機身小巧靈活，支援多合一地板清潔及零距離邊緣清潔，可應用於實驗室、特殊環境的清潔維護。",
+  "code": "Bottiz-G5",
+  "subtitle": "大型餐飲機構用 AI 炒餸機械人",
+  "summary": "配備獨立翻炒鏟，模擬人手翻炒技藝，精準複製慢推滑炒和高溫生炒等多種中菜烹調方式，是大型餐飲機構的強大生產力工具。",
   "tags": [
-   "清潔",
-   "中小型",
-   "精準導航"
+   "AI 烹飪",
+   "大型餐飲",
+   "自動炒菜"
   ],
   "industries": [
-   "education",
    "healthcare"
   ],
-  "cardImage": "images/tobot_phantas.png",
-  "cardImageAlt": "Phantas 中小型設施清潔機械人"
+  "cardImage": "images/tobot_g5.png",
+  "cardImageAlt": "G5 大型餐飲機構用 AI 炒餸機械人",
+  "category": "商業空間",
+  "intro": "配備獨立翻炒鏟，模擬人手翻炒技藝，精準複製慢推滑炒和高溫生炒等多種中菜烹調方式，是大型餐飲機構的強大生產力工具。",
+  "heroImage": "images/tobot_g5.png",
+  "heroImageAlt": "G5 大型餐飲機構用 AI 炒餸機械人",
+  "features": [
+   "獨立翻炒鏟系統，模擬人手翻炒技藝",
+   "300 度高溫氮化鐵鑊配合 25kW 大火力系統，20 秒內達到工作溫度",
+   "支援雲端食譜同步，一鍵上傳菜單，全球分店即時學會",
+   "適合大型連鎖餐廳、中式宴會廳、中央廚房應付大量點單"
+  ],
+  "specs": [
+   {
+    "label": "機身尺寸",
+    "value": "1000 x 1000 x 1280mm"
+   },
+   {
+    "label": "機身重量",
+    "value": "216kg"
+   },
+   {
+    "label": "電源電壓",
+    "value": "380V"
+   },
+   {
+    "label": "額定功率",
+    "value": "25kW"
+   },
+   {
+    "label": "入水壓力",
+    "value": "0.2–0.8MPa"
+   },
+   {
+    "label": "鑊直徑",
+    "value": "520mm"
+   },
+   {
+    "label": "鑊容量",
+    "value": "26kg"
+   },
+   {
+    "label": "調味盒數量",
+    "value": "13 個"
+   }
+  ],
+  "specNote": "實際功能、續航、效率及部署方式會受路線、人流、網絡、場地及配置影響，最終以正式方案及實機為準。",
+  "scenarios": [
+   {
+    "title": "大型連鎖餐廳中央廚房",
+    "text": "統一雲端食譜，確保各分店出品口味一致，同時應付高峰時段大量點單。"
+   },
+   {
+    "title": "中式宴會及酒樓廚房",
+    "text": "以穩定火力及翻炒技藝，複製大鑊小炒的鑊氣，減輕廚房人手短缺壓力。"
+   }
+  ],
+  "seo": {
+   "keywords": "G5,G5 大型餐飲機構用 AI 炒餸機械人,機械人方案,BottiZ",
+   "ogTitle": "G5 大型餐飲機構用 AI 炒餸機械人｜BottiZ"
+  },
+  "specPdf": "【待填：規格表 PDF】",
+  "demoVideo": "【待填：示範影片連結】",
+  "siteConditions": "【待填：場地條件（通道闊度、坡度與地面、電梯、網絡、充電位）】"
  },
  "g3": {
   "name": "G3",
@@ -117,7 +510,69 @@
    "healthcare"
   ],
   "cardImage": "images/tobot_g3.png",
-  "cardImageAlt": "G3 中型餐飲企業用 AI 炒餸機械人"
+  "cardImageAlt": "G3 中型餐飲企業用 AI 炒餸機械人",
+  "category": "商業空間",
+  "intro": "具備獨立翻炒鏟系統，能模擬人手翻炒，精準再現慢推滑炒和高溫生炒等技藝，是中型餐飲企業的理想選擇。",
+  "heroImage": "images/tobot_g3.png",
+  "heroImageAlt": "G3 中型餐飲企業用 AI 炒餸機械人",
+  "features": [
+   "獨立翻炒鏟系統，模擬人手翻炒技藝",
+   "300 度高溫氮化鐵鑊配合 15kW 大火力系統，20 秒內達到工作溫度",
+   "支援雲端食譜同步，新菜式即時零延遲學會",
+   "適合中式餐廳、連鎖快餐店或兩餸飯店應付中等單量"
+  ],
+  "specs": [
+   {
+    "label": "機身尺寸",
+    "value": "760 x 990 x 1640mm"
+   },
+   {
+    "label": "機身重量",
+    "value": "110kg"
+   },
+   {
+    "label": "電源電壓",
+    "value": "380V"
+   },
+   {
+    "label": "額定功率",
+    "value": "15kW"
+   },
+   {
+    "label": "入水壓力",
+    "value": "0.2–0.8MPa"
+   },
+   {
+    "label": "鑊直徑",
+    "value": "350mm"
+   },
+   {
+    "label": "鑊容量",
+    "value": "4kg"
+   },
+   {
+    "label": "調味盒數量",
+    "value": "13 個"
+   }
+  ],
+  "specNote": "實際功能、續航、效率及部署方式會受路線、人流、網絡、場地及配置影響，最終以正式方案及實機為準。",
+  "scenarios": [
+   {
+    "title": "中式餐廳及連鎖快餐店",
+    "text": "標準化出品流程，減少人為誤差，讓分店更容易複製同一水準的出品。"
+   },
+   {
+    "title": "兩餸飯及茶餐廳",
+    "text": "應付中等單量的日常炒菜需求，降低人手成本並保持出品穩定。"
+   }
+  ],
+  "seo": {
+   "keywords": "G3,G3 中型餐飲企業用 AI 炒餸機械人,機械人方案,BottiZ",
+   "ogTitle": "G3 中型餐飲企業用 AI 炒餸機械人｜BottiZ"
+  },
+  "specPdf": "【待填：規格表 PDF】",
+  "demoVideo": "【待填：示範影片連結】",
+  "siteConditions": "【待填：場地條件（通道闊度、坡度與地面、電梯、網絡、充電位）】"
  },
  "g2": {
   "name": "G2",
@@ -147,7 +602,174 @@
    "healthcare"
   ],
   "cardImage": "images/tobot_g2.png",
-  "cardImageAlt": "G2 小型餐飲場所用 AI 炒餸機械人"
+  "cardImageAlt": "G2 小型餐飲場所用 AI 炒餸機械人",
+  "category": "商業空間",
+  "intro": "專為小型餐飲場所設計的智能烹飪解決方案，採用獨立翻炒鏟模擬人手翻炒技藝，並提供 220V 電源選項，適合空間有限的小店。",
+  "heroImage": "images/tobot_g2.png",
+  "heroImageAlt": "G2 小型餐飲場所用 AI 炒餸機械人",
+  "features": [
+   "獨立翻炒鏟，模擬人手翻炒技藝",
+   "300 度高溫氮化鐵鑊配合 8kW 大火力系統，20 秒內達到工作溫度",
+   "支援雲端食譜同步，一鍵上傳新菜式",
+   "提供 220V／380V 雙電壓選項，靈活快速煮出 1–6 人份量"
+  ],
+  "specs": [
+   {
+    "label": "機身尺寸",
+    "value": "700 x 940 x 1678mm"
+   },
+   {
+    "label": "機身重量",
+    "value": "104kg"
+   },
+   {
+    "label": "電源電壓",
+    "value": "220V / 380V"
+   },
+   {
+    "label": "額定功率",
+    "value": "8kW"
+   },
+   {
+    "label": "入水壓力",
+    "value": "0.2–0.8MPa"
+   },
+   {
+    "label": "鑊直徑",
+    "value": "273mm"
+   },
+   {
+    "label": "鑊容量",
+    "value": "1.5kg"
+   },
+   {
+    "label": "調味盒數量",
+    "value": "12–13 個"
+   }
+  ],
+  "specNote": "實際功能、續航、效率及部署方式會受路線、人流、網絡、場地及配置影響，最終以正式方案及實機為準。",
+  "scenarios": [
+   {
+    "title": "小型餐廳及茶餐廳",
+    "text": "空間有限亦可安裝，220V 電源選項省卻重新拉電的工程。"
+   },
+   {
+    "title": "外賣及小炒店",
+    "text": "快速煮出 1–6 人份量，應付單一顧客或小量外賣訂單。"
+   }
+  ],
+  "seo": {
+   "keywords": "G2,G2 小型餐飲場所用 AI 炒餸機械人,機械人方案,BottiZ",
+   "ogTitle": "G2 小型餐飲場所用 AI 炒餸機械人｜BottiZ"
+  },
+  "specPdf": "【待填：規格表 PDF】",
+  "demoVideo": "【待填：示範影片連結】",
+  "siteConditions": "【待填：場地條件（通道闊度、坡度與地面、電梯、網絡、充電位）】"
+ },
+ "w3": {
+  "name": "W3",
+  "page": "product-w3.html",
+  "image": "images/tobot_w3.png",
+  "imageAlt": "W3",
+  "fit": {
+   "property": {
+    "tag": "酒店及服務式住宅配送",
+    "blurb": "自動搭乘電梯配合弧形防撞機身，適合酒店及服務式住宅為住客提供客房用品及餐飲配送。"
+   },
+   "healthcare": {
+    "tag": "院舍跨樓層物資配送",
+    "blurb": "90 公升儲物容量分為四格，適合院舍在不同樓層之間配送日用品、藥物及個人物資。"
+   }
+  },
+  "code": "Bottiz-W3",
+  "subtitle": "酒店梯控配送機械人",
+  "summary": "專為酒店場景設計的智能配送機械人，支援電梯自動控制與跨樓層配送，可自主完成客房送物、餐飲配送等任務。",
+  "tags": [
+   "酒店",
+   "梯控",
+   "跨樓層配送"
+  ],
+  "industries": [
+   "healthcare",
+   "property"
+  ],
+  "cardImage": "images/tobot_w3.png",
+  "cardImageAlt": "W3 酒店梯控配送機械人",
+  "category": "商業空間",
+  "intro": "專為酒店場景設計的智能配送機械人，支援電梯自動控制與跨樓層配送，可自主完成客房送物、餐飲配送等任務。",
+  "heroImage": "images/tobot_w3.png",
+  "heroImageAlt": "W3 酒店梯控配送機械人",
+  "features": [
+   "3D 避障：以 120 度廣角視野偵測並避開障礙物",
+   "電梯聯動：加裝模組後可自動進出電梯",
+   "長效續航：可連續運作長達 15 小時",
+   "安全設計：弧形機身防止意外碰撞，配全自動開關門機制",
+   "寬敞儲物：90 公升容量，四個獨立儲物格"
+  ],
+  "specs": [
+   {
+    "label": "機身尺寸",
+    "value": "450 x 550 x 1080mm"
+   },
+   {
+    "label": "機身重量",
+    "value": "48kg"
+   },
+   {
+    "label": "儲物格數量",
+    "value": "2–4 格，可拆卸層架"
+   },
+   {
+    "label": "儲物格尺寸",
+    "value": "390 x 385 x 300mm"
+   },
+   {
+    "label": "載重",
+    "value": "總重 20kg，每層 5kg，底層 10kg"
+   },
+   {
+    "label": "爬坡角度",
+    "value": "≤ 7°"
+   },
+   {
+    "label": "越障高度",
+    "value": "最高 15mm"
+   },
+   {
+    "label": "最小通行寬度",
+    "value": "70cm"
+   },
+   {
+    "label": "最高時速",
+    "value": "0.8 m/s"
+   },
+   {
+    "label": "續航時間",
+    "value": "9–12 小時"
+   }
+  ],
+  "specNote": "實際功能、續航、效率及部署方式會受路線、人流、網絡、場地及配置影響，最終以正式方案及實機為準。",
+  "scenarios": [
+   {
+    "title": "客房送物服務",
+    "text": "自主搭乘電梯將毛巾、備品送到指定房間，減少房務團隊往返樓層的時間。"
+   },
+   {
+    "title": "客房餐飲配送",
+    "text": "配合弧形機身及自動門設計，安全穩妥地將餐飲送達房門。"
+   },
+   {
+    "title": "多樓層協同派送",
+    "text": "最多支援 20 台機械人協同運作，應付大型酒店的高峰配送需求。"
+   }
+  ],
+  "seo": {
+   "keywords": "W3,W3 酒店梯控配送機械人,機械人方案,BottiZ",
+   "ogTitle": "W3 酒店梯控配送機械人｜BottiZ"
+  },
+  "specPdf": "【待填：規格表 PDF】",
+  "demoVideo": "【待填：示範影片連結】",
+  "siteConditions": "【待填：場地條件（通道闊度、坡度與地面、電梯、網絡、充電位）】"
  },
  "kettybot": {
   "name": "KettyBot",
@@ -177,7 +799,165 @@
    "property"
   ],
   "cardImage": "images/tobot_kettybot.jpg",
-  "cardImageAlt": "KettyBot 大屏幕送遞招待機械人"
+  "cardImageAlt": "KettyBot 大屏幕送遞招待機械人",
+  "category": "商業空間",
+  "intro": "配備大尺寸互動屏幕的送遞招待機械人，兼具配送與廣告展示功能，適用於餐廳、酒店大堂、零售門店等商業空間。",
+  "heroImage": "images/tobot_kettybot.jpg",
+  "heroImageAlt": "KettyBot 大屏幕送遞招待機械人",
+  "features": [
+   "僅需 55 公分淨空即可自由通行",
+   "18.5 吋行走廣告屏幕，兼具導覽與宣傳功能",
+   "無需鋪設定位標記即可導航",
+   "可連續運作 8 小時"
+  ],
+  "specs": [
+   {
+    "label": "機身尺寸",
+    "value": "435 x 450 x 1120mm"
+   },
+   {
+    "label": "機身重量",
+    "value": "38kg"
+   },
+   {
+    "label": "載重",
+    "value": "30kg"
+   },
+   {
+    "label": "續航時間",
+    "value": "8 小時"
+   },
+   {
+    "label": "充電時間",
+    "value": "4.5 小時"
+   },
+   {
+    "label": "最小淨空",
+    "value": "55cm"
+   },
+   {
+    "label": "最高時速",
+    "value": "1.2 m/s"
+   },
+   {
+    "label": "廣告屏幕尺寸",
+    "value": "18.5 吋"
+   }
+  ],
+  "specNote": "實際功能、續航、效率及部署方式會受路線、人流、網絡、場地及配置影響，最終以正式方案及實機為準。",
+  "scenarios": [
+   {
+    "title": "餐廳送餐與帶位",
+    "text": "送餐同時於屏幕顯示餐廳資訊或推廣內容，一機兩用。"
+   },
+   {
+    "title": "酒店大堂及零售店迎賓",
+    "text": "以大屏幕播放宣傳內容，並可引導賓客前往指定位置。"
+   }
+  ],
+  "seo": {
+   "keywords": "KettyBot,KettyBot 大屏幕送遞招待機械人,機械人方案,BottiZ",
+   "ogTitle": "KettyBot 大屏幕送遞招待機械人｜BottiZ"
+  },
+  "specPdf": "【待填：規格表 PDF】",
+  "demoVideo": "【待填：示範影片連結】",
+  "siteConditions": "【待填：場地條件（通道闊度、坡度與地面、電梯、網絡、充電位）】"
+ },
+ "d300": {
+  "name": "D-300",
+  "page": "product-d300.html",
+  "image": "images/tobot_d300.png",
+  "imageAlt": "D-300",
+  "fit": {
+   "property": {
+    "tag": "物業大型貨物搬運",
+    "blurb": "具備呼叫及跟隨功能，適合大型屋苑或工業物業搬運維修物料及大型貨物，減少人手手推車來回。"
+   },
+   "healthcare": {
+    "tag": "醫院重型物資運送",
+    "blurb": "承載力達 300 公斤並可自動頂升貨架，適合醫院在病房、藥房及倉存之間運送大批醫療物資及床單。"
+   }
+  },
+  "code": "Bottiz-D300",
+  "subtitle": "300kg 重型隨行頂升機械人",
+  "summary": "承載力達 300 公斤的重型隨行頂升機械人，適用於醫院物流、校園搬運等場景，可自主跟隨與自動頂升貨架。",
+  "tags": [
+   "重型搬運",
+   "醫院物流",
+   "300kg"
+  ],
+  "industries": [
+   "healthcare",
+   "property"
+  ],
+  "cardImage": "images/tobot_d300.png",
+  "cardImageAlt": "D-300 300kg 重型隨行頂升機械人",
+  "category": "醫療與教育",
+  "intro": "承載力達 300 公斤的重型隨行頂升機械人，適用於醫院物流、校園搬運等場景，可自主跟隨與自動頂升貨架。",
+  "heroImage": "images/tobot_d300.png",
+  "heroImageAlt": "D-300 300kg 重型隨行頂升機械人",
+  "features": [
+   "具備呼叫及跟隨功能",
+   "承載力達 300 公斤，可為貨物提供頂升服務",
+   "可配合層架運送不同類型的重型物品，設計美觀且功能強大",
+   "支援連續 4 小時高速運送作業，取代重複性人手搬運工作"
+  ],
+  "specs": [
+   {
+    "label": "機身尺寸",
+    "value": "740 x 500 x 1240mm"
+   },
+   {
+    "label": "機身重量",
+    "value": "85kg"
+   },
+   {
+    "label": "載物面積",
+    "value": "620 x 500mm"
+   },
+   {
+    "label": "最大載重",
+    "value": "300kg"
+   },
+   {
+    "label": "充電時間",
+    "value": "5 小時"
+   },
+   {
+    "label": "續航時間",
+    "value": "12 小時"
+   },
+   {
+    "label": "巡航速度",
+    "value": "1.2 m/s"
+   },
+   {
+    "label": "最小通行寬度",
+    "value": "70cm"
+   },
+   {
+    "label": "屏幕尺寸",
+    "value": "10.1 吋"
+   }
+  ],
+  "specNote": "實際功能、續航、效率及部署方式會受路線、人流、網絡、場地及配置影響，最終以正式方案及實機為準。",
+  "scenarios": [
+   {
+    "title": "醫院物資及藥物運送",
+    "text": "自主頂升並運送重型醫療物資、藥物或床單等貨架，減輕護理及後勤人員負擔。"
+   },
+   {
+    "title": "校園大型物資搬運",
+    "text": "配合層架運送活動器材、大批教材或設施用品，取代人手推車來回搬運。"
+   }
+  ],
+  "seo": {
+   "keywords": "D-300,D-300 300kg 重型隨行頂升機械人,機械人方案,BottiZ",
+   "ogTitle": "D-300 300kg 重型隨行頂升機械人｜BottiZ"
+  },
+  "specPdf": "【待填：規格表 PDF】",
+  "demoVideo": "【待填：示範影片連結】",
+  "siteConditions": "【待填：場地條件（通道闊度、坡度與地面、電梯、網絡、充電位）】"
  },
  "d150": {
   "name": "D-150",
@@ -207,7 +987,73 @@
    "healthcare"
   ],
   "cardImage": "images/tobot_d150.png",
-  "cardImageAlt": "D-150 150kg 重型隨行頂升機械人"
+  "cardImageAlt": "D-150 150kg 重型隨行頂升機械人",
+  "category": "醫療與教育",
+  "intro": "承載力達 150 公斤的隨行頂升機械人，靈活適用於醫療機構與教育場所的物資配送與搬運。",
+  "heroImage": "images/tobot_d150.png",
+  "heroImageAlt": "D-150 150kg 重型隨行頂升機械人",
+  "features": [
+   "具備呼叫及跟隨功能",
+   "承載力達 150 公斤，可為貨物提供頂升服務",
+   "可配合層架運送不同類型的物品，兼顧外觀與功能",
+   "支援連續 4 小時高速運送作業，取代重複性人手搬運工作"
+  ],
+  "specs": [
+   {
+    "label": "機身尺寸",
+    "value": "740 x 500 x 1240mm"
+   },
+   {
+    "label": "機身重量",
+    "value": "90kg"
+   },
+   {
+    "label": "載物面積",
+    "value": "580 x 500mm"
+   },
+   {
+    "label": "最大載重",
+    "value": "150kg"
+   },
+   {
+    "label": "充電時間",
+    "value": "5 小時"
+   },
+   {
+    "label": "續航時間",
+    "value": "12 小時"
+   },
+   {
+    "label": "巡航速度",
+    "value": "1.2 m/s"
+   },
+   {
+    "label": "最小通行寬度",
+    "value": "70cm"
+   },
+   {
+    "label": "屏幕尺寸",
+    "value": "10.1 吋"
+   }
+  ],
+  "specNote": "實際功能、續航、效率及部署方式會受路線、人流、網絡、場地及配置影響，最終以正式方案及實機為準。",
+  "scenarios": [
+   {
+    "title": "醫療機構物資配送",
+    "text": "於病房、藥房及儲物室之間運送中等重量的醫療物資，減少人手往返。"
+   },
+   {
+    "title": "校園教材及設備搬運",
+    "text": "運送教具、活動物資等中等重量貨物，靈活配置於課室及活動場地之間。"
+   }
+  ],
+  "seo": {
+   "keywords": "D-150,D-150 150kg 重型隨行頂升機械人,機械人方案,BottiZ",
+   "ogTitle": "D-150 150kg 重型隨行頂升機械人｜BottiZ"
+  },
+  "specPdf": "【待填：規格表 PDF】",
+  "demoVideo": "【待填：示範影片連結】",
+  "siteConditions": "【待填：場地條件（通道闊度、坡度與地面、電梯、網絡、充電位）】"
  },
  "s100": {
   "name": "S-100",
@@ -237,7 +1083,162 @@
    "healthcare"
   ],
   "cardImage": "images/tobot_s100.png",
-  "cardImageAlt": "S-100 100kg 重型多變配送機械人"
+  "cardImageAlt": "S-100 100kg 重型多變配送機械人",
+  "category": "醫療與教育",
+  "intro": "承載力達 100 公斤的多功能配送機械人，可靈活切換多種配送模式，適用於醫院、校園等場景。",
+  "heroImage": "images/tobot_s100.png",
+  "heroImageAlt": "S-100 100kg 重型多變配送機械人",
+  "features": [
+   "超大 100 公斤載重量",
+   "可選配行李架作酒店客房配送，或層架作為餐具回收車或醫療物資搬運車",
+   "15 秒快速換電功能，支援 24 小時不間斷配送",
+   "支援自主開關門及搭乘電梯，確保配送安全可靠"
+  ],
+  "specs": [
+   {
+    "label": "機身尺寸",
+    "value": "925 x 620 x 1282mm"
+   },
+   {
+    "label": "機身重量",
+    "value": "100kg"
+   },
+   {
+    "label": "層架尺寸",
+    "value": "913 x 616 x 900mm"
+   },
+   {
+    "label": "最大載重",
+    "value": "100kg"
+   },
+   {
+    "label": "充電時間",
+    "value": "4.5 小時"
+   },
+   {
+    "label": "續航時間",
+    "value": ">8 小時"
+   },
+   {
+    "label": "巡航速度",
+    "value": "0.5–1.2 m/s"
+   },
+   {
+    "label": "最小通行寬度",
+    "value": "90cm"
+   },
+   {
+    "label": "爬坡能力",
+    "value": "4.5°"
+   }
+  ],
+  "specNote": "實際功能、續航、效率及部署方式會受路線、人流、網絡、場地及配置影響，最終以正式方案及實機為準。",
+  "scenarios": [
+   {
+    "title": "醫院餐具回收及物資運送",
+    "text": "配合換電設計支援全日不停運作，於病房與後勤之間穿梭運送物資及回收餐具。"
+   },
+   {
+    "title": "校園多用途配送",
+    "text": "按需要切換行李架或層架配置，靈活應付活動物資、教材或餐具運送。"
+   }
+  ],
+  "seo": {
+   "keywords": "S-100,S-100 100kg 重型多變配送機械人,機械人方案,BottiZ",
+   "ogTitle": "S-100 100kg 重型多變配送機械人｜BottiZ"
+  },
+  "specPdf": "【待填：規格表 PDF】",
+  "demoVideo": "【待填：示範影片連結】",
+  "siteConditions": "【待填：場地條件（通道闊度、坡度與地面、電梯、網絡、充電位）】"
+ },
+ "flashbot": {
+  "name": "FlashBot",
+  "page": "product-flashbot.html",
+  "image": "images/tobot_flashbot.png",
+  "imageAlt": "FlashBot",
+  "fit": {
+   "property": {
+    "tag": "寫字樓跨樓層配送",
+    "blurb": "六輪獨立懸掛系統於任何環境平穩導航，適合寫字樓及商業大廈執行跨樓層文件及包裹配送。"
+   },
+   "healthcare": {
+    "tag": "醫院樓層配送及消毒",
+    "blurb": "自動搭乘電梯，儲物格可加裝 UV 消毒燈達 99.9% 消毒率，適合醫院在病房樓層之間配送物資同時保持衛生。"
+   }
+  },
+  "code": "Bottiz-FB01",
+  "subtitle": "樓層配送機械人",
+  "summary": "專為樓層間配送設計的智能機械人，支援電梯聯動，可在醫院、學校等多層建築中自主完成配送任務。",
+  "tags": [
+   "樓層配送",
+   "電梯聯動",
+   "醫院"
+  ],
+  "industries": [
+   "healthcare",
+   "property"
+  ],
+  "cardImage": "images/tobot_flashbot.png",
+  "cardImageAlt": "FlashBot 樓層配送機械人",
+  "category": "醫療與教育",
+  "intro": "專為樓層間配送設計的智能機械人，支援電梯聯動，可在醫院、學校等多層建築中自主完成配送任務。",
+  "heroImage": "images/tobot_flashbot.png",
+  "heroImageAlt": "FlashBot 樓層配送機械人",
+  "features": [
+   "自動搭乘電梯，實現跨樓層配送",
+   "精準 3D 感知，避開低矮及懸空障礙物",
+   "多功能儲物格設計，一次可執行多項任務",
+   "儲物格可加裝紫外線消毒燈，消毒率達 99.9%",
+   "六輪獨立懸掛系統，於任何環境中平穩導航"
+  ],
+  "specs": [
+   {
+    "label": "機身尺寸",
+    "value": "539 x 515 x 1050mm"
+   },
+   {
+    "label": "機身重量",
+    "value": "55kg"
+   },
+   {
+    "label": "最大載重",
+    "value": "30kg"
+   },
+   {
+    "label": "充電時間",
+    "value": "4.5 小時"
+   },
+   {
+    "label": "續航時間",
+    "value": "12 小時"
+   },
+   {
+    "label": "最高時速",
+    "value": "1.2 m/s"
+   },
+   {
+    "label": "儲物格數量",
+    "value": "2–4 格（可調校）"
+   }
+  ],
+  "specNote": "實際功能、續航、效率及部署方式會受路線、人流、網絡、場地及配置影響，最終以正式方案及實機為準。",
+  "scenarios": [
+   {
+    "title": "醫院樓層間物資及藥物配送",
+    "text": "自動搭乘電梯往返病房樓層，配合 UV 消毒功能同步保持儲物格衛生。"
+   },
+   {
+    "title": "學校跨樓層文件及教材傳遞",
+    "text": "於教員室、課室及活動場地之間自主完成跨樓層傳遞，減少教職員來回奔走。"
+   }
+  ],
+  "seo": {
+   "keywords": "FlashBot,FlashBot 樓層配送機械人,機械人方案,BottiZ",
+   "ogTitle": "FlashBot 樓層配送機械人｜BottiZ"
+  },
+  "specPdf": "【待填：規格表 PDF】",
+  "demoVideo": "【待填：示範影片連結】",
+  "siteConditions": "【待填：場地條件（通道闊度、坡度與地面、電梯、網絡、充電位）】"
  },
  "swiftbot": {
   "name": "SwiftBot",
@@ -267,7 +1268,74 @@
    "healthcare"
   ],
   "cardImage": "images/tobot_swiftbot.png",
-  "cardImageAlt": "SwiftBot 通用送遞機械人"
+  "cardImageAlt": "SwiftBot 通用送遞機械人",
+  "category": "醫療與教育",
+  "intro": "新一代通用送遞機械人，輕巧靈活，配備多層托盤，適用於校園食堂、醫院餐廳等場景的餐飲配送服務。",
+  "heroImage": "images/tobot_swiftbot.png",
+  "heroImageAlt": "SwiftBot 通用送遞機械人",
+  "features": [
+   "於高度動態複雜環境中表現出色",
+   "主動偵測途人並主動讓路",
+   "業界首創雷射投影互動功能",
+   "自動電動門設計，確保衛生、安全與私隱",
+   "支援遠端呼叫，物聯網擴充能力強"
+  ],
+  "specs": [
+   {
+    "label": "機身尺寸",
+    "value": "488 x 593 x 1281mm"
+   },
+   {
+    "label": "機身重量",
+    "value": "60kg（標準型號）"
+   },
+   {
+    "label": "最大載重",
+    "value": "35kg"
+   },
+   {
+    "label": "托盤",
+    "value": "尺寸 433 x 502mm，預設 3 層，最多 5 層"
+   },
+   {
+    "label": "續航時間",
+    "value": "10–24 小時（支援自動回充）"
+   },
+   {
+    "label": "充電時間",
+    "value": "4.5 小時"
+   },
+   {
+    "label": "最小淨空",
+    "value": "55cm"
+   },
+   {
+    "label": "巡航速度",
+    "value": "0.5–1.2 m/s"
+   }
+  ],
+  "specNote": "實際功能、續航、效率及部署方式會受路線、人流、網絡、場地及配置影響，最終以正式方案及實機為準。",
+  "scenarios": [
+   {
+    "title": "校園食堂送餐",
+    "text": "多層托盤設計一次過運送多份餐點，減少學生排隊輪候時間。"
+   },
+   {
+    "title": "醫院餐廳配送",
+    "text": "自動避讓行人，於繁忙走廊安全穿梭完成餐飲配送。"
+   },
+   {
+    "title": "零售及商場迎賓送遞",
+    "text": "配合雷射投影互動功能，於配送同時提供趣味導引體驗。"
+   }
+  ],
+  "seo": {
+   "keywords": "SwiftBot,SwiftBot 通用送遞機械人,機械人方案,BottiZ",
+   "ogTitle": "SwiftBot 通用送遞機械人｜BottiZ"
+  },
+  "specPdf": "【待填：規格表 PDF】",
+  "demoVideo": "【待填：示範影片連結】",
+  "siteConditions": "【待填：場地條件（通道闊度、坡度與地面、電梯、網絡、充電位）】"
  },
  "infobot": {
   "name": "InfoBot",
@@ -302,7 +1370,69 @@
    "security"
   ],
   "cardImage": "images/tobot_infobot.jpg",
-  "cardImageAlt": "InfoBot 推廣機械人"
+  "cardImageAlt": "InfoBot 推廣機械人",
+  "category": "特種應用",
+  "intro": "配備 27 吋大型互動屏幕的推廣機械人，可進行自主導覽、資訊展示與互動問答，適用於展覽、科研機構與政府場所。",
+  "heroImage": "images/tobot_infobot.jpg",
+  "heroImageAlt": "InfoBot 推廣機械人",
+  "features": [
+   "27 吋超大高清顯示屏幕",
+   "主動打招呼，5 米範圍人臉識別",
+   "支援跨樓層自動搭乘電梯",
+   "自動回充"
+  ],
+  "specs": [
+   {
+    "label": "機身尺寸",
+    "value": "530 x 500 x 1320mm"
+   },
+   {
+    "label": "機身重量",
+    "value": "43kg"
+   },
+   {
+    "label": "屏幕尺寸",
+    "value": "10.1 吋觸控屏（1200×1920px）／27 吋顯示屏（1080×1920px）"
+   },
+   {
+    "label": "硬件介面",
+    "value": "標準 5V/2A USB-A 數據介面／標準 DC 12V/3A 電源介面"
+   },
+   {
+    "label": "作業系統",
+    "value": "Android 9"
+   },
+   {
+    "label": "充電時間",
+    "value": "5 小時"
+   },
+   {
+    "label": "續航時間",
+    "value": "5 小時"
+   },
+   {
+    "label": "充電方式",
+    "value": "自動回充"
+   }
+  ],
+  "specNote": "實際功能、續航、效率及部署方式會受路線、人流、網絡、場地及配置影響，最終以正式方案及實機為準。",
+  "scenarios": [
+   {
+    "title": "展覽及科研機構導覽",
+    "text": "以 27 吋屏幕播放展品介紹及互動問答，主動迎接參觀者並提供自助導覽。"
+   },
+   {
+    "title": "政府場所資訊查詢",
+    "text": "5 米人臉識別範圍內主動打招呼，減少職員重複回答基本查詢的工作量。"
+   }
+  ],
+  "seo": {
+   "keywords": "InfoBot,InfoBot 推廣機械人,機械人方案,BottiZ",
+   "ogTitle": "InfoBot 推廣機械人｜BottiZ"
+  },
+  "specPdf": "【待填：規格表 PDF】",
+  "demoVideo": "【待填：示範影片連結】",
+  "siteConditions": "【待填：場地條件（通道闊度、坡度與地面、電梯、網絡、充電位）】"
  },
  "minibot": {
   "name": "MiniBot",
@@ -337,206 +1467,277 @@
    "property"
   ],
   "cardImage": "images/tobot_minibot.jpg",
-  "cardImageAlt": "MiniBot 招待小專員"
- },
- "scrubber75": {
-  "name": "Scrubber 75",
-  "page": "product-scrubber75.html",
-  "image": "images/tobot_scrubber75.png",
-  "imageAlt": "Scrubber 75",
-  "fit": {
-   "property": {
-    "tag": "商場及機場大堂清潔",
-    "blurb": "搭載先進環境感知系統，適合商場、機場、車站等大面積公共空間，靈活閃避行人完成大範圍地面清潔。"
+  "cardImageAlt": "MiniBot 招待小專員",
+  "category": "特種應用",
+  "intro": "小巧可愛的招待機械人，具備語音互動與自主導航功能，支援 27 種語言，適用於科研實驗室、教育展示與特殊場所的接待服務。",
+  "heroImage": "images/tobot_minibot.jpg",
+  "heroImageAlt": "MiniBot 招待小專員",
+  "features": [
+   "支援 27 種語言",
+   "僅需 55 公分淨空即可自由通行",
+   "14 吋高清觸控屏幕，配 6 麥克風環形陣列",
+   "搭載 Qualcomm Snapdragon 處理器",
+   "內置高保真重低音喇叭",
+   "自動回充"
+  ],
+  "specs": [
+   {
+    "label": "機身尺寸",
+    "value": "990 x 406 x 406mm"
+   },
+   {
+    "label": "機身重量",
+    "value": "21kg"
+   },
+   {
+    "label": "屏幕尺寸",
+    "value": "14 吋觸控屏（1920×1080px）"
+   },
+   {
+    "label": "麥克風陣列",
+    "value": "6 麥克風環形陣列"
+   },
+   {
+    "label": "作業系統",
+    "value": "Android"
+   },
+   {
+    "label": "電池",
+    "value": "鋰電池，容量 10.4Ah，電壓 25.2V"
+   },
+   {
+    "label": "充電方式",
+    "value": "自動回充"
    }
+  ],
+  "specNote": "實際功能、續航、效率及部署方式會受路線、人流、網絡、場地及配置影響，最終以正式方案及實機為準。",
+  "scenarios": [
+   {
+    "title": "校門及接待處迎賓",
+    "text": "以多語言語音互動接待訪客，支援校園介紹及基本查詢。"
+   },
+   {
+    "title": "科研實驗室及教育展示",
+    "text": "小巧機身適合於實驗室及展示空間穿梭，提供互動導覽體驗。"
+   }
+  ],
+  "seo": {
+   "keywords": "MiniBot,MiniBot 招待小專員,機械人方案,BottiZ",
+   "ogTitle": "MiniBot 招待小專員｜BottiZ"
   },
-  "code": "Bottiz-S75",
-  "subtitle": "卓越環境感知清潔機械人",
-  "summary": "搭載先進環境感知系統的大型清潔機械人，適用於商場、機場、車站等大面積公共空間的自動化清潔作業。",
-  "tags": [
-   "大面積清潔",
-   "環境感知",
-   "公共空間"
-  ],
-  "industries": [
-   "property"
-  ],
-  "cardImage": "images/tobot_scrubber75.png",
-  "cardImageAlt": "Scrubber 75 卓越環境感知清潔機械人"
+  "specPdf": "【待填：規格表 PDF】",
+  "demoVideo": "【待填：示範影片連結】",
+  "siteConditions": "【待填：場地條件（通道闊度、坡度與地面、電梯、網絡、充電位）】"
  },
- "w3": {
-  "name": "W3",
-  "page": "product-w3.html",
-  "image": "images/tobot_w3.png",
-  "imageAlt": "W3",
+ "phantas": {
+  "name": "Phantas",
+  "page": "product-phantas.html",
+  "image": "images/tobot_phantas.png",
+  "imageAlt": "Phantas",
   "fit": {
-   "property": {
-    "tag": "酒店及服務式住宅配送",
-    "blurb": "自動搭乘電梯配合弧形防撞機身，適合酒店及服務式住宅為住客提供客房用品及餐飲配送。"
+   "education": {
+    "tag": "課室及圖書館精細清潔",
+    "blurb": "機身小巧靈活，支援零距離邊緣清潔及自動定點清洗，適合課室、圖書館及走廊等中小型室內空間。"
    },
    "healthcare": {
-    "tag": "院舍跨樓層物資配送",
-    "blurb": "90 公升儲物容量分為四格，適合院舍在不同樓層之間配送日用品、藥物及個人物資。"
+    "tag": "診所及病房精細清潔",
+    "blurb": "地板種類自動識別配合精準導航，適合診所、病房及院舍公共空間等對地面衛生要求較高的環境。"
    }
   },
-  "code": "Bottiz-W3",
-  "subtitle": "酒店梯控配送機械人",
-  "summary": "專為酒店場景設計的智能配送機械人，支援電梯自動控制與跨樓層配送，可自主完成客房送物、餐飲配送等任務。",
+  "code": "Bottiz-PH01",
+  "subtitle": "中小型設施清潔機械人",
+  "summary": "適用於中小型設施的智能清潔機械人，具備精準導航與高效清潔能力，機身小巧靈活，支援多合一地板清潔及零距離邊緣清潔，可應用於實驗室、特殊環境的清潔維護。",
   "tags": [
-   "酒店",
-   "梯控",
-   "跨樓層配送"
+   "清潔",
+   "中小型",
+   "精準導航"
   ],
   "industries": [
-   "healthcare",
-   "property"
-  ],
-  "cardImage": "images/tobot_w3.png",
-  "cardImageAlt": "W3 酒店梯控配送機械人"
- },
- "d300": {
-  "name": "D-300",
-  "page": "product-d300.html",
-  "image": "images/tobot_d300.png",
-  "imageAlt": "D-300",
-  "fit": {
-   "property": {
-    "tag": "物業大型貨物搬運",
-    "blurb": "具備呼叫及跟隨功能，適合大型屋苑或工業物業搬運維修物料及大型貨物，減少人手手推車來回。"
-   },
-   "healthcare": {
-    "tag": "醫院重型物資運送",
-    "blurb": "承載力達 300 公斤並可自動頂升貨架，適合醫院在病房、藥房及倉存之間運送大批醫療物資及床單。"
-   }
-  },
-  "code": "Bottiz-D300",
-  "subtitle": "300kg 重型隨行頂升機械人",
-  "summary": "承載力達 300 公斤的重型隨行頂升機械人，適用於醫院物流、校園搬運等場景，可自主跟隨與自動頂升貨架。",
-  "tags": [
-   "重型搬運",
-   "醫院物流",
-   "300kg"
-  ],
-  "industries": [
-   "healthcare",
-   "property"
-  ],
-  "cardImage": "images/tobot_d300.png",
-  "cardImageAlt": "D-300 300kg 重型隨行頂升機械人"
- },
- "flashbot": {
-  "name": "FlashBot",
-  "page": "product-flashbot.html",
-  "image": "images/tobot_flashbot.png",
-  "imageAlt": "FlashBot",
-  "fit": {
-   "property": {
-    "tag": "寫字樓跨樓層配送",
-    "blurb": "六輪獨立懸掛系統於任何環境平穩導航，適合寫字樓及商業大廈執行跨樓層文件及包裹配送。"
-   },
-   "healthcare": {
-    "tag": "醫院樓層配送及消毒",
-    "blurb": "自動搭乘電梯，儲物格可加裝 UV 消毒燈達 99.9% 消毒率，適合醫院在病房樓層之間配送物資同時保持衛生。"
-   }
-  },
-  "code": "Bottiz-FB01",
-  "subtitle": "樓層配送機械人",
-  "summary": "專為樓層間配送設計的智能機械人，支援電梯聯動，可在醫院、學校等多層建築中自主完成配送任務。",
-  "tags": [
-   "樓層配送",
-   "電梯聯動",
-   "醫院"
-  ],
-  "industries": [
-   "healthcare",
-   "property"
-  ],
-  "cardImage": "images/tobot_flashbot.png",
-  "cardImageAlt": "FlashBot 樓層配送機械人"
- },
- "securbot": {
-  "name": "Securbot",
-  "page": "product-securbot.html",
-  "image": "images/tobot_securbot.png",
-  "imageAlt": "Securbot",
-  "fit": {
-   "property": {
-    "tag": "屋苑及園區保安巡邏",
-    "blurb": "可加裝滅火、消毒等模組，適合大型屋苑及工業物業的日常保安巡邏及緊急應變支援。"
-   },
-   "security": {
-    "tag": "核心巡邏及安防監控",
-    "blurb": "多功能六輪驅動配合 360° 全方位監控，可識別人臉、車牌及人群聚集，是園區、電站及基礎設施保安巡邏的核心方案。"
-   }
-  },
-  "code": "Bottiz-SEC01",
-  "subtitle": "六輪巡邏機械人",
-  "summary": "六輪全地形巡邏機械人，可自主巡航、異常偵測與即時警報，適用於園區、電站、隧道等大型基礎設施的安全巡檢。",
-  "tags": [
-   "巡邏",
-   "安防",
-   "全地形"
-  ],
-  "industries": [
-   "property",
-   "security"
-  ],
-  "cardImage": "images/tobot_securbot.png",
-  "cardImageAlt": "Securbot 六輪巡邏機械人"
- },
- "m20pro": {
-  "name": "M20Pro",
-  "page": "product-m20pro.html",
-  "image": "images/tobot_m20pro.png",
-  "imageAlt": "M20Pro",
-  "fit": {
-   "property": {
-    "tag": "大型屋苑戶外巡邏",
-    "blurb": "機身小巧可穿梭斜坡及狹窄空間，適合大型屋苑戶外範圍及地下停車場的保安巡邏。"
-   },
-   "security": {
-    "tag": "複雜地形巡檢",
-    "blurb": "輪足混合驅動可攀樓梯、越障，適合基礎設施在狹窄管道、樓梯及高低不平範圍執行保安巡檢。"
-   }
-  },
-  "code": "Bottiz-M20P",
-  "subtitle": "輪足混合動力機械犬",
-  "summary": "結合輪式與足式運動的混合動力機械犬，可適應複雜地形環境，搭載多種感測模組，適用於電力巡檢、隧道探測與智慧城市巡邏。",
-  "tags": [
-   "機械犬",
-   "複雜地形",
-   "巡檢"
-  ],
-  "industries": [
-   "property",
-   "security"
-  ],
-  "cardImage": "images/tobot_m20pro.png",
-  "cardImageAlt": "M20Pro 輪足混合動力機械犬"
- },
- "g5": {
-  "name": "G5",
-  "page": "product-g5.html",
-  "image": "images/tobot_g5.png",
-  "imageAlt": "G5",
-  "fit": {
-   "healthcare": {
-    "tag": "院舍及醫院中央廚房",
-    "blurb": "25kW 大火力配合雲端食譜同步，可應付大型院舍或醫院中央廚房同時為大量院友／病人備餐的高產能需求。"
-   }
-  },
-  "code": "Bottiz-G5",
-  "subtitle": "大型餐飲機構用 AI 炒餸機械人",
-  "summary": "配備獨立翻炒鏟，模擬人手翻炒技藝，精準複製慢推滑炒和高溫生炒等多種中菜烹調方式，是大型餐飲機構的強大生產力工具。",
-  "tags": [
-   "AI 烹飪",
-   "大型餐飲",
-   "自動炒菜"
-  ],
-  "industries": [
+   "education",
    "healthcare"
   ],
-  "cardImage": "images/tobot_g5.png",
-  "cardImageAlt": "G5 大型餐飲機構用 AI 炒餸機械人"
+  "cardImage": "images/tobot_phantas.png",
+  "cardImageAlt": "Phantas 中小型設施清潔機械人",
+  "category": "特種應用",
+  "intro": "適用於中小型設施的智能清潔機械人，具備精準導航與高效清潔能力，機身小巧靈活，支援多合一地板清潔及零距離邊緣清潔，可應用於實驗室、特殊環境的清潔維護。",
+  "heroImage": "images/tobot_phantas.png",
+  "heroImageAlt": "Phantas 中小型設施清潔機械人",
+  "features": [
+   "多合一地板清潔：擦地、掃地、拖塵一次完成",
+   "卓越通過性，適應多種地形",
+   "零距離邊緣清潔，貼牆清潔無死角",
+   "自動定點清潔",
+   "地板種類自動識別",
+   "物聯網整合管理"
+  ],
+  "specs": [
+   {
+    "label": "機身尺寸",
+    "value": "550 x 440 x 617mm"
+   },
+   {
+    "label": "機身重量",
+    "value": "48kg"
+   },
+   {
+    "label": "吸塵／掃地寬度",
+    "value": "410mm"
+   },
+   {
+    "label": "擦地寬度",
+    "value": "330mm"
+   },
+   {
+    "label": "清潔效率",
+    "value": "400–700 m²/h"
+   },
+   {
+    "label": "水箱容量",
+    "value": ">1000 m² 覆蓋"
+   },
+   {
+    "label": "垃圾箱",
+    "value": "0.7L"
+   },
+   {
+    "label": "最高清潔速度",
+    "value": "0.8 m/s"
+   },
+   {
+    "label": "最小通行寬度",
+    "value": "600mm"
+   },
+   {
+    "label": "最小通行高度",
+    "value": "650mm"
+   },
+   {
+    "label": "續航時間",
+    "value": "擦地 4.5 小時／吸塵 4.5 小時／掃地 18 小時／拖塵 10 小時"
+   },
+   {
+    "label": "充電時間",
+    "value": "2 小時"
+   }
+  ],
+  "specNote": "實際功能、續航、效率及部署方式會受路線、人流、網絡、場地及配置影響，最終以正式方案及實機為準。",
+  "scenarios": [
+   {
+    "title": "實驗室及特殊環境清潔",
+    "text": "零距離邊緣清潔配合地板種類識別，適應實驗室內精密及多變的地面材質。"
+   },
+   {
+    "title": "中小型設施日常清潔",
+    "text": "機身小巧靈活，適合走廊、辦公室等中小型室內空間穿梭作業。"
+   }
+  ],
+  "seo": {
+   "keywords": "Phantas,Phantas 中小型設施清潔機械人,機械人方案,BottiZ",
+   "ogTitle": "Phantas 中小型設施清潔機械人｜BottiZ"
+  },
+  "specPdf": "【待填：規格表 PDF】",
+  "demoVideo": "【待填：示範影片連結】",
+  "siteConditions": "【待填：場地條件（通道闊度、坡度與地面、電梯、網絡、充電位）】"
+ },
+ "scrubber50": {
+  "name": "Scrubber 50",
+  "page": "product-scrubber50.html",
+  "image": "images/tobot_scrubber50.png",
+  "imageAlt": "Scrubber 50",
+  "fit": {
+   "education": {
+    "tag": "大堂、禮堂及體育館清潔",
+    "blurb": "四合一清潔配合自動工作站，適合學校大堂、禮堂外圍及體育館等大中型室內空間，於課餘時段自動完成清潔。"
+   },
+   "property": {
+    "tag": "大型商場及會所清潔",
+    "blurb": "分區清潔規劃配合機械人隊伍管理，適合大型商場、會所及大堂等高人流公共空間的例行清潔。"
+   }
+  },
+  "code": "Bottiz-S50",
+  "subtitle": "全自動清潔機械人",
+  "summary": "以全自動清潔及機械人隊伍管理減少人手操作，四合一清潔功能配合自動工作站，適合學校大堂、體育館、禮堂外及寬闊走廊等大中型校園空間。",
+  "tags": [
+   "四合一清潔",
+   "分區清潔",
+   "自動工作站"
+  ],
+  "industries": [
+   "education",
+   "property"
+  ],
+  "cardImage": "images/tobot_scrubber50.png",
+  "cardImageAlt": "Scrubber 50 全自動清潔機械人",
+  "category": "醫療與教育",
+  "intro": "以全自動清潔及機械人隊伍管理減少人手操作，四合一清潔功能配合自動工作站，適合學校大堂、體育館、禮堂外及寬闊走廊等大中型校園空間。",
+  "heroImage": "images/tobot_scrubber50.png",
+  "heroImageAlt": "Scrubber 50 全自動清潔機械人",
+  "features": [
+   "減少人手介入，全程自動化作業",
+   "機械人隊伍管理系統",
+   "四合一清潔：擦地、掃地、拖塵及消毒",
+   "分區清潔規劃",
+   "整合式工作站，支援自動充電、加水及排水"
+  ],
+  "specs": [
+   {
+    "label": "機身尺寸",
+    "value": "860 x 700 x 1030mm"
+   },
+   {
+    "label": "機身重量",
+    "value": "155kg"
+   },
+   {
+    "label": "清潔寬度",
+    "value": "500mm"
+   },
+   {
+    "label": "最大清潔效率",
+    "value": "1,600 m²/h"
+   },
+   {
+    "label": "清水／污水箱",
+    "value": "24L / 18L"
+   },
+   {
+    "label": "垃圾盤",
+    "value": "2 x 0.6L"
+   },
+   {
+    "label": "最高清潔速度",
+    "value": "1 m/s"
+   },
+   {
+    "label": "最大噴霧流量",
+    "value": "1.8L/h"
+   },
+   {
+    "label": "噴霧時長",
+    "value": "3 小時"
+   },
+   {
+    "label": "續航時間",
+    "value": "3–8 小時"
+   }
+  ],
+  "specNote": "實際功能、續航、效率及部署方式會受路線、人流、網絡、場地及配置影響，最終以正式方案及實機為準。",
+  "scenarios": [
+   {
+    "title": "學校大堂及禮堂",
+    "text": "分區清潔規劃配合自動工作站，於課餘時段自動完成大堂及禮堂外圍清潔。"
+   },
+   {
+    "title": "體育館及寬闊走廊",
+    "text": "四合一清潔一次過完成擦地、掃地及消毒，維持大範圍空間衛生水平。"
+   }
+  ],
+  "seo": {
+   "keywords": "Scrubber,Scrubber 50 全自動清潔機械人,機械人方案,BottiZ",
+   "ogTitle": "Scrubber 50 全自動清潔機械人｜BottiZ"
+  },
+  "specPdf": "【待填：規格表 PDF】",
+  "demoVideo": "【待填：示範影片連結】",
+  "siteConditions": "【待填：場地條件（通道闊度、坡度與地面、電梯、網絡、充電位）】"
  }
 }
