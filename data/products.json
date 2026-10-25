@@ -2,7 +2,7 @@
  "securbot": {
   "name": "Securbot",
   "page": "product-securbot.html",
-  "image": "images/tobot_securbot.png",
+  "image": "images/bottiz_securbot.webp",
   "imageAlt": "Securbot",
   "fit": {
    "property": {
@@ -26,11 +26,11 @@
    "property",
    "security"
   ],
-  "cardImage": "images/tobot_securbot.png",
+  "cardImage": "images/bottiz_securbot.webp",
   "cardImageAlt": "Securbot 六輪巡邏機械人",
   "category": "基礎設施",
   "intro": "六輪全地形巡邏機械人，可自主巡航、異常偵測與即時警報，適用於園區、電站、隧道等大型基礎設施的安全巡檢。",
-  "heroImage": "images/tobot_securbot.png",
+  "heroImage": "images/bottiz_securbot.webp",
   "heroImageAlt": "Securbot 六輪巡邏機械人",
   "features": [
    "多功能六輪驅動系統，可適應斜坡、障礙物、裂縫、沙地、雪地及草地等各種地形",
@@ -102,7 +102,7 @@
  "m20pro": {
   "name": "M20Pro",
   "page": "product-m20pro.html",
-  "image": "images/tobot_m20pro.png",
+  "image": "images/bottiz_m20pro.webp",
   "imageAlt": "M20Pro",
   "fit": {
    "property": {
@@ -126,11 +126,11 @@
    "property",
    "security"
   ],
-  "cardImage": "images/tobot_m20pro.png",
+  "cardImage": "images/bottiz_m20pro.webp",
   "cardImageAlt": "M20Pro 輪足混合動力機械犬",
   "category": "基礎設施",
   "intro": "結合輪式與足式運動的混合動力機械犬，可適應複雜地形環境，搭載多種感測模組，適用於電力巡檢、隧道探測與智慧城市巡邏。",
-  "heroImage": "images/tobot_m20pro.png",
+  "heroImage": "images/bottiz_m20pro.webp",
   "heroImageAlt": "M20Pro 輪足混合動力機械犬",
   "features": [
    "輪足混合驅動系統，能應付極端地形變化，輕鬆爬樓梯及越過障礙物",
@@ -206,7 +206,7 @@
  "beetle": {
   "name": "Beetle",
   "page": "product-beetle.html",
-  "image": "images/tobot_beetle.png",
+  "image": "images/bottiz_beetle.webp",
   "imageAlt": "Beetle",
   "fit": {
    "education": {
@@ -230,11 +230,11 @@
    "education",
    "property"
   ],
-  "cardImage": "images/tobot_beetle.png",
+  "cardImage": "images/bottiz_beetle.webp",
   "cardImageAlt": "Beetle 室內外工業級清潔機械人",
   "category": "基礎設施",
   "intro": "工業級室內外清潔機械人，具備強大清潔能力與環境感知系統，可於光線不足或人流較多的環境中定位及避障，適合大面積公共設施、園區道路等場景自主作業。",
-  "heroImage": "images/tobot_beetle.png",
+  "heroImage": "images/bottiz_beetle.webp",
   "heroImageAlt": "Beetle 室內外工業級清潔機械人",
   "features": [
    "即使在光線不足或人流較多的環境中，亦能精準定位及避障",
@@ -311,7 +311,7 @@
  "scrubber75": {
   "name": "Scrubber 75",
   "page": "product-scrubber75.html",
-  "image": "images/tobot_scrubber75.png",
+  "image": "images/bottiz_scrubber75.webp",
   "imageAlt": "Scrubber 75",
   "fit": {
    "property": {
@@ -330,11 +330,11 @@
   "industries": [
    "property"
   ],
-  "cardImage": "images/tobot_scrubber75.png",
+  "cardImage": "images/bottiz_scrubber75.webp",
   "cardImageAlt": "Scrubber 75 卓越環境感知清潔機械人",
   "category": "基礎設施",
   "intro": "搭載先進環境感知系統的大型清潔機械人，適用於商場、機場、車站等大面積公共空間的自動化清潔作業。",
-  "heroImage": "images/tobot_scrubber75.png",
+  "heroImage": "images/bottiz_scrubber75.webp",
   "heroImageAlt": "Scrubber 75 卓越環境感知清潔機械人",
   "features": [
    "節水設計，降低耗水量",
@@ -398,7 +398,7 @@
  "g5": {
   "name": "G5",
   "page": "product-g5.html",
-  "image": "images/tobot_g5.png",
+  "image": "images/bottiz_g5.webp",
   "imageAlt": "G5",
   "fit": {
    "healthcare": {
@@ -417,11 +417,11 @@
   "industries": [
    "healthcare"
   ],
-  "cardImage": "images/tobot_g5.png",
+  "cardImage": "images/bottiz_g5.webp",
   "cardImageAlt": "G5 大型餐飲機構用 AI 炒餸機械人",
   "category": "商業空間",
   "intro": "配備獨立翻炒鏟，模擬人手翻炒技藝，精準複製慢推滑炒和高溫生炒等多種中菜烹調方式，是大型餐飲機構的強大生產力工具。",
-  "heroImage": "images/tobot_g5.png",
+  "heroImage": "images/bottiz_g5.webp",
   "heroImageAlt": "G5 大型餐飲機構用 AI 炒餸機械人",
   "features": [
    "獨立翻炒鏟系統，模擬人手翻炒技藝",
@@ -485,7 +485,7 @@
  "g3": {
   "name": "G3",
   "page": "product-g3.html",
-  "image": "images/tobot_g3.png",
+  "image": "images/bottiz_g3.webp",
   "imageAlt": "G3",
   "fit": {
    "education": {
@@ -509,11 +509,11 @@
    "education",
    "healthcare"
   ],
-  "cardImage": "images/tobot_g3.png",
+  "cardImage": "images/bottiz_g3.webp",
   "cardImageAlt": "G3 中型餐飲企業用 AI 炒餸機械人",
   "category": "商業空間",
   "intro": "具備獨立翻炒鏟系統，能模擬人手翻炒，精準再現慢推滑炒和高溫生炒等技藝，是中型餐飲企業的理想選擇。",
-  "heroImage": "images/tobot_g3.png",
+  "heroImage": "images/bottiz_g3.webp",
   "heroImageAlt": "G3 中型餐飲企業用 AI 炒餸機械人",
   "features": [
    "獨立翻炒鏟系統，模擬人手翻炒技藝",
@@ -577,7 +577,7 @@
  "g2": {
   "name": "G2",
   "page": "product-g2.html",
-  "image": "images/tobot_g2.png",
+  "image": "images/bottiz_g2.webp",
   "imageAlt": "G2",
   "fit": {
    "education": {
@@ -601,11 +601,11 @@
    "education",
    "healthcare"
   ],
-  "cardImage": "images/tobot_g2.png",
+  "cardImage": "images/bottiz_g2.webp",
   "cardImageAlt": "G2 小型餐飲場所用 AI 炒餸機械人",
   "category": "商業空間",
   "intro": "專為小型餐飲場所設計的智能烹飪解決方案，採用獨立翻炒鏟模擬人手翻炒技藝，並提供 220V 電源選項，適合空間有限的小店。",
-  "heroImage": "images/tobot_g2.png",
+  "heroImage": "images/bottiz_g2.webp",
   "heroImageAlt": "G2 小型餐飲場所用 AI 炒餸機械人",
   "features": [
    "獨立翻炒鏟，模擬人手翻炒技藝",
@@ -669,7 +669,7 @@
  "w3": {
   "name": "W3",
   "page": "product-w3.html",
-  "image": "images/tobot_w3.png",
+  "image": "images/bottiz_w3.webp",
   "imageAlt": "W3",
   "fit": {
    "property": {
@@ -693,11 +693,11 @@
    "healthcare",
    "property"
   ],
-  "cardImage": "images/tobot_w3.png",
+  "cardImage": "images/bottiz_w3.webp",
   "cardImageAlt": "W3 酒店梯控配送機械人",
   "category": "商業空間",
   "intro": "專為酒店場景設計的智能配送機械人，支援電梯自動控制與跨樓層配送，可自主完成客房送物、餐飲配送等任務。",
-  "heroImage": "images/tobot_w3.png",
+  "heroImage": "images/bottiz_w3.webp",
   "heroImageAlt": "W3 酒店梯控配送機械人",
   "features": [
    "3D 避障：以 120 度廣角視野偵測並避開障礙物",
@@ -774,7 +774,7 @@
  "kettybot": {
   "name": "KettyBot",
   "page": "product-kettybot.html",
-  "image": "images/tobot_kettybot.jpg",
+  "image": "images/bottiz_kettybot.webp",
   "imageAlt": "KettyBot",
   "fit": {
    "education": {
@@ -798,11 +798,11 @@
    "education",
    "property"
   ],
-  "cardImage": "images/tobot_kettybot.jpg",
+  "cardImage": "images/bottiz_kettybot.webp",
   "cardImageAlt": "KettyBot 大屏幕送遞招待機械人",
   "category": "商業空間",
   "intro": "配備大尺寸互動屏幕的送遞招待機械人，兼具配送與廣告展示功能，適用於餐廳、酒店大堂、零售門店等商業空間。",
-  "heroImage": "images/tobot_kettybot.jpg",
+  "heroImage": "images/bottiz_kettybot.webp",
   "heroImageAlt": "KettyBot 大屏幕送遞招待機械人",
   "features": [
    "僅需 55 公分淨空即可自由通行",
@@ -866,7 +866,7 @@
  "d300": {
   "name": "D-300",
   "page": "product-d300.html",
-  "image": "images/tobot_d300.png",
+  "image": "images/bottiz_d300.webp",
   "imageAlt": "D-300",
   "fit": {
    "property": {
@@ -890,11 +890,11 @@
    "healthcare",
    "property"
   ],
-  "cardImage": "images/tobot_d300.png",
+  "cardImage": "images/bottiz_d300.webp",
   "cardImageAlt": "D-300 300kg 重型隨行頂升機械人",
   "category": "醫療與教育",
   "intro": "承載力達 300 公斤的重型隨行頂升機械人，適用於醫院物流、校園搬運等場景，可自主跟隨與自動頂升貨架。",
-  "heroImage": "images/tobot_d300.png",
+  "heroImage": "images/bottiz_d300.webp",
   "heroImageAlt": "D-300 300kg 重型隨行頂升機械人",
   "features": [
    "具備呼叫及跟隨功能",
@@ -962,7 +962,7 @@
  "d150": {
   "name": "D-150",
   "page": "product-d150.html",
-  "image": "images/tobot_d150.png",
+  "image": "images/bottiz_d150.webp",
   "imageAlt": "D-150",
   "fit": {
    "education": {
@@ -986,11 +986,11 @@
    "education",
    "healthcare"
   ],
-  "cardImage": "images/tobot_d150.png",
+  "cardImage": "images/bottiz_d150.webp",
   "cardImageAlt": "D-150 150kg 重型隨行頂升機械人",
   "category": "醫療與教育",
   "intro": "承載力達 150 公斤的隨行頂升機械人，靈活適用於醫療機構與教育場所的物資配送與搬運。",
-  "heroImage": "images/tobot_d150.png",
+  "heroImage": "images/bottiz_d150.webp",
   "heroImageAlt": "D-150 150kg 重型隨行頂升機械人",
   "features": [
    "具備呼叫及跟隨功能",
@@ -1058,7 +1058,7 @@
  "s100": {
   "name": "S-100",
   "page": "product-s100.html",
-  "image": "images/tobot_s100.png",
+  "image": "images/bottiz_s100.webp",
   "imageAlt": "S-100",
   "fit": {
    "education": {
@@ -1082,11 +1082,11 @@
    "education",
    "healthcare"
   ],
-  "cardImage": "images/tobot_s100.png",
+  "cardImage": "images/bottiz_s100.webp",
   "cardImageAlt": "S-100 100kg 重型多變配送機械人",
   "category": "醫療與教育",
   "intro": "承載力達 100 公斤的多功能配送機械人，可靈活切換多種配送模式，適用於醫院、校園等場景。",
-  "heroImage": "images/tobot_s100.png",
+  "heroImage": "images/bottiz_s100.webp",
   "heroImageAlt": "S-100 100kg 重型多變配送機械人",
   "features": [
    "超大 100 公斤載重量",
@@ -1154,7 +1154,7 @@
  "flashbot": {
   "name": "FlashBot",
   "page": "product-flashbot.html",
-  "image": "images/tobot_flashbot.png",
+  "image": "images/bottiz_flashbot.webp",
   "imageAlt": "FlashBot",
   "fit": {
    "property": {
@@ -1178,11 +1178,11 @@
    "healthcare",
    "property"
   ],
-  "cardImage": "images/tobot_flashbot.png",
+  "cardImage": "images/bottiz_flashbot.webp",
   "cardImageAlt": "FlashBot 樓層配送機械人",
   "category": "醫療與教育",
   "intro": "專為樓層間配送設計的智能機械人，支援電梯聯動，可在醫院、學校等多層建築中自主完成配送任務。",
-  "heroImage": "images/tobot_flashbot.png",
+  "heroImage": "images/bottiz_flashbot.webp",
   "heroImageAlt": "FlashBot 樓層配送機械人",
   "features": [
    "自動搭乘電梯，實現跨樓層配送",
@@ -1243,7 +1243,7 @@
  "swiftbot": {
   "name": "SwiftBot",
   "page": "product-swiftbot.html",
-  "image": "images/tobot_swiftbot.png",
+  "image": "images/bottiz_swiftbot.webp",
   "imageAlt": "SwiftBot",
   "fit": {
    "education": {
@@ -1267,11 +1267,11 @@
    "education",
    "healthcare"
   ],
-  "cardImage": "images/tobot_swiftbot.png",
+  "cardImage": "images/bottiz_swiftbot.webp",
   "cardImageAlt": "SwiftBot 通用送遞機械人",
   "category": "醫療與教育",
   "intro": "新一代通用送遞機械人，輕巧靈活，配備多層托盤，適用於校園食堂、醫院餐廳等場景的餐飲配送服務。",
-  "heroImage": "images/tobot_swiftbot.png",
+  "heroImage": "images/bottiz_swiftbot.webp",
   "heroImageAlt": "SwiftBot 通用送遞機械人",
   "features": [
    "於高度動態複雜環境中表現出色",
@@ -1340,7 +1340,7 @@
  "infobot": {
   "name": "InfoBot",
   "page": "product-infobot.html",
-  "image": "images/tobot_infobot.jpg",
+  "image": "images/bottiz_infobot.webp",
   "imageAlt": "InfoBot",
   "fit": {
    "education": {
@@ -1369,11 +1369,11 @@
    "property",
    "security"
   ],
-  "cardImage": "images/tobot_infobot.jpg",
+  "cardImage": "images/bottiz_infobot.webp",
   "cardImageAlt": "InfoBot 推廣機械人",
   "category": "特種應用",
   "intro": "配備 27 吋大型互動屏幕的推廣機械人，可進行自主導覽、資訊展示與互動問答，適用於展覽、科研機構與政府場所。",
-  "heroImage": "images/tobot_infobot.jpg",
+  "heroImage": "images/bottiz_infobot.webp",
   "heroImageAlt": "InfoBot 推廣機械人",
   "features": [
    "27 吋超大高清顯示屏幕",
@@ -1437,7 +1437,7 @@
  "minibot": {
   "name": "MiniBot",
   "page": "product-minibot.html",
-  "image": "images/tobot_minibot.jpg",
+  "image": "images/bottiz_minibot.webp",
   "imageAlt": "MiniBot",
   "fit": {
    "education": {
@@ -1466,11 +1466,11 @@
    "healthcare",
    "property"
   ],
-  "cardImage": "images/tobot_minibot.jpg",
+  "cardImage": "images/bottiz_minibot.webp",
   "cardImageAlt": "MiniBot 招待小專員",
   "category": "特種應用",
   "intro": "小巧可愛的招待機械人，具備語音互動與自主導航功能，支援 27 種語言，適用於科研實驗室、教育展示與特殊場所的接待服務。",
-  "heroImage": "images/tobot_minibot.jpg",
+  "heroImage": "images/bottiz_minibot.webp",
   "heroImageAlt": "MiniBot 招待小專員",
   "features": [
    "支援 27 種語言",
@@ -1532,7 +1532,7 @@
  "phantas": {
   "name": "Phantas",
   "page": "product-phantas.html",
-  "image": "images/tobot_phantas.png",
+  "image": "images/bottiz_phantas.webp",
   "imageAlt": "Phantas",
   "fit": {
    "education": {
@@ -1556,11 +1556,11 @@
    "education",
    "healthcare"
   ],
-  "cardImage": "images/tobot_phantas.png",
+  "cardImage": "images/bottiz_phantas.webp",
   "cardImageAlt": "Phantas 中小型設施清潔機械人",
   "category": "特種應用",
   "intro": "適用於中小型設施的智能清潔機械人，具備精準導航與高效清潔能力，機身小巧靈活，支援多合一地板清潔及零距離邊緣清潔，可應用於實驗室、特殊環境的清潔維護。",
-  "heroImage": "images/tobot_phantas.png",
+  "heroImage": "images/bottiz_phantas.webp",
   "heroImageAlt": "Phantas 中小型設施清潔機械人",
   "features": [
    "多合一地板清潔：擦地、掃地、拖塵一次完成",
@@ -1642,7 +1642,7 @@
  "scrubber50": {
   "name": "Scrubber 50",
   "page": "product-scrubber50.html",
-  "image": "images/tobot_scrubber50.png",
+  "image": "images/bottiz_scrubber50.webp",
   "imageAlt": "Scrubber 50",
   "fit": {
    "education": {
@@ -1666,11 +1666,11 @@
    "education",
    "property"
   ],
-  "cardImage": "images/tobot_scrubber50.png",
+  "cardImage": "images/bottiz_scrubber50.webp",
   "cardImageAlt": "Scrubber 50 全自動清潔機械人",
   "category": "醫療與教育",
   "intro": "以全自動清潔及機械人隊伍管理減少人手操作，四合一清潔功能配合自動工作站，適合學校大堂、體育館、禮堂外及寬闊走廊等大中型校園空間。",
-  "heroImage": "images/tobot_scrubber50.png",
+  "heroImage": "images/bottiz_scrubber50.webp",
   "heroImageAlt": "Scrubber 50 全自動清潔機械人",
   "features": [
    "減少人手介入，全程自動化作業",
