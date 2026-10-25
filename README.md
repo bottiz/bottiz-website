@@ -15,7 +15,7 @@
 | 下載檔案（勘察清單、通告範本） | `data/downloads.json` |
 | 翻譯（簡體／英文） | `data/i18n/*.json`，以繁體原文作鍵 |
 
-【待填：…】為尚未提供的內容，清單見 `deliverables/待填清單.md`（`node scripts/todo-list.mjs` 重新生成）。
+【待填：…】為尚未提供的內容，清單見 `docs/content-todo.md`（內部文件，不提交、不部署）。
 
 ## 指令
 
