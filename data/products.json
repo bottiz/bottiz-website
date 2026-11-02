@@ -658,6 +658,10 @@
    "healthcare": {
     "tag": "院舍跨樓層物資配送",
     "blurb": "90 公升儲物容量分為四格，適合院舍在不同樓層之間配送日用品、藥物及個人物資。"
+   },
+   "hotel": {
+    "tag": "客房無接觸送物",
+    "blurb": "專為酒店設計，支援電梯聯動及跨樓層配送，弧形機身配自動開關門，適合客房送物與餐飲配送。"
    }
   },
   "code": "BottiZ-W3",
@@ -670,7 +674,8 @@
   ],
   "industries": [
    "healthcare",
-   "property"
+   "property",
+   "hotel"
   ],
   "cardImage": "images/bottiz_w3.webp",
   "cardImageAlt": "W3 酒店梯控配送機械人",
@@ -760,6 +765,10 @@
    "property": {
     "tag": "商場及大堂接待導覽",
     "blurb": "無需鋪設定位標記即可導航，適合商場、寫字樓大堂提供訪客接待及方向指引，兼顯示宣傳內容。"
+   },
+   "hotel": {
+    "tag": "迎賓導覽與營銷",
+    "blurb": "18.5 吋行走廣告屏幕兼具導覽與宣傳，僅需 55 公分淨空即可通行，適合大堂迎賓與帶位。"
    }
   },
   "code": "BottiZ-KB01",
@@ -772,7 +781,8 @@
   ],
   "industries": [
    "education",
-   "property"
+   "property",
+   "hotel"
   ],
   "cardImage": "images/bottiz_kettybot.webp",
   "cardImageAlt": "KettyBot 大屏幕送遞招待機械人",
@@ -1035,6 +1045,10 @@
    "healthcare": {
     "tag": "醫院換電不停送遞",
     "blurb": "15 秒快速換電支援 24 小時不間斷配送，適合醫院運送餐具、藥物及物資並同步回收，全日運作不中斷。"
+   },
+   "hotel": {
+    "tag": "行李與重大物資配送",
+    "blurb": "100 公斤載重，可選配行李架作客房行李配送，並支援自主搭乘電梯，適合酒店大堂至客房的重物轉運。"
    }
   },
   "code": "BottiZ-S100",
@@ -1047,7 +1061,8 @@
   ],
   "industries": [
    "education",
-   "healthcare"
+   "healthcare",
+   "hotel"
   ],
   "cardImage": "images/bottiz_s100.webp",
   "cardImageAlt": "S-100 100kg 重型多變配送機械人",
@@ -1128,6 +1143,10 @@
    "healthcare": {
     "tag": "醫院樓層配送及消毒",
     "blurb": "自動搭乘電梯，儲物格可加裝 UV 消毒燈達 99.9% 消毒率，適合醫院在病房樓層之間配送物資同時保持衛生。"
+   },
+   "hotel": {
+    "tag": "跨樓層密閉配送",
+    "blurb": "自動搭乘電梯跨樓層配送，多功能儲物格可加裝紫外線消毒燈，適合客房備品及外賣的私密遞送。"
    }
   },
   "code": "BottiZ-FB01",
@@ -1140,7 +1159,8 @@
   ],
   "industries": [
    "healthcare",
-   "property"
+   "property",
+   "hotel"
   ],
   "cardImage": "images/bottiz_flashbot.webp",
   "cardImageAlt": "FlashBot 樓層配送機械人",

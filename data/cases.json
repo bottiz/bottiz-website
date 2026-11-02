@@ -1,9 +1,28 @@
 [
   {
+    "id": "macau-buffet",
+    "industries": [
+      "hotel"
+    ],
+    "title": "澳門上葡京「自助山」",
+    "tag": "自助餐回盤",
+    "text": "部署 10 台 HolaBot 組成回盤機隊，在超高客流密度下無縫協調運作，有效緩解侍應搬運負擔，顯著加快繁忙時段翻枱效率。"
+  },
+  {
+    "id": "macau-crowne",
+    "industries": [
+      "hotel"
+    ],
+    "title": "澳門皇冠假日酒店",
+    "tag": "行李及客房配送",
+    "text": "引進 S-100 重載行李機械人與 W3 客房配送，節省達 80% 的行李與重物轉運工時，符合企業可持續發展與關愛員工倡議。"
+  },
+  {
     "id": "hyatt",
     "industries": [
       "property",
-      "business"
+      "business",
+      "hotel"
     ],
     "title": "沙田凱悅酒店",
     "image": "images/insight_hyatt_hotel.webp",

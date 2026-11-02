@@ -1,5 +1,5 @@
 {{#with page.ind}}
-<section class="hero hero-campus-v2{{#if hero.photo}}{{else}} hero-solo{{/if}}">
+<section class="hero hero-campus-v2{{#if hero.photo}}{{else}}{{#if hero.facts}} hero-split{{else}} hero-solo{{/if}}{{/if}}">
 <div class="hero-copy-panel">
 <span class="eyebrow"><span class="dot"></span>{{hero.eyebrow}}</span>
 <h1 class="hero-title">
@@ -24,6 +24,9 @@
 </div>
 {{#each hero.photo.floats}}<div class="hero-float hero-float-{{#if @index}}two{{else}}one{{/if}}"><b>{{title}}</b><small>{{text}}</small></div>
 {{/each}}</div>{{/if}}
+{{#if hero.facts}}<ul class="hero-facts">
+{{#each hero.facts}}<li><strong>{{value}}</strong><span>{{label}}</span></li>
+{{/each}}</ul>{{/if}}
 </section>
 {{#if stats}}<section class="stats-bar">
 <div class="stats-bar-inner">
@@ -50,7 +53,7 @@
 </article>
 {{/each}}</div>
 </section>
-<section class="section campus-day" id="day">
+{{#if day}}<section class="section campus-day" id="day">
 <div class="section-head">
 <div>
 <div class="section-kicker">{{day.kicker}}</div>
@@ -66,7 +69,7 @@
 <p>{{text}}</p>
 </article>
 {{/each}}</div>
-</section>
+</section>{{/if}}
 <section class="section campus-solutions" id="scenes">
 <div class="section-head">
 <div>
@@ -84,8 +87,11 @@
 <span class="scene-tag">{{tag}}</span>
 <h3>{{title}}</h3>
 <p>{{text}}</p>
+{{#if facts}}<ul class="scene-facts">
+{{#each facts}}<li>{{this}}</li>
+{{/each}}</ul>{{/if}}
 {{#if models}}<p class="scene-models">{{#each models}}<a href="{{page}}">{{name}}</a>{{/each}}</p>{{/if}}
-{{#if link}}<a class="scene-link" href="{{link.href}}">{{link.label}} <b>→</b></a>{{else}}<a class="scene-link" href="#models">查看合適機械人 <b>→</b></a>{{/if}}
+{{#if link}}<a class="scene-link" href="{{link.href}}">{{link.label}} <b>→</b></a>{{else}}{{#if models}}<a class="scene-link" href="#models">查看合適機械人 <b>→</b></a>{{/if}}{{/if}}
 </div>
 </article>
 {{/each}}</div>
@@ -126,7 +132,7 @@
 </article>
 {{/each}}</div>
 </section>{{/if}}
-<section class="section" id="values">
+{{#if values}}<section class="section" id="values">
 <div class="section-head">
 <div>
 <div class="section-kicker">{{values.kicker}}</div>
@@ -141,22 +147,22 @@
 <p>{{text}}</p>
 </div>
 {{/each}}</div>
-</section>
+</section>{{/if}}
 {{#if cases}}<section class="section" id="cases">
 <div class="section-head">
 <div>
-<div class="section-kicker">Case Studies</div>
-<h2>相關案例</h2>
+<div class="section-kicker">{{#if casesHead}}{{casesHead.kicker}}{{else}}Case Studies{{/if}}</div>
+<h2>{{#if casesHead}}{{casesHead.title}}{{else}}相關案例{{/if}}</h2>
 </div>
 </div>
 <div class="fit-grid">
 {{#each cases}}<article class="fit-card model-card">
-<div class="fit-card-media case-media"><img alt="{{imageAlt}}" src="{{image}}" loading="lazy" decoding="async"/></div>
+{{#if image}}<div class="fit-card-media case-media"><img alt="{{imageAlt}}" src="{{image}}" loading="lazy" decoding="async"/></div>{{/if}}
 <div class="fit-card-body">
 <span class="fit-tag">{{tag}}</span>
 <h3>{{title}}</h3>
 <p>{{text}}</p>
-<a class="scene-link" href="{{href}}">閱讀案例 <b>→</b></a>
+{{#if href}}<a class="scene-link" href="{{href}}">閱讀案例 <b>→</b></a>{{/if}}
 </div>
 </article>
 {{/each}}</div>

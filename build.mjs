@@ -322,7 +322,7 @@ function resolveIndustry(key) {
     const lead = it.models?.[0] && product(it.models[0]);
     return { ...it, models, image: it.image || (lead && { src: lead.cardImage, alt: lead.cardImageAlt, width: 539, height: 538, cls: 'scene-image-product' }) };
   });
-  d.values.items = d.values.items.map((it, i) => ({ ...it, no: pad(i) }));
+  if (d.values) d.values.items = d.values.items.map((it, i) => ({ ...it, no: pad(i) }));
   if (d.models || d.scenes.items.some((s) => s.models.length)) {
     // models: those in scenes first (grouped by task), then any other model listed for this industry
     const keys = [...new Set([...d.scenes.items.flatMap((s, i) => data[file].scenes.items[i].models || []), ...Object.keys(data.products).filter((k) => data.products[k].fit?.[key])])];

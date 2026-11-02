@@ -33,6 +33,10 @@
           "label": "物業管理"
         },
         {
+          "href": "hotel.html",
+          "label": "酒店及度假村"
+        },
+        {
           "href": "healthcare.html",
           "label": "醫療及院舍"
         },
@@ -131,6 +135,10 @@
         {
           "href": "property-management.html",
           "label": "物業管理"
+        },
+        {
+          "href": "hotel.html",
+          "label": "酒店及度假村"
         },
         {
           "href": "healthcare.html",
