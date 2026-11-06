@@ -390,7 +390,7 @@
 </div>
 
 <div class="form-panel">
-<form class="form-grid enquiry-form" id="inquiryForm" data-enquiry data-form="developer" data-endpoint="https://formsubmit.co/ajax/support@bottiz.com" data-format="formsubmit" data-endpoint-ready="true" data-whatsapp="85295335639" data-mailto="support@bottiz.com" data-industry="developer" data-page-title="發展商設計階段諮詢｜BottiZ" novalidate>
+<form class="form-grid enquiry-form" id="inquiryForm" method="post" action="mailto:support@bottiz.com" enctype="text/plain" data-enquiry data-form="developer" data-endpoint="https://formsubmit.co/ajax/support@bottiz.com" data-format="formsubmit" data-access-key="" data-endpoint-ready="true" data-whatsapp="85295335639" data-mailto="support@bottiz.com" data-industry="developer" data-page-title="發展商設計階段諮詢｜BottiZ" novalidate>
 <div class="field"><label for="inquiryForm-name">姓名<span class="req" aria-hidden="true"> *</span></label><input id="inquiryForm-name" name="name" type="text" required aria-required="true" placeholder="姓名及職位" autocomplete="name" aria-describedby="inquiryForm-e-name"/><p class="field-error" id="inquiryForm-e-name" hidden></p></div>
 <div class="field"><label for="inquiryForm-company">公司 / 機構名稱</label><input id="inquiryForm-company" name="company" type="text" placeholder="例如：XX有限公司" autocomplete="organization" aria-describedby="inquiryForm-e-company"/><p class="field-error" id="inquiryForm-e-company" hidden></p></div>
 <div class="field"><label for="inquiryForm-email">電子郵件<span class="req" aria-hidden="true"> *</span></label><input id="inquiryForm-email" name="email" type="email" required aria-required="true" placeholder="name@company.com" autocomplete="email" aria-describedby="inquiryForm-e-email"/><p class="field-error" id="inquiryForm-e-email" hidden></p></div>
@@ -410,6 +410,7 @@
 <button class="btn btn-whatsapp" type="button" data-whatsapp-submit data-track="whatsapp_form_click">WhatsApp 查詢</button>
 </div>
 <p class="form-wa-hint" hidden><span>想更快回覆，可以直接</span> <a href="https://wa.me/85295335639?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E4%BA%86%E8%A7%A3%E6%A8%93%E5%AE%87%E8%A8%AD%E8%A8%88%E9%9A%8E%E6%AE%B5%E9%A0%90%E7%95%99%E6%A9%9F%E6%A2%B0%E4%BA%BA%E4%BD%8D%E7%BD%AE%E5%98%85%E5%AE%89%E6%8E%92%E3%80%82" target="_blank" rel="noopener noreferrer" data-contact-source="form-success">WhatsApp 我哋</a></p>
+<p class="form-fallback" hidden><button type="button" class="btn btn-secondary" data-mail-fallback>改用電郵傳送</button></p>
 <p class="form-status" role="status" aria-live="polite" data-i18n-skip hidden></p>
 </form>
 

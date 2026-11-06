@@ -39,7 +39,8 @@ if (process.env.PRIVACY_URL) site.form.privacyUrl = process.env.PRIVACY_URL;
 if (process.env.ANALYTICS_ID) Object.assign(site.analytics, { enabled: true, measurementId: process.env.ANALYTICS_ID });
 const isBlank = (v) => !v || !String(v).trim();
 site.form.endpointConfigured = !isBlank(site.form.endpoint);
-site.form.format = /^https:\/\/formsubmit\.co\//.test(site.form.endpoint) ? 'formsubmit' : 'json';
+site.form.format = /formsubmit\.co\//.test(site.form.endpoint) ? 'formsubmit' : /formspree\.io\//.test(site.form.endpoint) ? 'formspree' : /web3forms\.com\//.test(site.form.endpoint) ? 'web3forms' : 'json';
+site.form.accessKey = site.form.accessKey || '';
 site.form.privacyConfigured = !isBlank(site.form.privacyUrl);
 site.analytics.enabled = Boolean(site.analytics.enabled) && !isBlank(site.analytics.measurementId);
 

@@ -18,6 +18,8 @@
   function initForm(form) {
     const track = (name, extra = {}) => window.BottizTrack?.(name, { form: form.dataset.form, industry: form.dataset.industry, ...extra });
     const statusEl = form.querySelector('.form-status');
+    const fallbackEl = form.querySelector('.form-fallback');
+    let lastPayload = null;
     let statusKey = '';
     let lastCta = '';
 
@@ -105,11 +107,15 @@
       form.querySelectorAll('button').forEach((b) => { b.disabled = busy; });
     }
 
-    // FormSubmit.co (email relay) wants flat fields; it emails them to the address in the endpoint URL.
-    function toFormSubmit(payload) {
+    // Email-relay services (FormSubmit, Formspree, Web3Forms) want flat fields and deliver them to the
+    // mailbox configured on their side. Any other endpoint receives the nested JSON as is.
+    function toRelay(payload, format) {
       const { source, ...fields } = payload;
       const flat = { ...fields, pagePath: source.pagePath, pageTitle: source.pageTitle, industry: source.industry, cta: source.cta, referrer: source.referrer, landingPath: source.landingPath, language: source.language, ...source.utm };
-      return { ...flat, _subject: `BottiZ 網站查詢｜${payload.name}｜${form.dataset.pageTitle}`, _template: 'table', _captcha: 'false', _honey: '' };
+      const subject = `BottiZ 網站查詢｜${payload.name}｜${form.dataset.pageTitle}`;
+      if (format === 'web3forms') return { ...flat, access_key: form.dataset.accessKey, subject, from_name: payload.name, botcheck: '' };
+      if (format === 'formspree') return { ...flat, _subject: subject };
+      return { ...flat, _subject: subject, _template: 'table', _captcha: 'false', _honey: '' };
     }
 
     async function postJson(payload) {
@@ -119,11 +125,11 @@
         const response = await fetch(form.dataset.endpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify(form.dataset.format === 'formsubmit' ? toFormSubmit(payload) : payload),
+          body: JSON.stringify(form.dataset.format === 'json' ? payload : toRelay(payload, form.dataset.format)),
           signal: controller.signal,
         });
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        // FormSubmit answers 200 with {"success":"false"} when the address is not yet activated.
+        // Relays may answer 200 with success:false (e.g. FormSubmit before the address is activated).
         const result = await response.json().catch(() => ({}));
         if (String(result.success) === 'false') throw new Error(result.message || 'Rejected by form service');
       } finally {
@@ -155,6 +161,8 @@
       }
 
       const payload = buildPayload();
+      lastPayload = payload;
+      fallbackEl?.setAttribute('hidden', '');
       track('form_submit', { status: 'attempt' });
       setStatus('提交中⋯⋯');
       setBusy(true);
@@ -172,12 +180,16 @@
         track('form_submit_success');
       } catch (error) {
         console.error('Enquiry submit failed', error);
-        setStatus('提交未成功，請稍後再試，或改用 WhatsApp 與我們聯絡。', 'error');
+        setStatus('提交未成功，請稍後再試，或改用電郵或 WhatsApp 與我們聯絡。', 'error');
+        fallbackEl?.removeAttribute('hidden');
         track('form_submit_error');
       } finally {
         setBusy(false);
       }
     });
+
+    // If the relay is down, the visitor can still send the same content from their own email app.
+    form.querySelector('[data-mail-fallback]')?.addEventListener('click', () => lastPayload && openMailClient(lastPayload));
 
     form.querySelector('[data-whatsapp-submit]')?.addEventListener('click', () => {
       if (!validate({ skipConsent: true })) return;
@@ -199,6 +211,7 @@
       lastCta = event.detail.cta;
       setStatus('');
       form.querySelector('.form-wa-hint')?.setAttribute('hidden', '');
+      fallbackEl?.setAttribute('hidden', '');
       track('form_open', { cta: lastCta });
     });
   }
